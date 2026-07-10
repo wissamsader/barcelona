@@ -6,31 +6,33 @@
 :root{--org:#ff5a1f;--ink:#0b0b0d;--steel:#c8ccd2;--chrome:#e8eaee}
 *{margin:0;padding:0;box-sizing:border-box}
 html.en .es{display:none}html:not(.en) .en{display:none}
-body{font:15px/1.6 ui-monospace,'SF Mono',Menlo,monospace;color:var(--chrome);background:var(--ink);overflow-x:hidden}
-#lg{position:fixed;top:14px;right:14px;z-index:50;background:var(--org);color:#000;border:0;border-radius:0;padding:7px 14px;font-size:12px;font-weight:800;letter-spacing:.12em;cursor:pointer}
+body{font:15px/1.6 ui-monospace,'SF Mono',Menlo,monospace;color:var(--chrome);background:var(--ink)}
+#lg{position:fixed;top:14px;right:14px;z-index:60;background:var(--org);color:#000;border:0;padding:7px 14px;font-size:12px;font-weight:800;letter-spacing:.12em;cursor:pointer}
+.bar{position:fixed;bottom:0;left:0;right:0;z-index:55;background:rgba(5,5,6,.96);backdrop-filter:blur(8px);display:flex;gap:2px;padding:7px 10px;justify-content:center}
+.bar a{flex:1;max-width:200px;text-align:center;text-decoration:none;font-weight:800;font-size:13px;letter-spacing:.06em;text-transform:uppercase;padding:12px 6px}
+.bar .t{background:var(--org);color:#000}.bar .i{background:transparent;color:#fff;border:1px solid var(--steel)}.bar .m{background:var(--chrome);color:#000}
 .marq{background:var(--org);color:#000;font-weight:800;letter-spacing:.2em;white-space:nowrap;overflow:hidden;padding:8px 0;text-transform:uppercase;font-size:13px}
 .marq span{display:inline-block;animation:mv 18s linear infinite}
 @keyframes mv{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-.hero{min-height:92svh;display:flex;flex-direction:column;justify-content:center;padding:50px 22px;position:relative;background:linear-gradient(180deg,#141416,#0b0b0d)}
+.hero{min-height:90svh;display:flex;flex-direction:column;justify-content:center;padding:50px 22px 100px;position:relative;background:linear-gradient(180deg,#141416,#0b0b0d)}
 .coord{font-size:12px;letter-spacing:.24em;color:var(--org);text-transform:uppercase}
-h1{font-size:clamp(84px,32vw,300px);font-weight:900;letter-spacing:-.04em;line-height:.8;color:var(--chrome);background:linear-gradient(180deg,#fff,#7d828a);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;margin:8px 0}
-.tag{font-size:clamp(15px,4vw,22px);font-weight:700;letter-spacing:.05em;color:#fff;text-transform:uppercase}
+h1{font-size:clamp(84px,32vw,300px);font-weight:900;letter-spacing:-.04em;line-height:.8;background:linear-gradient(180deg,#fff,#7d828a);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;margin:8px 0}
+.htag{font-size:clamp(15px,4vw,22px);font-weight:700;letter-spacing:.05em;color:#fff;text-transform:uppercase}
 .meta{margin-top:24px;display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1px;background:#26262b;border:1px solid #26262b}
-.meta div{background:var(--ink);padding:16px}
-.meta h3{font-size:10px;letter-spacing:.2em;color:var(--org);text-transform:uppercase;margin-bottom:6px}
-.meta p{font-size:15px;color:#fff;font-weight:600}
-.cta{margin-top:28px;display:flex;gap:10px;flex-wrap:wrap}
-.btn{padding:15px 26px;font-weight:800;text-decoration:none;font-size:14px;letter-spacing:.08em;text-transform:uppercase}
-.b-tk{background:var(--org);color:#000}.b-ig{background:transparent;color:#fff;border:1px solid var(--steel)}.b-map{background:var(--chrome);color:#000}
+.meta div{background:var(--ink);padding:16px}.meta h3{font-size:10px;letter-spacing:.2em;color:var(--org);text-transform:uppercase;margin-bottom:6px}.meta p{font-size:15px;color:#fff;font-weight:600}
 section{max-width:960px;margin:0 auto;padding:64px 22px}
-.lead{font-family:'Segoe UI',sans-serif;font-size:clamp(19px,3.4vw,27px);line-height:1.5;color:#fff}.lead b{color:var(--org)}
-.big{width:100%;height:min(72vh,620px);object-fit:cover;margin-top:24px;border:1px solid #26262b}
-.map-note{border:1px dashed var(--org);padding:22px;margin-top:22px}
+h2{font-family:'Segoe UI',sans-serif;font-size:clamp(24px,5vw,38px);font-weight:900;color:#fff;margin-bottom:10px}
+.lead{font-family:'Segoe UI',sans-serif;font-size:clamp(18px,3.2vw,24px);line-height:1.5;color:#fff}.lead b{color:var(--org)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:24px}
+.two img{width:100%;border:1px solid #26262b}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;font-family:'Segoe UI',sans-serif}
+.pc{border:1px solid #26262b;padding:22px;text-align:center}.pc .ic{font-size:28px}.pc h3{margin:8px 0 4px;color:var(--org);font-size:15px}.pc p{font-size:14px;color:var(--steel)}
+.map-note{border:1px dashed var(--org);padding:22px;font-family:'Segoe UI',sans-serif;max-width:760px;margin:0 auto}
 .map-note h3{color:var(--org);font-size:13px;letter-spacing:.2em;text-transform:uppercase;margin-bottom:10px}
-.map-note p{font-family:'Segoe UI',sans-serif}
+.faq{max-width:760px;margin:0 auto;font-family:'Segoe UI',sans-serif}.fq{border-bottom:1px solid #26262b;padding:16px 0}.fq h3{color:#fff;font-size:16px}.fq p{color:var(--steel);margin-top:6px;font-size:15px}
 .q{border-left:3px solid var(--org);padding:16px 18px;margin-top:14px;font-family:'Segoe UI',sans-serif;font-style:italic;color:#cfd2d7;background:#141416}
-footer{padding:48px 22px;background:#050506;color:#7d828a;text-align:center;font-size:13px}
-footer a{color:var(--org)}
+footer{padding:48px 22px 90px;background:#050506;color:#7d828a;text-align:center;font-size:13px}footer a{color:var(--org)}
+@media(max-width:700px){.two,.cards{grid-template-columns:1fr}}
 </style></head>
 <body>
 <div class="marq"><span>LOST&nbsp;·&nbsp;FREE OPEN AIR BEACH PARTY&nbsp;·&nbsp;PLATJA DEL FÒRUM&nbsp;·&nbsp;06 SEPT 2026&nbsp;·&nbsp;LOST&nbsp;·&nbsp;FREE OPEN AIR BEACH PARTY&nbsp;·&nbsp;PLATJA DEL FÒRUM&nbsp;·&nbsp;06 SEPT 2026&nbsp;·&nbsp;</span></div>
@@ -38,36 +40,50 @@ footer a{color:var(--org)}
 <div class="hero">
  <div class="coord">41.4103°N · 2.2270°E — BARCELONA</div>
  <h1>LOST</h1>
- <div class="tag"><span class="es">Free open air beach party</span><span class="en">Free open air beach party</span></div>
+ <div class="htag"><span class="es">Free open air beach party</span><span class="en">Free open air beach party</span></div>
  <div class="meta">
   <div><h3><span class="es">Fecha</span><span class="en">Date</span></h3><p>DOM 06.09.2026</p></div>
   <div><h3>Time</h3><p>15:00 → 23:30</p></div>
   <div><h3><span class="es">Acceso</span><span class="en">Access</span></h3><p><span class="es">Gratis</span><span class="en">Free</span></p></div>
   <div><h3><span class="es">Lugar</span><span class="en">Spot</span></h3><p>Sunseabar · Fòrum</p></div>
  </div>
- <div class="cta">
-  <a class="btn b-tk" href="#access"><span class="es">Acceso / lista</span><span class="en">Access / list</span></a>
-  <a class="btn b-ig" href="https://www.instagram.com/lost.bcn/" target="_blank" rel="noopener">Instagram</a>
-  <a class="btn b-map" href="https://www.google.com/maps/search/?api=1&query=Platja+del+Forum+Barcelona" target="_blank" rel="noopener"><span class="es">Cómo llegar</span><span class="en">Get there</span></a>
- </div>
 </div>
 
 <section>
- <p class="lead"><span class="es">LOST es un nuevo colectivo de sonido nacido en Barcelona. Sol, playa, arena, música, copas y amigos: <b>fiestas de día</b> en la orilla del mar con artistas nacionales e internacionales.</span><span class="en">LOST is a new sound collective born in Barcelona. Sun, beach, sand, music, drinks and friends — <b>daytime parties</b> by the sea with national and international artists.</span></p>
- <img class="big" src="img/01.jpg" alt="LOST beach party">
+ <h2><span class="es">El colectivo</span><span class="en">The collective</span></h2>
+ <p class="lead"><span class="es">LOST es un nuevo colectivo de sonido nacido en Barcelona. Sol, playa, arena, música, copas y amigos: <b>fiestas de día</b> en la orilla del mar con artistas nacionales e internacionales, a 15 minutos del centro.</span><span class="en">LOST is a new sound collective born in Barcelona. Sun, beach, sand, music, drinks and friends — <b>daytime parties</b> by the sea with national and international artists, 15 minutes from the centre.</span></p>
+ <div class="two"><img src="img/01.jpg" alt="LOST flyer front"><img src="img/02.jpg" alt="LOST flyer back"></div>
 </section>
 
-<section style="padding-top:0" id="access">
+<section style="padding-top:0">
+ <h2><span class="es">Qué esperar</span><span class="en">What to expect</span></h2>
+ <div class="cards">
+  <div class="pc"><div class="ic">🏖️</div><h3><span class="es">De día, en la arena</span><span class="en">Daytime, on the sand</span></h3><p><span class="es">De 15:00 al anochecer.</span><span class="en">From 15:00 to dusk.</span></p></div>
+  <div class="pc"><div class="ic">🎟️</div><h3><span class="es">Entrada libre</span><span class="en">Free entry</span></h3><p><span class="es">Apúntate a la lista.</span><span class="en">Join the list.</span></p></div>
+  <div class="pc"><div class="ic">🎧</div><h3><span class="es">Artistas nac. &amp; int.</span><span class="en">National &amp; int. artists</span></h3><p><span class="es">Buen sonido junto al mar.</span><span class="en">Great sound by the sea.</span></p></div>
+ </div>
+</section>
+
+<section style="padding-top:0">
+ <h2><span class="es">Cómo llegar &amp; acceso</span><span class="en">Getting there &amp; access</span></h2>
  <div class="map-note">
   <h3><span class="es">Cómo llegar</span><span class="en">How to get there</span></h3>
-  <p><span class="es">Playa del Fòrum · a <b>15 minutos</b> del centro de Barcelona.<br>Tram T4 → Port del Fòrum · Metro L4 → El Maresme i Fòrum · Taxi 15 min.</span><span class="en">Platja del Fòrum · <b>15 minutes</b> from central Barcelona.<br>Tram T4 → Port del Fòrum · Metro L4 → El Maresme i Fòrum · Taxi 15 min.</span></p>
+  <p style="font-family:'Segoe UI',sans-serif"><span class="es">Platja del Fòrum · a <b style="color:var(--org)">15 minutos</b> del centro de Barcelona.<br>Tram T4 → Port del Fòrum · Metro L4 → El Maresme i Fòrum · Taxi 15 min.</span><span class="en">Platja del Fòrum · <b style="color:var(--org)">15 minutes</b> from central Barcelona.<br>Tram T4 → Port del Fòrum · Metro L4 → El Maresme i Fòrum · Taxi 15 min.</span></p>
  </div>
- <div class="map-note" style="border-style:solid">
+ <div class="map-note" style="border-style:solid;margin-top:16px">
   <h3><span class="es">Acceso</span><span class="en">Access</span></h3>
-  <p><span class="es"><b>Entrada libre</b>. Apúntate a la lista por Instagram para asegurar tu acceso — aforo limitado.</span><span class="en"><b>Free entry</b>. Join the list on Instagram to secure your spot — limited capacity.</span></p>
+  <p style="font-family:'Segoe UI',sans-serif"><span class="es"><b style="color:var(--org)">Entrada libre</b>. Apúntate a la lista por Instagram para asegurar tu acceso — aforo limitado.</span><span class="en"><b style="color:var(--org)">Free entry</b>. Join the list on Instagram to secure your spot — limited capacity.</span></p>
+ </div>
+</section>
+
+<section style="padding-top:0">
+ <h2>FAQ</h2>
+ <div class="faq">
+  <div class="fq"><h3><span class="es">¿Cuánto cuesta?</span><span class="en">How much?</span></h3><p><span class="es">Gratis. Apúntate a la lista por Instagram (@lost.bcn) para asegurar el acceso.</span><span class="en">Free. Join the list on Instagram (@lost.bcn) to secure access.</span></p></div>
+  <div class="fq"><h3><span class="es">¿Se puede ir en transporte público?</span><span class="en">Public transport?</span></h3><p><span class="es">Sí: Tram T4 hasta Port del Fòrum, o Metro L4 hasta El Maresme i Fòrum + unos minutos andando.</span><span class="en">Yes: Tram T4 to Port del Fòrum, or Metro L4 to El Maresme i Fòrum + a short walk.</span></p></div>
+  <div class="fq"><h3><span class="es">¿Es en la playa?</span><span class="en">Is it on the beach?</span></h3><p><span class="es">Sí — en el Sunseabar, a pie de la Platja del Fòrum. Trae protección solar.</span><span class="en">Yes — at Sunseabar, right on Platja del Fòrum. Bring sun protection.</span></p></div>
  </div>
  <div class="q">“Best free beach party in the city — proper sound system, feet in the sand, sun going down. LOST never miss.”</div>
- <div class="q">“Colectivo joven con muy buen gusto. Playa, buena música y buen rollo. Repetiré seguro.”</div>
 </section>
 
 <footer>
@@ -75,4 +91,9 @@ footer a{color:var(--org)}
  <p style="margin-top:6px">PLATJA DEL FÒRUM · BARCELONA · 06.09.2026</p>
  <p style="margin-top:8px"><a href="https://www.instagram.com/lost.bcn/" target="_blank" rel="noopener">@lost.bcn</a></p>
 </footer>
+<div class="bar">
+ <a class="t" href="https://www.instagram.com/lost.bcn/" target="_blank" rel="noopener"><span class="es">Lista</span><span class="en">List</span></a>
+ <a class="i" href="https://www.instagram.com/lost.bcn/" target="_blank" rel="noopener">Instagram</a>
+ <a class="m" href="https://www.google.com/maps/search/?api=1&query=Platja+del+Forum+Barcelona" target="_blank" rel="noopener"><span class="es">Cómo llegar</span><span class="en">Directions</span></a>
+</div>
 </body></html>

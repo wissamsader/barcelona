@@ -7,37 +7,40 @@
 *{margin:0;padding:0;box-sizing:border-box}
 html.en .es{display:none}html:not(.en) .en{display:none}
 body{font:16px/1.6 'Segoe UI',sans-serif;color:var(--ink);background:var(--cream)}
-#lg{position:fixed;top:16px;right:16px;z-index:50;background:var(--ink);color:var(--cream);border:0;border-radius:30px;padding:8px 15px;font-size:12px;font-weight:800;letter-spacing:.1em;cursor:pointer}
-.hero{min-height:96svh;display:flex;flex-direction:column;justify-content:center;padding:60px 24px;position:relative;overflow:hidden;background:var(--coral)}
+#lg{position:fixed;top:16px;right:16px;z-index:60;background:var(--ink);color:var(--cream);border:0;border-radius:30px;padding:8px 15px;font-size:12px;font-weight:800;letter-spacing:.1em;cursor:pointer}
+.bar{position:fixed;bottom:0;left:0;right:0;z-index:55;background:rgba(34,26,46,.96);backdrop-filter:blur(8px);display:flex;gap:2px;padding:7px 10px;justify-content:center}
+.bar a{flex:1;max-width:210px;text-align:center;color:#fff;text-decoration:none;font-weight:700;font-size:14px;padding:9px 6px;border-radius:10px}
+.bar .i{background:var(--blue)}.bar .m{background:#3a2f4c}
+.hero{min-height:92svh;display:flex;flex-direction:column;justify-content:center;padding:60px 24px 96px;position:relative;overflow:hidden;background:var(--coral)}
 .rings{position:absolute;inset:0;background:repeating-radial-gradient(circle at 80% 20%,transparent 0 26px,rgba(43,76,255,.12) 26px 28px);pointer-events:none;animation:spin 40s linear infinite}
 @keyframes spin{to{transform:rotate(360deg)}}
 .hero-in{position:relative;z-index:2;max-width:900px;margin:0 auto;text-align:center;color:var(--cream)}
 .badge{display:inline-block;background:var(--yel);color:var(--ink);font-weight:900;font-size:12px;letter-spacing:.2em;text-transform:uppercase;padding:6px 16px;border-radius:30px;transform:rotate(-3deg)}
-h1{font-size:clamp(46px,12vw,110px);font-weight:900;line-height:.9;margin:18px 0 8px;letter-spacing:-.02em}
-h1 span{color:var(--yel)}
+h1{font-size:clamp(46px,12vw,110px);font-weight:900;line-height:.9;margin:18px 0 8px;letter-spacing:-.02em}h1 span{color:var(--yel)}
 .tag{font-size:clamp(18px,3.6vw,24px);max-width:560px;margin:0 auto}
 .chips{margin-top:18px;display:flex;gap:8px;flex-wrap:wrap;justify-content:center}
 .chip{background:rgba(255,255,255,.16);border:1.5px solid var(--cream);border-radius:30px;padding:7px 15px;font-size:13px;font-weight:700}
-.cta{margin-top:26px;display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
-.btn{padding:14px 24px;border-radius:30px;font-weight:800;text-decoration:none;font-size:15px}
-.b-ig{background:var(--blue);color:#fff}.b-map{background:var(--cream);color:var(--coral)}
 section{max-width:980px;margin:0 auto;padding:60px 24px}
-h2{font-size:clamp(26px,5vw,40px);font-weight:900;color:var(--coral);margin-bottom:12px}
-.lead{font-size:clamp(18px,3vw,23px);max-width:720px}
-.gal{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:24px}
-.gal img{width:100%;height:230px;object-fit:cover;border-radius:16px;border:4px solid var(--ink)}
-.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:14px}
+h2{font-size:clamp(26px,5vw,40px);font-weight:900;color:var(--coral);margin-bottom:10px}
+.sub{color:#5a5266;font-size:15px;margin-bottom:22px;max-width:640px}
+.story{display:grid;grid-template-columns:1.1fr .9fr;gap:36px;align-items:center}
+.story p{font-size:clamp(16px,2.4vw,19px);margin-bottom:14px}
+.story img{width:100%;height:100%;min-height:300px;object-fit:cover;border-radius:18px;border:4px solid var(--ink)}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
 .pc{border:3px solid var(--ink);border-radius:18px;padding:22px;background:#fff}
-.pc .ic{font-size:32px}
-.pc h3{font-size:15px;font-weight:900;margin:8px 0 4px;color:var(--blue)}
-.pc p{font-size:14px;color:#5a5266}
-.info{background:var(--ink);color:var(--cream);border-radius:18px;padding:26px;margin-top:22px;display:flex;flex-wrap:wrap;gap:24px}
-.info b{color:var(--yel)}
-.note{font-size:13px;color:#7a7288;margin-top:14px}
-.rev{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:14px}
-.q{background:#fff;border-radius:16px;padding:20px;font-style:italic;font-size:15px;border-left:4px solid var(--yel)}
-footer{background:var(--ink);color:var(--cream);text-align:center;padding:48px 24px}footer a{color:var(--yel)}
-@media(max-width:700px){.gal,.cards{grid-template-columns:1fr}.rev{grid-template-columns:1fr}}
+.pc .ic{font-size:32px}.pc h3{font-size:16px;font-weight:900;margin:8px 0 4px;color:var(--blue)}.pc p{font-size:14px;color:#5a5266}
+.gal{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.gal img{width:100%;height:230px;object-fit:cover;border-radius:16px;border:4px solid var(--ink)}
+.agenda{background:var(--ink);color:var(--cream);border-radius:18px;padding:28px;text-align:center}
+.agenda b{color:var(--yel)}
+.rev{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.q{background:#fff;border-radius:16px;padding:20px;font-style:italic;font-size:14.5px;border-left:4px solid var(--yel)}.q .who{display:block;margin-top:10px;font-style:normal;font-weight:700;color:var(--coral);font-size:13px}
+.visit{display:grid;grid-template-columns:1fr 1fr;gap:36px;max-width:900px;margin:0 auto}
+.hours{list-style:none}.hours li{display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid #e6ddc9;font-size:14.5px}
+.vbox b{color:var(--coral)}
+.vbox a.map{display:inline-block;margin-top:12px;background:var(--coral);color:#fff;text-decoration:none;font-weight:800;padding:12px 22px;border-radius:30px;font-size:14px}
+footer{background:var(--ink);color:var(--cream);text-align:center;padding:48px 24px 90px}footer a{color:var(--yel)}
+@media(max-width:820px){.story,.visit{grid-template-columns:1fr}.cards,.gal{grid-template-columns:1fr}.rev{grid-template-columns:1fr}}
 </style></head>
 <body>
 <button id="lg" onclick="document.documentElement.classList.toggle('en')"><span class="es">EN</span><span class="en">ES</span></button>
@@ -48,17 +51,18 @@ footer{background:var(--ink);color:var(--cream);text-align:center;padding:48px 2
   <h1>Buena Onda<br><span>Social Club</span></h1>
   <p class="tag"><span class="es">Espacio creativo, mercadillos de diseño, vinilos y buena onda. Un club social de barrio.</span><span class="en">A creative space with design markets, vinyl and good vibes. A neighbourhood social club.</span></p>
   <div class="chips"><span class="chip">☕ <span class="es">Café &amp; copas</span><span class="en">Coffee &amp; drinks</span></span><span class="chip">🎧 <span class="es">Vinilos</span><span class="en">Vinyl</span></span><span class="chip">🛍️ <span class="es">Mercadillos</span><span class="en">Markets</span></span><span class="chip">🎨 <span class="es">Comunidad</span><span class="en">Community</span></span></div>
-  <div class="cta">
-   <a class="btn b-ig" href="https://www.instagram.com/buenaondasocialclub/" target="_blank" rel="noopener">Instagram</a>
-   <a class="btn b-map" href="https://www.google.com/maps/search/?api=1&query=Buena+Onda+Social+Club+Barcelona" target="_blank" rel="noopener"><span class="es">Cómo llegar</span><span class="en">Directions</span></a>
-  </div>
  </div>
 </div>
 
 <section>
  <h2><span class="es">Un punto de encuentro en Gràcia</span><span class="en">A meeting point in Gràcia</span></h2>
- <p class="lead"><span class="es">Un espacio con mucho encanto: mercadillos de diseño, vinilos, música y ambiente creativo. Ideal para tomar algo por la tarde y descubrir cosas nuevas.</span><span class="en">A charming space: design markets, records, music and a creative atmosphere. Perfect for an afternoon drink and discovering something new.</span></p>
- <div class="gal"><img src="img/01.jpg" alt=""><img src="img/02.jpg" alt=""><img src="img/03.jpg" alt=""></div>
+ <div class="story">
+  <div>
+   <p><span class="es">Un espacio con mucho encanto: mercadillos de diseño, vinilos, música y ambiente creativo. Ideal para tomar algo por la tarde y descubrir cosas nuevas.</span><span class="en">A charming space: design markets, records, music and a creative atmosphere. Perfect for an afternoon drink and discovering something new.</span></p>
+   <p><span class="es">Más que un bar: es un club social de barrio donde se cruzan creadores, vecinos y curiosos. Café de especialidad de día, copas y sesiones de vinilo cuando cae la tarde.</span><span class="en">More than a bar: a neighbourhood social club where makers, locals and the curious cross paths. Specialty coffee by day, drinks and vinyl sets as the afternoon rolls in.</span></p>
+  </div>
+  <img src="img/01.jpg" alt="">
+ </div>
 </section>
 
 <section style="padding-top:0">
@@ -68,24 +72,54 @@ footer{background:var(--ink);color:var(--cream);text-align:center;padding:48px 2
   <div class="pc"><div class="ic">🎧</div><h3><span class="es">Música &amp; vinilos</span><span class="en">Music &amp; vinyl</span></h3><p><span class="es">Sesiones, discos y buen sonido de tarde.</span><span class="en">DJ sets, records and good afternoon sound.</span></p></div>
   <div class="pc"><div class="ic">☕</div><h3><span class="es">Café &amp; copas</span><span class="en">Coffee &amp; drinks</span></h3><p><span class="es">Café de especialidad, vermut y cócteles.</span><span class="en">Specialty coffee, vermouth and cocktails.</span></p></div>
  </div>
- <div class="info">
-  <div><b><span class="es">Horario</span><span class="en">Hours</span></b><br><span class="es">Mar–Jue 18–24 · Vie 18–1 · Sáb 12–1 · Dom 12–22</span><span class="en">Tue–Thu 18–24 · Fri 18–1 · Sat 12–1 · Sun 12–22</span></div>
-  <div><b><span class="es">Dónde</span><span class="en">Where</span></b><br>Carrer del Canó, 4 · Gràcia</div>
-  <div><b><span class="es">Agenda &amp; reservas</span><span class="en">Agenda &amp; bookings</span></b><br>Instagram DM</div>
- </div>
- <p class="note"><span class="es">★ Consulta la agenda de mercadillos y eventos en nuestro Instagram.</span><span class="en">★ Check the schedule of markets &amp; events on our Instagram.</span></p>
 </section>
 
 <section style="padding-top:0">
+ <h2><span class="es">El espacio</span><span class="en">The space</span></h2>
+ <div class="gal"><img src="img/01.jpg" alt=""><img src="img/02.jpg" alt=""><img src="img/03.jpg" alt=""></div>
+</section>
+
+<section style="padding-top:0">
+ <div class="agenda">
+  <h2 style="color:var(--yel);margin-bottom:12px"><span class="es">Agenda &amp; comunidad</span><span class="en">Agenda &amp; community</span></h2>
+  <p><span class="es">Cada semana hay algo: <b>mercadillos</b>, <b>sesiones de vinilo</b>, presentaciones y encuentros. Sigue la agenda y únete a la comunidad en Instagram.</span><span class="en">Every week there's something: <b>markets</b>, <b>vinyl sessions</b>, launches and meetups. Follow the schedule and join the community on Instagram.</span></p>
+ </div>
+</section>
+
+<section style="padding-top:0">
+ <h2><span class="es">Lo que dicen</span><span class="en">What they say</span></h2>
  <div class="rev">
-  <div class="q">“Loved the space — there was a pop-up market and it was very welcoming. The staff are super friendly. I'd definitely be going again.”</div>
-  <div class="q">“Un espacio con mucho encanto en Gràcia, con mercadillos, buena música y ambiente creativo. Ideal para tomar algo por la tarde.”</div>
+  <div class="q">“Loved the space — there was a pop-up market and it was very welcoming. The staff are super friendly. I'd definitely be going again.”<span class="who">Google · ★★★★★</span></div>
+  <div class="q">“Un espacio con mucho encanto en Gràcia, con mercadillos, buena música y ambiente creativo. Ideal para tomar algo por la tarde.”<span class="who">Google · ★★★★</span></div>
+  <div class="q">“Cool creative hub — vintage market, records and a relaxed community vibe. A nice little spot to discover in Gràcia.”<span class="who">Google · ★★★★</span></div>
+ </div>
+</section>
+
+<section style="padding-top:0">
+ <h2><span class="es">Dónde &amp; cuándo</span><span class="en">Where &amp; when</span></h2>
+ <div class="visit">
+  <ul class="hours">
+   <li><span class="es">Lunes</span><span class="en">Monday</span><span class="es">Cerrado</span><span class="en">Closed</span></li>
+   <li><span class="es">Mar–Jue</span><span class="en">Tue–Thu</span><span>18:00 – 24:00</span></li>
+   <li><span class="es">Viernes</span><span class="en">Friday</span><span>18:00 – 1:00</span></li>
+   <li><span class="es">Sábado</span><span class="en">Saturday</span><span>12:00 – 1:00</span></li>
+   <li><span class="es">Domingo</span><span class="en">Sunday</span><span>12:00 – 22:00</span></li>
+  </ul>
+  <div class="vbox">
+   <p><b><span class="es">Dónde estamos</span><span class="en">Where we are</span></b><br>Carrer del Canó, 4<br>Gràcia · 08012 Barcelona</p>
+   <p style="margin-top:14px"><b><span class="es">Agenda &amp; reservas</span><span class="en">Agenda &amp; bookings</span></b><br>Instagram · @buenaondasocialclub</p>
+   <p style="margin-top:14px;font-size:14px;color:#5a5266"><span class="es">En pleno Gràcia. Metro Fontana (L3) o Joanic (L4), a 5 min andando.</span><span class="en">In the heart of Gràcia. Metro Fontana (L3) or Joanic (L4), 5 min walk.</span></p>
+   <a class="map" href="https://www.google.com/maps/search/?api=1&query=Buena+Onda+Social+Club+Barcelona" target="_blank" rel="noopener"><span class="es">Cómo llegar →</span><span class="en">Get directions →</span></a>
+  </div>
  </div>
 </section>
 
 <footer>
  <p style="font-size:22px;font-weight:900">Buena Onda Social Club</p>
- <p style="margin-top:8px">Carrer del Canó 4 · Gràcia · Barcelona</p>
- <p style="margin-top:8px"><a href="https://www.instagram.com/buenaondasocialclub/" target="_blank" rel="noopener">@buenaondasocialclub</a></p>
+ <p style="margin-top:8px">Carrer del Canó 4 · Gràcia · Barcelona · <a href="https://www.instagram.com/buenaondasocialclub/" target="_blank" rel="noopener">@buenaondasocialclub</a></p>
 </footer>
+<div class="bar">
+ <a class="i" href="https://www.instagram.com/buenaondasocialclub/" target="_blank" rel="noopener">📷 Instagram</a>
+ <a class="m" href="https://www.google.com/maps/search/?api=1&query=Buena+Onda+Social+Club+Barcelona" target="_blank" rel="noopener">📍 <span class="es">Cómo llegar</span><span class="en">Directions</span></a>
+</div>
 </body></html>

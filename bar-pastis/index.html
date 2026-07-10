@@ -5,12 +5,13 @@
 <style>
 :root{--red:#8e1d24;--redd:#4a0f14;--yel:#e8b23a;--cream:#f3e7d2;--ink:#1a0d0c}
 *{margin:0;padding:0;box-sizing:border-box}
-html.en .es{display:none}html.en .fr{display:none}
-html:not(.en) .en{display:none}
+html.en .es{display:none}html:not(.en) .en{display:none}
 body{font:16px/1.7 Georgia,serif;color:var(--cream);background:var(--redd)}
-#lg{position:fixed;top:16px;right:16px;z-index:50;background:var(--yel);color:var(--redd);border:0;border-radius:30px;padding:8px 15px;font:800 12px/1 sans-serif;letter-spacing:.1em;cursor:pointer}
-.hero{min-height:96svh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:70px 26px;position:relative;background:
- radial-gradient(circle at 50% 30%,#a8262e 0%,var(--redd) 70%)}
+#lg{position:fixed;top:16px;right:16px;z-index:60;background:var(--yel);color:var(--redd);border:0;border-radius:30px;padding:8px 15px;font:800 12px/1 sans-serif;letter-spacing:.1em;cursor:pointer}
+.bar{position:fixed;bottom:0;left:0;right:0;z-index:55;background:rgba(26,13,12,.96);backdrop-filter:blur(8px);display:flex;gap:2px;padding:7px 10px;justify-content:center}
+.bar a{flex:1;max-width:200px;text-align:center;color:#fff;text-decoration:none;font:800 14px/1 sans-serif;padding:11px 6px;border-radius:8px}
+.bar .w{background:#25d366;color:#053}.bar .m{background:#701820}.bar .i{background:var(--yel);color:var(--redd)}
+.hero{min-height:90svh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:70px 26px;position:relative;background:radial-gradient(circle at 50% 30%,#a8262e 0%,var(--redd) 70%)}
 .hero::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(90deg,rgba(232,178,58,.06) 0 3px,transparent 3px 26px);pointer-events:none}
 .lamp{position:absolute;top:0;left:50%;transform:translateX(-50%);width:120px;height:120px;background:radial-gradient(circle,rgba(232,178,58,.5),transparent 70%);animation:glow 4s ease-in-out infinite}
 @keyframes glow{0%,100%{opacity:.5}50%{opacity:.9}}
@@ -20,26 +21,33 @@ h1{font-size:clamp(48px,13vw,124px);font-weight:400;font-style:italic;line-heigh
 .since{font:700 14px/1 sans-serif;letter-spacing:.3em;text-transform:uppercase;color:var(--yel)}
 .tag{margin-top:20px;font-size:clamp(17px,3vw,22px);max-width:600px;margin-left:auto;margin-right:auto}
 .stars{margin-top:14px;font:600 15px/1 sans-serif}.stars b{color:var(--yel)}
-.cta{margin-top:26px;display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
-.btn{padding:14px 26px;border-radius:30px;font:800 14px/1 sans-serif;text-decoration:none}
-.b-wa{background:#25d366;color:#053}.b-map{background:var(--cream);color:var(--red)}.b-ig{background:var(--yel);color:var(--redd)}
+.quick{margin-top:18px;display:flex;gap:9px;flex-wrap:wrap;justify-content:center;font:600 13px/1 sans-serif}
+.quick span{border:1px solid rgba(232,178,58,.5);border-radius:30px;padding:8px 14px;color:#f0d9a8}
 section{max-width:940px;margin:0 auto;padding:66px 26px}
 h2{font-size:clamp(28px,5.5vw,44px);font-style:italic;color:var(--yel);text-align:center;font-weight:400}
-.lead{font-size:clamp(18px,3vw,23px);font-style:italic;text-align:center;max-width:720px;margin:20px auto 0}
-.gal{display:grid;grid-template-columns:2fr 1fr;gap:12px;margin-top:26px}
-.gal .col{display:grid;gap:12px}
-.gal img{width:100%;object-fit:cover;border:3px solid var(--yel);border-radius:2px}
-.gal>img{height:100%;min-height:340px}.gal .col img{height:164px}
-.menu{border:3px double var(--yel);padding:32px;margin-top:14px}
+.sub{font:400 15px/1.5 sans-serif;color:#e6cfa0;text-align:center;max-width:640px;margin:8px auto 24px}
+.story{display:grid;grid-template-columns:1.05fr .95fr;gap:36px;align-items:center;margin-top:10px}
+.story p{font-size:clamp(16px,2.4vw,19px);font-style:italic;margin-bottom:14px}
+.story img{width:100%;height:100%;min-height:300px;object-fit:cover;border:3px solid var(--yel)}
+.nights{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.nc{border:1px solid var(--yel);padding:24px;text-align:center;background:rgba(26,13,12,.35)}
+.nc .ic{font-size:32px}.nc h3{color:var(--yel);font:400 18px/1 Georgia,serif;font-style:italic;margin:8px 0 5px}.nc p{font:400 14px/1.5 sans-serif;color:#e6cfa0}
+.gal{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.gal img{width:100%;height:180px;object-fit:cover;border:3px solid var(--yel);border-radius:2px}
+.menu{border:3px double var(--yel);padding:32px;max-width:720px;margin:0 auto}
 .menu .head{text-align:center;font-style:italic;color:var(--yel);font-size:22px;margin-bottom:16px}
 .mrow{display:flex;justify-content:space-between;gap:16px;padding:10px 0;border-bottom:1px dotted rgba(232,178,58,.4)}.mrow:last-child{border:0}
 .nm{font-weight:400}.ds{font:400 13px/1.4 sans-serif;color:#e6cfa0}.pr{color:var(--yel);white-space:nowrap;font:700 15px/1 sans-serif}
 .note{font:400 13px/1.5 sans-serif;color:#e6cfa0;margin-top:14px;text-align:center}
-.info{display:flex;flex-wrap:wrap;gap:24px;justify-content:center;margin-top:24px;font:400 15px/1.6 sans-serif}.info b{color:var(--yel)}
-.rev{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:22px}
-.q{border-left:3px solid var(--yel);padding:18px;font-style:italic;font-size:15px;background:rgba(26,13,12,.4)}
-footer{background:var(--ink);color:var(--cream);text-align:center;padding:50px 26px}footer a{color:var(--yel)}
-@media(max-width:700px){.gal{grid-template-columns:1fr}.gal>img{min-height:240px}.rev{grid-template-columns:1fr}}
+.rev{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.q{border-left:3px solid var(--yel);padding:18px;font-style:italic;font-size:14.5px;background:rgba(26,13,12,.4)}
+.q .who{display:block;margin-top:10px;font-style:normal;font:700 12px/1 sans-serif;color:var(--yel)}
+.visit{display:grid;grid-template-columns:1fr 1fr;gap:36px;max-width:900px;margin:0 auto;font-family:sans-serif}
+.hours{list-style:none}.hours li{display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid rgba(232,178,58,.25);font-size:14.5px}
+.vbox b{color:var(--yel)}
+.vbox a.map{display:inline-block;margin-top:12px;background:var(--yel);color:var(--redd);text-decoration:none;font-weight:800;padding:12px 22px;border-radius:30px;font-size:14px}
+footer{background:var(--ink);color:var(--cream);text-align:center;padding:50px 26px 90px}footer a{color:var(--yel)}
+@media(max-width:820px){.story,.visit{grid-template-columns:1fr}.nights{grid-template-columns:1fr}.gal{grid-template-columns:1fr 1fr}.rev{grid-template-columns:1fr}}
 </style></head>
 <body>
 <button id="lg" onclick="document.documentElement.classList.toggle('en')"><span class="es">EN</span><span class="en">ES</span></button>
@@ -48,24 +56,37 @@ footer{background:var(--ink);color:var(--cream);text-align:center;padding:50px 2
  <div class="hero-in">
   <div class="est">El Raval · Barcelona</div>
   <h1>Bar Pastís</h1>
-  <div class="since"><span class="es fr">Cabaret français · depuis 1947</span><span class="en">French cabaret · since 1947</span></div>
+  <div class="since"><span class="es">Cabaret français · depuis 1947</span><span class="en">French cabaret · since 1947</span></div>
   <p class="tag"><span class="es">Un racó de París al Raval: cançó francesa en directe, pastís, absenta i l'ambient de sempre.</span><span class="en">A corner of Paris in El Raval: live French chanson, pastis, absinthe and the atmosphere of always.</span></p>
   <div class="stars">★ <b>4,4</b> · 411 <span class="es">reseñas</span><span class="en">reviews</span></div>
-  <div class="cta">
-   <a class="btn b-wa" href="https://wa.me/34619753740" target="_blank" rel="noopener">WhatsApp</a>
-   <a class="btn b-map" href="https://www.google.com/maps/search/?api=1&query=Bar+Pastis+Barcelona" target="_blank" rel="noopener"><span class="es">Cómo llegar</span><span class="en">Directions</span></a>
-   <a class="btn b-ig" href="https://www.instagram.com/bar.pastis/" target="_blank" rel="noopener">Instagram</a>
-  </div>
+  <div class="quick"><span>🎷 <span class="es">Cançó en directe</span><span class="en">Live chanson</span></span><span>🥃 <span class="es">Pastís &amp; absenta</span><span class="en">Pastis &amp; absinthe</span></span><span>🕰️ <span class="es">Des de 1947</span><span class="en">Since 1947</span></span></div>
  </div>
 </div>
 
 <section>
  <h2><span class="es">Petit, íntim, llegendari</span><span class="en">Small, intimate, legendary</span></h2>
- <p class="lead"><span class="es">Obert el 1947, aquest diminut bar de cabaret conserva els cartells belle époque, la música francesa i les nits en directe. Un secret molt ben guardat del Raval.</span><span class="en">Opened in 1947, this tiny cabaret bar keeps its belle-époque posters, French music and live nights. One of El Raval's best-kept secrets.</span></p>
- <div class="gal">
-  <img src="img/01.jpg" alt="">
-  <div class="col"><img src="img/02.jpg" alt=""><img src="img/03.jpg" alt=""></div>
+ <div class="story">
+  <div>
+   <p><span class="es">Obert el 1947, aquest diminut bar de cabaret conserva els cartells belle époque, la música francesa i les nits en directe. Un secret molt ben guardat del Raval.</span><span class="en">Opened in 1947, this tiny cabaret bar keeps its belle-époque posters, French music and live nights. One of El Raval's best-kept secrets.</span></p>
+   <p><span class="es">Cada visita té la seva màgia: un old fashioned ben fet, un pastís amb aigua freda i, si tens sort, música francesa en directe. Lluny del turisme, ple d'ànima.</span><span class="en">Every visit has its magic: a well-made old fashioned, a pastis with cold water, and if you're lucky, live French music. Far from the tourist trail, full of soul.</span></p>
+  </div>
+  <img src="img/02.jpg" alt="">
  </div>
+</section>
+
+<section style="padding-top:0">
+ <h2><span class="es">Las noches</span><span class="en">The nights</span></h2>
+ <p class="sub"><span class="es">Consulta la agenda de música en directo en Instagram.</span><span class="en">Check the live-music schedule on Instagram.</span></p>
+ <div class="nights">
+  <div class="nc"><div class="ic">🎶</div><h3><span class="es">Chanson en directe</span><span class="en">Live chanson</span></h3><p><span class="es">Noches de música francesa.</span><span class="en">French music nights.</span></p></div>
+  <div class="nc"><div class="ic">🍸</div><h3><span class="es">Còctels clàssics</span><span class="en">Classic cocktails</span></h3><p><span class="es">Old Fashioned, Negroni…</span><span class="en">Old Fashioned, Negroni…</span></p></div>
+  <div class="nc"><div class="ic">🥃</div><h3>Pastis &amp; <span class="es">absenta</span><span class="en">absinthe</span></h3><p><span class="es">El aperitivo de Marsella.</span><span class="en">The Marseille aperitif.</span></p></div>
+ </div>
+</section>
+
+<section style="padding-top:0">
+ <h2><span class="es">Per dins</span><span class="en">Inside</span></h2>
+ <div class="gal"><img src="img/03.jpg" alt=""><img src="img/04.jpg" alt=""><img src="img/05.jpg" alt=""><img src="img/06.jpg" alt=""></div>
 </section>
 
 <section style="padding-top:0">
@@ -75,25 +96,49 @@ footer{background:var(--ink);color:var(--cream);text-align:center;padding:50px 2
   <div class="mrow"><div><div class="nm">Pastis · <span class="es">Absenta</span><span class="en">Absinthe</span></div><div class="ds"><span class="es">l'aperitiu de Marsella, amb aigua freda</span><span class="en">the Marseille aperitif, with cold water</span></div></div><div class="pr"></div></div>
   <div class="mrow"><div><div class="nm"><span class="es">Whiskies &amp; bourbons</span><span class="en">Whiskies &amp; bourbons</span></div><div class="ds">Jameson · Talisker · Oban · Laphroaig · Nikka</div></div><div class="pr">8–16€</div></div>
   <div class="mrow"><div><div class="nm">Vodka</div><div class="ds">Moskovskaya · Stolichnaya</div></div><div class="pr">8€</div></div>
-  <div class="mrow"><div><div class="nm"><span class="es">Còctels clàssics</span><span class="en">Classic cocktails</span></div><div class="ds">Old Fashioned, Negroni…</div></div><div class="pr"></div></div>
-  <div class="mrow"><div><div class="nm"><span class="es">Nits de música en directe</span><span class="en">Live music nights</span></div><div class="ds"><span class="es">chanson francesa — agenda a Instagram</span><span class="en">French chanson — schedule on Instagram</span></div></div><div class="pr"></div></div>
+  <div class="mrow"><div><div class="nm"><span class="es">Còctels clàssics</span><span class="en">Classic cocktails</span></div></div><div class="pr"></div></div>
   <p class="note"><span class="es">★ Preus de la carta del local (whiskies i vodka reals). Local molt petit: millor venir d'hora.</span><span class="en">★ Real prices from the bar's menu (whiskies &amp; vodka). Very small room — best to arrive early.</span></p>
- </div>
- <div class="info">
-  <div><b><span class="es">Horari</span><span class="en">Hours</span></b> · <span class="es">Dc–Dj 19:30–2:30 · Dv–Ds 19:30–3 · Dg 19:30–2:30</span><span class="en">Wed–Thu 19:30–2:30 · Fri–Sat 19:30–3 · Sun 19:30–2:30</span></div>
-  <div><b><span class="es">On som</span><span class="en">Where</span></b> · Carrer de Santa Mònica 4 · El Raval</div>
  </div>
 </section>
 
 <section style="padding-top:0">
+ <h2><span class="es">Què en diuen</span><span class="en">What they say</span></h2>
  <div class="rev">
-  <div class="q">“Every time I visit Barcelona, the same night I visit Pastís. This time it was a French night, with live music — special atmosphere. Far from touristic.”</div>
-  <div class="q">“Lovely little bar full of locals, good music and amazing vibes, as well as a super welcoming owner 🇦🇷🔥”</div>
+  <div class="q">“Every time I visit Barcelona, the same night I visit Pastís. This time it was a French night, with live music — special atmosphere. Far from touristic.”<span class="who">Google · ★★★★★</span></div>
+  <div class="q">“Lovely little bar full of locals, good music and amazing vibes, as well as a super welcoming owner 🇦🇷🔥”<span class="who">Google · ★★★★★</span></div>
+  <div class="q">“Pedí un old fashioned y solo puedo decir que es excelente. Vaso ligeramente ahumado, notas de cereza — un sitio con muchísimo encanto.”<span class="who">Google · ★★★★★</span></div>
+ </div>
+</section>
+
+<section style="padding-top:0">
+ <h2><span class="es">Visita'ns</span><span class="en">Visit us</span></h2>
+ <div class="visit">
+  <ul class="hours">
+   <li><span class="es">Lunes</span><span class="en">Monday</span><span class="es">Cerrado</span><span class="en">Closed</span></li>
+   <li><span class="es">Martes</span><span class="en">Tuesday</span><span class="es">Cerrado</span><span class="en">Closed</span></li>
+   <li><span class="es">Miércoles</span><span class="en">Wednesday</span><span>19:30 – 2:30</span></li>
+   <li><span class="es">Jueves</span><span class="en">Thursday</span><span>19:30 – 2:30</span></li>
+   <li><span class="es">Viernes</span><span class="en">Friday</span><span>19:30 – 3:00</span></li>
+   <li><span class="es">Sábado</span><span class="en">Saturday</span><span>19:30 – 3:00</span></li>
+   <li><span class="es">Domingo</span><span class="en">Sunday</span><span>19:30 – 2:30</span></li>
+  </ul>
+  <div class="vbox">
+   <p><b><span class="es">On som</span><span class="en">Where we are</span></b><br>Carrer de Santa Mònica, 4<br>El Raval · 08001 Barcelona</p>
+   <p style="margin-top:14px"><b><span class="es">Reservas</span><span class="en">Bookings</span></b><br>WhatsApp · 619 753 740</p>
+   <p style="margin-top:14px;font-size:14px;color:#e6cfa0"><span class="es">Junto a la Rambla, bajando al mar. Metro Drassanes (L3), a 3 min andando.</span><span class="en">Off the Rambla, towards the sea. Metro Drassanes (L3), 3 min walk.</span></p>
+   <a class="map" href="https://www.google.com/maps/search/?api=1&query=Bar+Pastis+Barcelona" target="_blank" rel="noopener"><span class="es">Cómo llegar →</span><span class="en">Get directions →</span></a>
+  </div>
  </div>
 </section>
 
 <footer>
  <p style="font:400 26px/1 Georgia,serif;font-style:italic">Bar Pastís · <span style="font-size:14px;font-style:normal">est. 1947</span></p>
  <p style="margin-top:10px;font-family:sans-serif;font-size:14px">Carrer de Santa Mònica 4 · El Raval · Barcelona · <a href="https://wa.me/34619753740">619 753 740</a></p>
+ <p style="margin-top:6px;font-family:sans-serif;font-size:13px;opacity:.7">★ 4,4 · 411 <span class="es">reseñas</span><span class="en">reviews</span> · Google</p>
 </footer>
+<div class="bar">
+ <a class="w" href="https://wa.me/34619753740" target="_blank" rel="noopener">💬 WhatsApp</a>
+ <a class="i" href="https://www.instagram.com/bar.pastis/" target="_blank" rel="noopener">📷 Instagram</a>
+ <a class="m" href="https://www.google.com/maps/search/?api=1&query=Bar+Pastis+Barcelona" target="_blank" rel="noopener">📍 <span class="es">Cómo llegar</span><span class="en">Directions</span></a>
+</div>
 </body></html>

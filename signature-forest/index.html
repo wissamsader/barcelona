@@ -7,8 +7,11 @@
 *{margin:0;padding:0;box-sizing:border-box}
 html.en .es{display:none}html:not(.en) .en{display:none}
 body{font:16px/1.65 'Georgia',serif;color:var(--paper);background:var(--pine);overflow-x:hidden}
-#lg{position:fixed;top:16px;right:16px;z-index:50;background:rgba(0,0,0,.4);color:var(--sage);border:1px solid var(--moss);border-radius:30px;padding:7px 15px;font:700 12px/1 sans-serif;letter-spacing:.1em;cursor:pointer}
-.hero{min-height:100svh;display:flex;flex-direction:column;justify-content:center;padding:60px 24px;position:relative;background:radial-gradient(120% 90% at 50% 0%,#16281c 0%,#0a1410 60%)}
+#lg{position:fixed;top:16px;right:16px;z-index:60;background:rgba(0,0,0,.4);color:var(--sage);border:1px solid var(--moss);border-radius:30px;padding:7px 15px;font:700 12px/1 sans-serif;letter-spacing:.1em;cursor:pointer}
+.bar{position:fixed;bottom:0;left:0;right:0;z-index:55;background:rgba(5,10,7,.96);backdrop-filter:blur(8px);display:flex;gap:2px;padding:7px 10px;justify-content:center}
+.bar a{flex:1;max-width:210px;text-align:center;text-decoration:none;font:800 13px/1 sans-serif;letter-spacing:.06em;text-transform:uppercase;padding:12px 6px;border-radius:4px}
+.bar .t{background:var(--gold);color:#1a1a10}.bar .i{background:transparent;color:var(--paper);border:1px solid var(--moss)}
+.hero{min-height:100svh;display:flex;flex-direction:column;justify-content:center;padding:60px 24px 100px;position:relative;background:radial-gradient(120% 90% at 50% 0%,#16281c 0%,#0a1410 60%)}
 .fog{position:absolute;inset:0;background:radial-gradient(60% 40% at 30% 70%,rgba(167,196,160,.09),transparent),radial-gradient(50% 40% at 75% 40%,rgba(167,196,160,.07),transparent);animation:drift 16s ease-in-out infinite alternate;pointer-events:none}
 @keyframes drift{from{transform:translateX(-4%)}to{transform:translateX(4%)}}
 .trees{position:absolute;bottom:0;left:0;right:0;height:38%;background:linear-gradient(180deg,transparent,#050a07);pointer-events:none}
@@ -16,26 +19,24 @@ body{font:16px/1.65 'Georgia',serif;color:var(--paper);background:var(--pine);ov
 .mono{font:600 12px/1.8 ui-monospace,monospace;letter-spacing:.34em;text-transform:uppercase;color:var(--sage)}
 .brand{font-size:14px;letter-spacing:.5em;text-transform:uppercase;color:var(--gold);margin-bottom:20px}
 h1{font-size:clamp(44px,10vw,96px);font-weight:400;font-style:italic;line-height:1;letter-spacing:-.01em}
-.sub{margin-top:20px;font-size:clamp(17px,3.6vw,23px);color:var(--sage)}
+.hsub{margin-top:20px;font-size:clamp(17px,3.6vw,23px);color:var(--sage)}
 .count{margin:34px auto 0;display:inline-flex;gap:18px}
 .count div{text-align:center}.count b{display:block;font:700 34px/1 sans-serif;color:var(--gold)}.count span{font:600 10px/1 sans-serif;letter-spacing:.2em;text-transform:uppercase;color:var(--sage)}
-.cta{margin-top:38px;display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
-.btn{padding:15px 28px;border-radius:4px;font:800 14px/1 sans-serif;letter-spacing:.08em;text-transform:uppercase;text-decoration:none}
-.b-tk{background:var(--gold);color:#1a1a10}.b-ig{background:transparent;color:var(--paper);border:1px solid var(--moss)}
-section{max-width:900px;margin:0 auto;padding:74px 24px}
-.lead{font-size:clamp(20px,3.4vw,28px);font-style:italic;line-height:1.5}
-.hr{width:60px;height:2px;background:var(--gold);margin:34px auto}
-.info{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--moss);border:1px solid var(--moss);border-radius:12px;overflow:hidden;margin-top:20px}
-.info div{background:var(--pine);padding:22px}
-.info h3{font:700 11px/1 sans-serif;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:9px}
-.info p{font-size:16px;font-family:sans-serif}
-.big{width:100%;height:min(72vh,620px);object-fit:cover;border-radius:14px;margin-top:8px}
-.secret{background:#0f1c14;border:1px dashed var(--moss);border-radius:14px;padding:26px;text-align:center;margin-top:22px}
+section{max-width:900px;margin:0 auto;padding:72px 24px}
+h2{font-size:clamp(26px,5vw,40px);font-weight:400;font-style:italic;color:var(--gold);text-align:center}
+.hr{width:60px;height:2px;background:var(--gold);margin:20px auto 26px}
+.lead{font-size:clamp(18px,3vw,23px);font-style:italic;line-height:1.5;text-align:center;max-width:720px;margin:0 auto}
+.big{width:100%;max-width:520px;margin:26px auto 0;display:block;border-radius:14px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--moss);border:1px solid var(--moss);border-radius:12px;overflow:hidden;margin-top:8px}
+.pc{background:var(--pine);padding:24px;text-align:center}.pc .ic{font-size:28px}.pc h3{font:700 13px/1 sans-serif;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin:10px 0 6px}.pc p{font-family:sans-serif;font-size:14px;color:var(--sage)}
+.info{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--moss);border:1px solid var(--moss);border-radius:12px;overflow:hidden}
+.info div{background:var(--pine);padding:22px}.info h3{font:700 11px/1 sans-serif;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:9px}.info p{font-size:16px;font-family:sans-serif}
+.secret{background:#0f1c14;border:1px dashed var(--moss);border-radius:14px;padding:26px;text-align:center;max-width:640px;margin:24px auto 0}
 .secret .mono{color:var(--gold)}
-.q{background:#0f1c14;border-left:3px solid var(--gold);border-radius:0 12px 12px 0;padding:20px;font-style:italic;font-size:15.5px;margin-top:14px}
-footer{text-align:center;padding:56px 24px;background:#050a07;color:var(--sage);font-family:sans-serif;font-size:14px}
-footer a{color:var(--gold)}
-@media(max-width:640px){.info{grid-template-columns:1fr}}
+.faq{max-width:720px;margin:0 auto}.fq{border-bottom:1px solid var(--moss);padding:16px 0}.fq h3{font:400 18px/1 Georgia,serif;font-style:italic;color:var(--gold)}.fq p{font-family:sans-serif;font-size:15px;color:var(--sage);margin-top:6px}
+.q{background:#0f1c14;border-left:3px solid var(--gold);border-radius:0 12px 12px 0;padding:20px;font-style:italic;font-size:15px;margin-top:14px}
+footer{text-align:center;padding:56px 24px 90px;background:#050a07;color:var(--sage);font-family:sans-serif;font-size:14px}footer a{color:var(--gold)}
+@media(max-width:700px){.cards,.info{grid-template-columns:1fr}}
 </style></head>
 <body>
 <button id="lg" onclick="document.documentElement.classList.toggle('en')"><span class="es">EN</span><span class="en">ES</span></button>
@@ -44,35 +45,52 @@ footer a{color:var(--gold)}
  <div class="hero-in">
   <div class="brand">Signature · Madrid</div>
   <h1>Forest Connection</h1>
-  <p class="sub"><span class="es">4º Aniversario · 14 horas en la naturaleza</span><span class="en">4th Anniversary · 14 hours in nature</span></p>
-  <div class="count">
-   <div><b>12</b><span>SEPT</span></div><div><b>19h</b><span class="es">inicio</span><span class="en">start</span></div><div><b>14h</b><span class="es">duración</span><span class="en">length</span></div>
-  </div>
-  <div class="cta">
-   <a class="btn b-tk" href="#info"><span class="es">Entradas</span><span class="en">Tickets</span></a>
-   <a class="btn b-ig" href="https://www.instagram.com/signature.madrid/" target="_blank" rel="noopener">Instagram</a>
-  </div>
-  <p class="mono" style="margin-top:26px">40.4168°N · 3.7038°W — <span class="es">ubicación por revelar</span><span class="en">location tbа</span></p>
+  <p class="hsub"><span class="es">4º Aniversario · 14 horas en la naturaleza</span><span class="en">4th Anniversary · 14 hours in nature</span></p>
+  <div class="count"><div><b>12</b><span>SEPT</span></div><div><b>19h</b><span class="es">inicio</span><span class="en">start</span></div><div><b>14h</b><span class="es">duración</span><span class="en">length</span></div></div>
+  <p class="mono" style="margin-top:26px">40.4168°N · 3.7038°W — <span class="es">ubicación por revelar</span><span class="en">location tba</span></p>
  </div>
 </div>
 
-<section id="info">
- <p class="lead"><span class="es">Con motivo de nuestro 4º aniversario, Signature propone un encuentro de 14 horas en la naturaleza. Forest Connection nace para conectar con la comunidad en un espacio abierto, lejos de las dinámicas habituales del club.</span><span class="en">For our 4th anniversary, Signature invites you to a 14-hour gathering in nature. Forest Connection is about reconnecting with the community in an open space, far from the usual club dynamics.</span></p>
+<section>
+ <h2><span class="es">El encuentro</span><span class="en">The gathering</span></h2>
  <div class="hr"></div>
+ <p class="lead"><span class="es">Con motivo de nuestro 4º aniversario, Signature propone un encuentro de 14 horas en la naturaleza. Forest Connection nace para conectar con la comunidad en un espacio abierto, lejos de las dinámicas habituales del club — un lugar definido por el sonido, lo visual y lo artístico.</span><span class="en">For our 4th anniversary, Signature invites you to a 14-hour gathering in nature. Forest Connection is about reconnecting with the community in an open space, far from the usual club dynamics — a place shaped by sound, visuals and art.</span></p>
  <img class="big" src="img/01.jpg" alt="Forest Connection flyer">
+</section>
+
+<section style="padding-top:0">
+ <h2><span class="es">Qué esperar</span><span class="en">What to expect</span></h2>
+ <div class="hr"></div>
+ <div class="cards">
+  <div class="pc"><div class="ic">🌲</div><h3><span class="es">En la naturaleza</span><span class="en">In nature</span></h3><p><span class="es">Open air, lejos del club.</span><span class="en">Open air, away from the club.</span></p></div>
+  <div class="pc"><div class="ic">🎛️</div><h3><span class="es">14 horas</span><span class="en">14 hours</span></h3><p><span class="es">Techno melódico &amp; organic.</span><span class="en">Melodic &amp; organic techno.</span></p></div>
+  <div class="pc"><div class="ic">🤝</div><h3><span class="es">Comunidad</span><span class="en">Community</span></h3><p><span class="es">Sonido, visuales y arte.</span><span class="en">Sound, visuals and art.</span></p></div>
+ </div>
+</section>
+
+<section style="padding-top:0">
+ <h2><span class="es">Info práctica</span><span class="en">Practical info</span></h2>
+ <div class="hr"></div>
  <div class="info">
-  <div><h3><span class="es">Fecha</span><span class="en">Date</span></h3><p><span class="es">Sábado 12 septiembre 2026</span><span class="en">Saturday 12 September 2026</span><br>19:00 → 09:00</p></div>
+  <div><h3><span class="es">Fecha</span><span class="en">Date</span></h3><p><span class="es">Sábado 12 septiembre 2026 · 19:00 → 09:00</span><span class="en">Saturday 12 September 2026 · 19:00 → 09:00</span></p></div>
   <div><h3><span class="es">Formato</span><span class="en">Format</span></h3><p><span class="es">Open air · 14h · en la naturaleza</span><span class="en">Open air · 14h · in nature</span></p></div>
   <div><h3><span class="es">Sonido</span><span class="en">Sound</span></h3><p><span class="es">Techno melódico · organic · comunidad</span><span class="en">Melodic techno · organic · community</span></p></div>
   <div><h3><span class="es">Edad</span><span class="en">Age</span></h3><p>+18</p></div>
  </div>
  <div class="secret">
   <p class="mono"><span class="es">Ubicación secreta</span><span class="en">Secret location</span></p>
-  <p style="font-family:sans-serif;margin-top:10px;font-size:16px"><span class="es">La ubicación exacta se revela a las personas con entrada <b>48 horas antes</b> del evento.</span><span class="en">The exact location is revealed to ticket holders <b>48 hours before</b> the event.</span></p>
+  <p style="font-family:sans-serif;margin-top:10px;font-size:16px"><span class="es">La ubicación exacta se revela a quien tenga entrada <b>48 horas antes</b> del evento.</span><span class="en">The exact location is revealed to ticket holders <b>48 hours before</b> the event.</span></p>
  </div>
 </section>
 
 <section style="padding-top:0">
+ <h2><span class="es">Preguntas</span><span class="en">FAQ</span></h2>
+ <div class="hr"></div>
+ <div class="faq">
+  <div class="fq"><h3><span class="es">¿Cómo consigo la entrada?</span><span class="en">How do I get a ticket?</span></h3><p><span class="es">Venta anticipada — el enlace se publica en Instagram (@signature.madrid) y en Resident Advisor.</span><span class="en">Advance sale — the link is posted on Instagram (@signature.madrid) and Resident Advisor.</span></p></div>
+  <div class="fq"><h3><span class="es">¿Dónde es exactamente?</span><span class="en">Where exactly?</span></h3><p><span class="es">En un entorno natural cerca de Madrid. La ubicación se comparte 48h antes con las personas con entrada.</span><span class="en">A natural setting near Madrid. The location is shared 48h before with ticket holders.</span></p></div>
+  <div class="fq"><h3><span class="es">¿Cuánto dura?</span><span class="en">How long?</span></h3><p><span class="es">14 horas, de las 19:00 del sábado a las 09:00 del domingo.</span><span class="en">14 hours, from 19:00 Saturday to 09:00 Sunday.</span></p></div>
+ </div>
  <div class="q">“Uno de los colectivos más cuidados de Madrid. La selección musical y el entorno hacen que cada fiesta sea única.”</div>
  <div class="q">“The Signature crew build a real community. Beautiful setting, beautiful people, music all day into the night.”</div>
 </section>
@@ -82,4 +100,8 @@ footer a{color:var(--gold)}
  <p style="margin-top:8px">Forest Connection · Madrid · 12.09.2026</p>
  <p style="margin-top:8px"><a href="https://www.instagram.com/signature.madrid/" target="_blank" rel="noopener">@signature.madrid</a></p>
 </footer>
+<div class="bar">
+ <a class="t" href="https://www.instagram.com/signature.madrid/" target="_blank" rel="noopener"><span class="es">Entradas</span><span class="en">Tickets</span></a>
+ <a class="i" href="https://www.instagram.com/signature.madrid/" target="_blank" rel="noopener">Instagram</a>
+</div>
 </body></html>

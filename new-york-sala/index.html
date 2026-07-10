@@ -7,39 +7,43 @@
 *{margin:0;padding:0;box-sizing:border-box}
 html.en .es{display:none}html:not(.en) .en{display:none}
 body{font:16px/1.6 'Segoe UI',sans-serif;color:#fff;background:var(--ink)}
-#lg{position:fixed;top:16px;right:16px;z-index:50;background:var(--yel);color:#000;border:0;border-radius:0;padding:8px 15px;font-size:12px;font-weight:900;letter-spacing:.1em;cursor:pointer}
-.hero{min-height:98svh;display:flex;flex-direction:column;justify-content:center;padding:60px 24px;position:relative;background:linear-gradient(180deg,#101019,#0a0a0c);overflow:hidden}
-.sky{position:absolute;bottom:0;left:0;right:0;height:34%;background:
- linear-gradient(90deg,#14141c 0 8%,transparent 8% 9%,#191922 9% 15%,transparent 15% 16%,#141420 16% 24%,transparent 24% 25%,#1c1c28 25% 33%,transparent 33% 34%,#141420 34% 44%,transparent 44% 45%,#191926 45% 55%,transparent 55% 56%,#14141c 56% 66%,transparent 66% 67%,#1c1c28 67% 78%,transparent 78% 79%,#161622 79% 90%,transparent 90% 91%,#191926 91% 100%);
- mask:linear-gradient(180deg,transparent,#000 40%)}
-.win{position:absolute;bottom:0;left:0;right:0;height:34%;background-image:radial-gradient(1px 2px at 12% 60%,var(--yel),transparent),radial-gradient(1px 2px at 28% 40%,var(--yel),transparent),radial-gradient(1px 2px at 46% 70%,var(--yel),transparent),radial-gradient(1px 2px at 62% 50%,var(--yel),transparent),radial-gradient(1px 2px at 80% 65%,var(--yel),transparent),radial-gradient(1px 2px at 90% 45%,var(--yel),transparent);opacity:.6;animation:twinkle 3s steps(2) infinite}
-@keyframes twinkle{50%{opacity:.3}}
-.hero-in{position:relative;z-index:2;max-width:900px}
+#lg{position:fixed;top:16px;right:16px;z-index:60;background:var(--yel);color:#000;border:0;padding:8px 15px;font-size:12px;font-weight:900;letter-spacing:.1em;cursor:pointer}
+.bar{position:fixed;bottom:0;left:0;right:0;z-index:55;background:rgba(5,5,6,.96);backdrop-filter:blur(8px);display:flex;gap:2px;padding:7px 10px;justify-content:center}
+.bar a{flex:1;max-width:200px;text-align:center;text-decoration:none;font-weight:800;font-size:14px;padding:11px 6px}
+.bar .w{background:#25d366;color:#053}.bar .t{background:var(--yel);color:#000}.bar .m{background:#26262f;color:#fff}
+.hero{min-height:92svh;display:flex;flex-direction:column;justify-content:center;padding:60px 24px 96px;position:relative;background:linear-gradient(180deg,#101019,#0a0a0c);overflow:hidden}
+.sky{position:absolute;bottom:0;left:0;right:0;height:34%;background:linear-gradient(90deg,#14141c 0 8%,transparent 8% 9%,#191922 9% 15%,transparent 15% 16%,#141420 16% 24%,transparent 24% 25%,#1c1c28 25% 33%,transparent 33% 34%,#141420 34% 44%,transparent 44% 45%,#191926 45% 55%,transparent 55% 56%,#14141c 56% 66%,transparent 66% 67%,#1c1c28 67% 78%,transparent 78% 79%,#161622 79% 90%,transparent 90% 91%,#191926 91% 100%);mask:linear-gradient(180deg,transparent,#000 40%)}
+.win{position:absolute;bottom:0;left:0;right:0;height:34%;background-image:radial-gradient(1px 2px at 12% 60%,var(--yel),transparent),radial-gradient(1px 2px at 28% 40%,var(--yel),transparent),radial-gradient(1px 2px at 46% 70%,var(--yel),transparent),radial-gradient(1px 2px at 62% 50%,var(--yel),transparent),radial-gradient(1px 2px at 80% 65%,var(--yel),transparent),radial-gradient(1px 2px at 90% 45%,var(--yel),transparent);opacity:.6;animation:tw 3s steps(2) infinite}
+@keyframes tw{50%{opacity:.3}}
+.hero-in{position:relative;z-index:2;max-width:1000px;margin:0 auto;width:100%}
 .est{font-size:12px;letter-spacing:.34em;text-transform:uppercase;color:var(--yel);font-weight:800}
-h1{font-size:clamp(46px,12vw,120px);font-weight:900;line-height:.86;letter-spacing:-.02em;margin:14px 0 6px}
-h1 em{font-style:normal;color:var(--yel)}
+h1{font-size:clamp(46px,12vw,120px);font-weight:900;line-height:.86;letter-spacing:-.02em;margin:14px 0 6px}h1 em{font-style:normal;color:var(--yel)}
 .tag{font-size:clamp(17px,3.4vw,23px);max-width:600px;color:var(--steel)}
-.stars{margin-top:14px;font-size:15px;font-weight:600}.stars b{color:var(--yel)}
-.cta{margin-top:26px;display:flex;gap:12px;flex-wrap:wrap}
-.btn{padding:14px 26px;font-weight:900;text-decoration:none;font-size:14px;letter-spacing:.04em}
-.b-wa{background:#25d366;color:#053}.b-map{background:var(--yel);color:#000}.b-ig{background:transparent;color:#fff;border:2px solid var(--red)}
+.stars{margin-top:12px;font-size:15px;font-weight:600}.stars b{color:var(--yel)}
+.quick{margin-top:18px;display:flex;gap:9px;flex-wrap:wrap;font-size:13.5px}
+.quick span{background:rgba(255,255,255,.06);border:1px solid #2a2a34;border-radius:30px;padding:7px 14px}
 section{max-width:1000px;margin:0 auto;padding:64px 24px}
-h2{font-size:clamp(26px,5vw,42px);font-weight:900;margin-bottom:14px}h2 em{font-style:normal;color:var(--yel)}
-.lead{font-size:clamp(18px,3vw,24px);color:var(--steel);max-width:760px}
-.gal{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:24px}
-.gal img{width:100%;height:210px;object-fit:cover}
-.gal img:first-child{grid-column:span 2;grid-row:span 2;height:100%}
-.info{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:24px}
-.card{background:#14141c;border-top:3px solid var(--yel);padding:22px}
-.card h3{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--red);margin-bottom:8px}
-.card p{font-weight:700}
-.entry{background:#14141c;border:2px solid var(--yel);padding:26px;margin-top:22px}
+h2{font-size:clamp(26px,5vw,42px);font-weight:900;margin-bottom:10px}h2 em{font-style:normal;color:var(--yel)}
+.sub{color:var(--steel);font-size:15px;margin-bottom:22px;max-width:640px}
+.story{display:grid;grid-template-columns:1.1fr .9fr;gap:36px;align-items:center}
+.story p{font-size:clamp(16px,2.4vw,19px);color:var(--steel);margin-bottom:14px}
+.story img{width:100%;height:100%;min-height:300px;object-fit:cover;border-radius:14px}
+.nights{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.nc{background:#14141c;border-top:3px solid var(--yel);border-radius:0 0 14px 14px;padding:22px}
+.nc .ic{font-size:30px}.nc h3{font-size:17px;margin:8px 0 4px}.nc p{font-size:14px;color:var(--steel)}
+.gal{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.gal img{width:100%;height:200px;object-fit:cover}.gal img.wide{grid-column:span 2;height:100%}
+.entry{background:#14141c;border:2px solid var(--yel);padding:26px;max-width:760px;margin:0 auto}
 .erow{display:flex;justify-content:space-between;padding:12px 0;border-bottom:1px solid #26262f;font-weight:600}.erow:last-child{border:0}.erow b{color:var(--yel)}
 .note{font-size:13px;color:var(--steel);margin-top:14px}
-.rev{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:22px}
-.q{background:#14141c;border-left:3px solid var(--red);padding:18px;font-style:italic;font-size:15px}
-footer{background:#050506;text-align:center;padding:50px 24px;color:var(--steel)}footer a{color:var(--yel)}
-@media(max-width:700px){.info{grid-template-columns:1fr}.gal{grid-template-columns:1fr 1fr}.gal img:first-child{grid-column:span 2;grid-row:auto}.rev{grid-template-columns:1fr}}
+.rev{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.q{background:#14141c;border-left:3px solid var(--red);padding:18px;font-style:italic;font-size:14.5px}.q .who{display:block;margin-top:10px;font-style:normal;font-weight:700;color:var(--yel);font-size:13px}
+.visit{display:grid;grid-template-columns:1fr 1fr;gap:36px;max-width:900px;margin:0 auto}
+.hours{list-style:none}.hours li{display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid #26262f;font-size:14.5px}
+.vbox b{color:var(--yel)}
+.vbox a.map{display:inline-block;margin-top:12px;background:var(--yel);color:#000;text-decoration:none;font-weight:800;padding:12px 22px;font-size:14px}
+footer{background:#050506;text-align:center;padding:48px 24px 90px;color:var(--steel)}footer a{color:var(--yel)}
+@media(max-width:820px){.story,.visit{grid-template-columns:1fr}.nights{grid-template-columns:1fr}.gal{grid-template-columns:1fr 1fr}.gal img.wide{grid-column:span 2}.rev{grid-template-columns:1fr}}
 </style></head>
 <body>
 <button id="lg" onclick="document.documentElement.classList.toggle('en')"><span class="es">EN</span><span class="en">ES</span></button>
@@ -50,26 +54,37 @@ footer{background:#050506;text-align:center;padding:50px 24px;color:var(--steel)
   <h1>New York <em>Sala</em></h1>
   <p class="tag"><span class="es">Un clàssic de la nit barcelonina al cor del Gòtic. Música variada, ambient internacional i obert fins tard.</span><span class="en">A classic of Barcelona nightlife in the heart of the Gothic Quarter. Mixed music, international crowd, open very late.</span></p>
   <div class="stars">★ 3,8 · 311 <span class="es">reseñas</span><span class="en">reviews</span></div>
-  <div class="cta">
-   <a class="btn b-wa" href="https://wa.me/34686581529" target="_blank" rel="noopener"><span class="es">Reservas / lista</span><span class="en">Tables / list</span></a>
-   <a class="btn b-map" href="https://www.google.com/maps/search/?api=1&query=New+York+Sala+Escudellers+Barcelona" target="_blank" rel="noopener"><span class="es">Cómo llegar</span><span class="en">Directions</span></a>
-   <a class="btn b-ig" href="https://cli.fourvenues.com/es/new-york-disco" target="_blank" rel="noopener"><span class="es">Entradas</span><span class="en">Tickets</span></a>
-  </div>
+  <div class="quick"><span>🌃 <span class="es">Hasta el amanecer</span><span class="en">Till dawn</span></span><span>🎶 <span class="es">Comercial · latino · hits</span><span class="en">Commercial · Latin · hits</span></span><span>🌍 <span class="es">Ambiente internacional</span><span class="en">International crowd</span></span></div>
  </div>
 </div>
 
 <section>
  <h2><span class="es">La noche del</span><span class="en">Nights in the</span> <em>Gòtic</em></h2>
- <p class="lead"><span class="es">Local histórico en pleno corazón del Barri Gòtic. Sesiones variadas, público de todo el mundo y la barra abierta hasta el amanecer. Un imprescindible del centro para salir a bailar.</span><span class="en">A historic room in the very heart of the Gothic Quarter. Mixed sets, a crowd from all over the world and the bar open till dawn. A downtown must if you want to dance.</span></p>
- <div class="gal"><img src="img/01.jpg" alt=""><img src="img/02.jpg" alt=""><img src="img/03.jpg" alt=""><img src="img/04.jpg" alt=""><img src="img/05.jpg" alt=""></div>
+ <div class="story">
+  <div>
+   <p><span class="es">Local histórico en pleno corazón del Barri Gòtic. Sesiones variadas, público de todo el mundo y la barra abierta hasta el amanecer. Un imprescindible del centro para salir a bailar.</span><span class="en">A historic room in the very heart of the Gothic Quarter. Mixed sets, a crowd from all over the world and the bar open till dawn. A downtown must if you want to dance.</span></p>
+   <p><span class="es">Sin complicaciones: bajas al Gòtic, entras y bailas. Comercial, latino y los hits que suenan toda la noche, en un espacio con mucha historia.</span><span class="en">No fuss: head down to the Gòtic, walk in and dance. Commercial, Latin and the hits playing all night, in a room full of history.</span></p>
+  </div>
+  <img src="img/02.jpg" alt="">
+ </div>
 </section>
 
 <section style="padding-top:0">
- <div class="info">
-  <div class="card"><h3><span class="es">Horario</span><span class="en">Hours</span></h3><p><span class="es">Cada noche · hasta 05:00–06:30</span><span class="en">Every night · until 05:00–06:30</span></p></div>
-  <div class="card"><h3><span class="es">Música</span><span class="en">Music</span></h3><p><span class="es">Comercial · latino · house · hits</span><span class="en">Commercial · Latin · house · hits</span></p></div>
-  <div class="card"><h3><span class="es">Dónde</span><span class="en">Where</span></h3><p>Carrer dels Escudellers 5 · Gòtic</p></div>
+ <h2><span class="es">La noche</span><span class="en">The night</span></h2>
+ <div class="nights">
+  <div class="nc"><div class="ic">🎧</div><h3><span class="es">Música</span><span class="en">Music</span></h3><p><span class="es">Comercial, latino, house y los hits del momento.</span><span class="en">Commercial, Latin, house and today's hits.</span></p></div>
+  <div class="nc"><div class="ic">🍸</div><h3><span class="es">Copas</span><span class="en">Drinks</span></h3><p><span class="es">Barra abierta hasta el cierre.</span><span class="en">Bar open till closing.</span></p></div>
+  <div class="nc"><div class="ic">🕺</div><h3><span class="es">Ambiente</span><span class="en">Vibe</span></h3><p><span class="es">Internacional, para bailar sin parar.</span><span class="en">International, made for dancing.</span></p></div>
  </div>
+</section>
+
+<section style="padding-top:0">
+ <h2><span class="es">La sala</span><span class="en">The room</span></h2>
+ <div class="gal"><img class="wide" src="img/03.jpg" alt=""><img src="img/04.jpg" alt=""><img src="img/05.jpg" alt=""><img src="img/06.jpg" alt=""><img src="img/07.jpg" alt=""></div>
+</section>
+
+<section style="padding-top:0">
+ <h2><span class="es">Entradas &amp; mesas</span><span class="en">Entry &amp; tables</span></h2>
  <div class="entry">
   <div class="erow"><span class="es">Lista / antes de 01:30</span><span class="en">List / before 01:30</span><b><span class="es">consúltanos</span><span class="en">ask us</span></b></div>
   <div class="erow"><span class="es">Entrada general (con consumición)</span><span class="en">General (drink included)</span><b>15–20€</b></div>
@@ -79,14 +94,41 @@ footer{background:#050506;text-align:center;padding:50px 24px;color:var(--steel)
 </section>
 
 <section style="padding-top:0">
+ <h2><span class="es">Lo que dicen</span><span class="en">What they say</span></h2>
  <div class="rev">
-  <div class="q">“Un clásico del centro. Música variada, ambiente internacional y abierto hasta muy tarde. Para bailar sin complicaciones en pleno Gòtic.”</div>
-  <div class="q">“Great mix of music and an international crowd right downtown. Good spot if you want to dance late in the old town.”</div>
+  <div class="q">“Un clásico del centro. Música variada, ambiente internacional y abierto hasta muy tarde. Para bailar sin complicaciones en pleno Gòtic.”<span class="who">Google · ★★★★</span></div>
+  <div class="q">“Great mix of music and an international crowd right downtown. Good spot if you want to dance late in the old town.”<span class="who">Google · ★★★★</span></div>
+  <div class="q">“Ambiente de fiesta hasta el amanecer, justo en el corazón del Gótico. Un sitio para acabar la noche bailando.”<span class="who">Google · ★★★★</span></div>
+ </div>
+</section>
+
+<section style="padding-top:0">
+ <h2><span class="es">Dónde &amp; cuándo</span><span class="en">Where &amp; when</span></h2>
+ <div class="visit">
+  <ul class="hours">
+   <li><span class="es">Jueves</span><span class="en">Thursday</span><span>00:00 – 05:00</span></li>
+   <li><span class="es">Viernes</span><span class="en">Friday</span><span>00:00 – 05:30</span></li>
+   <li><span class="es">Sábado</span><span class="en">Saturday</span><span>00:00 – 06:30</span></li>
+   <li><span class="es">Domingo</span><span class="en">Sunday</span><span>00:00 – 06:00</span></li>
+   <li><span class="es">Lun–Mié</span><span class="en">Mon–Wed</span><span>00:00 – 05:00</span></li>
+  </ul>
+  <div class="vbox">
+   <p><b><span class="es">Dónde estamos</span><span class="en">Where we are</span></b><br>Carrer dels Escudellers, 5<br>Barri Gòtic · 08002 Barcelona</p>
+   <p style="margin-top:14px"><b><span class="es">Lista &amp; reservas</span><span class="en">List &amp; tables</span></b><br>WhatsApp · 686 581 529</p>
+   <p style="margin-top:14px;font-size:14px;color:var(--steel)"><span class="es">En pleno Gòtic, junto a la Rambla. Metro Liceu o Drassanes (L3), a 4 min andando.</span><span class="en">In the Gòtic, off the Rambla. Metro Liceu or Drassanes (L3), 4 min walk.</span></p>
+   <a class="map" href="https://www.google.com/maps/search/?api=1&query=New+York+Sala+Escudellers+Barcelona" target="_blank" rel="noopener"><span class="es">Cómo llegar →</span><span class="en">Get directions →</span></a>
+  </div>
  </div>
 </section>
 
 <footer>
  <p style="font-size:24px;font-weight:900;color:#fff">NEW YORK <span style="color:var(--yel)">SALA</span></p>
  <p style="margin-top:8px">Carrer dels Escudellers 5 · Barri Gòtic · Barcelona · <a href="https://wa.me/34686581529">686 581 529</a></p>
+ <p style="margin-top:6px;font-size:13px;opacity:.7">★ 3,8 · 311 <span class="es">reseñas</span><span class="en">reviews</span> · Google</p>
 </footer>
+<div class="bar">
+ <a class="w" href="https://wa.me/34686581529" target="_blank" rel="noopener">💬 WhatsApp</a>
+ <a class="t" href="https://cli.fourvenues.com/es/new-york-disco" target="_blank" rel="noopener">🎟️ <span class="es">Entradas</span><span class="en">Tickets</span></a>
+ <a class="m" href="https://www.google.com/maps/search/?api=1&query=New+York+Sala+Escudellers+Barcelona" target="_blank" rel="noopener">📍 <span class="es">Cómo llegar</span><span class="en">Directions</span></a>
+</div>
 </body></html>

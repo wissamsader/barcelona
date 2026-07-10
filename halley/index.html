@@ -6,9 +6,12 @@
 :root{--void:#050608;--blue:#3d7bff;--ice:#cfe0ff;--dim:#7d8798}
 *{margin:0;padding:0;box-sizing:border-box}
 html.en .es{display:none}html:not(.en) .en{display:none}
-body{font:15px/1.7 'Helvetica Neue',Arial,sans-serif;color:var(--ice);background:var(--void);overflow-x:hidden}
-#lg{position:fixed;top:16px;right:16px;z-index:50;background:transparent;color:var(--blue);border:1px solid #26324a;border-radius:0;padding:7px 14px;font-size:12px;font-weight:700;letter-spacing:.14em;cursor:pointer}
-.hero{min-height:100svh;display:flex;flex-direction:column;justify-content:center;padding:60px 26px;position:relative;overflow:hidden}
+body{font:15px/1.7 'Helvetica Neue',Arial,sans-serif;color:var(--ice);background:var(--void)}
+#lg{position:fixed;top:16px;right:16px;z-index:60;background:transparent;color:var(--blue);border:1px solid #26324a;padding:7px 14px;font-size:12px;font-weight:700;letter-spacing:.14em;cursor:pointer}
+.bar{position:fixed;bottom:0;left:0;right:0;z-index:55;background:rgba(3,4,10,.96);backdrop-filter:blur(8px);display:flex;gap:2px;padding:7px 10px;justify-content:center}
+.bar a{flex:1;max-width:200px;text-align:center;text-decoration:none;font-weight:700;font-size:13px;letter-spacing:.08em;text-transform:uppercase;padding:12px 6px}
+.bar .t{background:var(--blue);color:#000}.bar .i{border:1px solid #26324a;color:var(--ice)}.bar .m{background:var(--ice);color:#000}
+.hero{min-height:100svh;display:flex;flex-direction:column;justify-content:center;padding:60px 26px 100px;position:relative;overflow:hidden}
 .stars{position:absolute;inset:0;background:radial-gradient(1px 1px at 20% 30%,#fff,transparent),radial-gradient(1px 1px at 70% 60%,#cfe0ff,transparent),radial-gradient(1px 1px at 40% 80%,#fff,transparent),radial-gradient(1px 1px at 85% 25%,#9db6e0,transparent),radial-gradient(1px 1px at 55% 15%,#fff,transparent);opacity:.7}
 .comet{position:absolute;top:18%;left:-10%;width:60%;height:2px;background:linear-gradient(90deg,transparent,var(--blue));animation:orbit 9s linear infinite;transform-origin:right;opacity:.8}
 .comet::after{content:"";position:absolute;right:-4px;top:-3px;width:8px;height:8px;border-radius:50%;background:#fff;box-shadow:0 0 14px 3px var(--blue)}
@@ -16,28 +19,25 @@ body{font:15px/1.7 'Helvetica Neue',Arial,sans-serif;color:var(--ice);background
 .hero-in{position:relative;z-index:2;max-width:860px}
 .mono{font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--dim)}
 .brand{font-size:13px;letter-spacing:.5em;text-transform:uppercase;color:var(--blue);margin-bottom:24px}
-h1{font-size:clamp(40px,8vw,86px);font-weight:200;letter-spacing:-.01em;line-height:1.02}
-h1 b{font-weight:700}
+h1{font-size:clamp(40px,8vw,86px);font-weight:200;letter-spacing:-.01em;line-height:1.02}h1 b{font-weight:700}
 .line{margin-top:22px;font-size:clamp(16px,3vw,20px);color:var(--dim);font-weight:300;max-width:600px}
-.meta{margin-top:40px;display:grid;grid-template-columns:repeat(4,auto);gap:34px}
-.meta div h3{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--blue);margin-bottom:6px}
-.meta div p{font-size:16px;font-weight:500;color:#fff}
-.cta{margin-top:40px;display:flex;gap:12px;flex-wrap:wrap}
-.btn{padding:15px 30px;font-weight:700;text-decoration:none;font-size:13px;letter-spacing:.1em;text-transform:uppercase}
-.b-tk{background:var(--blue);color:#000}.b-ig{border:1px solid #26324a;color:var(--ice)}
+.hmeta{margin-top:40px;display:grid;grid-template-columns:repeat(4,auto);gap:34px}
+.hmeta div h3{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--blue);margin-bottom:6px}.hmeta div p{font-size:16px;font-weight:500;color:#fff}
 section{max-width:900px;margin:0 auto;padding:76px 26px}
-.big{width:100%;height:min(74vh,640px);object-fit:cover}
-.artist{border-top:1px solid #1a2436;padding-top:30px;margin-top:30px}
-.artist h2{font-size:clamp(24px,5vw,40px);font-weight:300}.artist h2 b{font-weight:700}
+h2{font-size:clamp(24px,5vw,38px);font-weight:200;color:#fff;margin-bottom:14px}h2 b{font-weight:700}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:8px}
+.two img{width:100%;border:1px solid #1a2436}
+.artist{border-top:1px solid #1a2436;padding-top:30px}
 .artist p{margin-top:14px;color:var(--dim);font-weight:300;max-width:640px}
-.tix{border:1px solid #1a2436;margin-top:26px}
-.tix-row{display:flex;justify-content:space-between;padding:16px 20px;border-bottom:1px solid #1a2436}
-.tix-row:last-child{border:0}.tix-row b{color:var(--blue)}
-.home-note{font-size:12px;color:var(--dim);margin-top:16px;letter-spacing:.02em}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.pc{border:1px solid #1a2436;padding:22px;text-align:center}.pc .ic{font-size:26px}.pc h3{margin:8px 0 4px;color:#fff;font-weight:500;font-size:16px}.pc p{color:var(--dim);font-weight:300;font-size:14px}
+.tix{border:1px solid #1a2436;max-width:760px;margin:0 auto}
+.tix-row{display:flex;justify-content:space-between;padding:16px 20px;border-bottom:1px solid #1a2436}.tix-row:last-child{border:0}.tix-row b{color:var(--blue)}
+.home-note{font-size:13px;color:var(--dim);margin-top:16px;letter-spacing:.02em;max-width:760px;margin-left:auto;margin-right:auto}
+.faq{max-width:760px;margin:0 auto}.fq{border-bottom:1px solid #1a2436;padding:16px 0}.fq h3{color:#fff;font-weight:500;font-size:16px}.fq p{color:var(--dim);font-weight:300;margin-top:6px;font-size:15px}
 .q{border-left:2px solid var(--blue);padding:14px 18px;margin-top:14px;color:var(--dim);font-weight:300;font-style:italic}
-footer{padding:56px 26px;background:#03040a;color:var(--dim);text-align:center;font-size:13px}
-footer a{color:var(--blue)}
-@media(max-width:640px){.meta{grid-template-columns:1fr 1fr;gap:20px}}
+footer{padding:56px 26px 90px;background:#03040a;color:var(--dim);text-align:center;font-size:13px}footer a{color:var(--blue)}
+@media(max-width:640px){.hmeta{grid-template-columns:1fr 1fr;gap:20px}.two,.cards{grid-template-columns:1fr}}
 </style></head>
 <body>
 <button id="lg" onclick="document.documentElement.classList.toggle('en')"><span class="es">EN</span><span class="en">ES</span></button>
@@ -48,31 +48,50 @@ footer a{color:var(--blue)}
   <div class="mono">Specka · 19.09.2026</div>
   <h1><b>Michael Mayer</b><br>[Kompakt]</h1>
   <p class="line"><span class="es">Un cometa cruza Madrid. Sets extendidos de uno de los fundadores de Kompakt, en una de las salas de referencia de la cultura de club.</span><span class="en">A comet crosses Madrid. Extended sets from a Kompakt co-founder, at one of the city's landmark club spaces.</span></p>
-  <div class="meta">
+  <div class="hmeta">
    <div><h3><span class="es">Fecha</span><span class="en">Date</span></h3><p>19 SEP 2026</p></div>
    <div><h3><span class="es">Puertas</span><span class="en">Doors</span></h3><p>23:59</p></div>
    <div><h3><span class="es">Sala</span><span class="en">Venue</span></h3><p>Specka</p></div>
    <div><h3><span class="es">Edad</span><span class="en">Age</span></h3><p>+18</p></div>
   </div>
-  <div class="cta">
-   <a class="btn b-tk" href="#tickets"><span class="es">Entradas</span><span class="en">Tickets</span></a>
-   <a class="btn b-ig" href="https://www.instagram.com/halleyclub/" target="_blank" rel="noopener">Instagram</a>
-  </div>
  </div>
 </div>
 
 <section>
- <img class="big" src="img/01.png" alt="Halley Club · Michael Mayer">
- <div class="artist">
+ <h2><span class="es">La noche</span><span class="en">The night</span></h2>
+ <div class="two"><img src="img/01.png" alt="Halley Club flyer"><img src="img/02.jpg" alt="Halley Club line-up"></div>
+ <div class="artist" style="margin-top:30px">
   <h2>Michael Mayer <b>&amp; David Ponziano</b></h2>
   <p><span class="es">Michael Mayer — remixer, DJ y productor de la Selva Negra alemana, cofundador del sello Kompakt — firma sets extendidos junto a David Ponziano. Cuatro décadas explorando todo tipo de géneros, en una noche.</span><span class="en">Michael Mayer — remixer, DJ, producer from Germany's Black Forest and Kompakt co-founder — plays extended sets alongside David Ponziano. Four decades of genre-crossing exploration, in one night.</span></p>
  </div>
- <div class="tix" id="tickets">
+</section>
+
+<section style="padding-top:0">
+ <h2><span class="es">Qué esperar</span><span class="en">What to expect</span></h2>
+ <div class="cards">
+  <div class="pc"><div class="ic">🎛️</div><h3>Kompakt</h3><p><span class="es">Techno melódico de referencia.</span><span class="en">Landmark melodic techno.</span></p></div>
+  <div class="pc"><div class="ic">⏱️</div><h3><span class="es">Sets extendidos</span><span class="en">Extended sets</span></h3><p>Mayer &amp; Ponziano.</p></div>
+  <div class="pc"><div class="ic">🔊</div><h3>Specka</h3><p><span class="es">Sala de club de verdad.</span><span class="en">A proper club room.</span></p></div>
+ </div>
+</section>
+
+<section style="padding-top:0">
+ <h2><span class="es">Entradas</span><span class="en">Tickets</span></h2>
+ <div class="tix">
   <div class="tix-row"><span class="es">Anticipada</span><span class="en">Advance</span><b>18€</b></div>
   <div class="tix-row"><span class="es">2ª fase</span><span class="en">2nd release</span><b>24€</b></div>
   <div class="tix-row"><span class="es">Taquilla</span><span class="en">Door</span><b>30€</b></div>
  </div>
  <p class="home-note"><span class="es">★ Esta es la página oficial del evento. Consíguela por Instagram si algún enlace antiguo no funciona.</span><span class="en">★ This is the event's official home. Reach us on Instagram if any older link no longer works.</span></p>
+</section>
+
+<section style="padding-top:0">
+ <h2>FAQ</h2>
+ <div class="faq">
+  <div class="fq"><h3><span class="es">¿Dónde es?</span><span class="en">Where is it?</span></h3><p><span class="es">Specka (Halley Club), Calle Orense 26, Madrid. Metro Nuevos Ministerios o Santiago Bernabéu.</span><span class="en">Specka (Halley Club), Calle Orense 26, Madrid. Metro Nuevos Ministerios or Santiago Bernabéu.</span></p></div>
+  <div class="fq"><h3><span class="es">¿A qué hora?</span><span class="en">What time?</span></h3><p><span class="es">Puertas a las 23:59 del sábado 19, hasta las 06:00.</span><span class="en">Doors at 23:59 on Saturday the 19th, until 06:00.</span></p></div>
+  <div class="fq"><h3><span class="es">¿Dónde consigo la entrada?</span><span class="en">Where do I get tickets?</span></h3><p><span class="es">Anticipada desde 18€ — enlace en el Instagram de Halley Club (@halleyclub).</span><span class="en">Advance from 18€ — link on Halley Club's Instagram (@halleyclub).</span></p></div>
+ </div>
  <div class="q">“Una de las salas con mejor sonido de Madrid. Programación de club de verdad.”</div>
  <div class="q">“Proper underground room, serious bookings, sound that hits. Halley always deliver.”</div>
 </section>
@@ -82,4 +101,9 @@ footer a{color:var(--blue)}
  <p style="margin-top:8px">Specka · Calle Orense 26 · Madrid · 19.09.2026</p>
  <p style="margin-top:8px"><a href="https://www.instagram.com/halleyclub/" target="_blank" rel="noopener">@halleyclub</a></p>
 </footer>
+<div class="bar">
+ <a class="t" href="https://www.instagram.com/halleyclub/" target="_blank" rel="noopener"><span class="es">Entradas</span><span class="en">Tickets</span></a>
+ <a class="i" href="https://www.instagram.com/halleyclub/" target="_blank" rel="noopener">Instagram</a>
+ <a class="m" href="https://www.google.com/maps/search/?api=1&query=Specka+Calle+Orense+26+Madrid" target="_blank" rel="noopener"><span class="es">Cómo llegar</span><span class="en">Directions</span></a>
+</div>
 </body></html>
