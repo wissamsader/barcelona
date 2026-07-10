@@ -7,9 +7,12 @@
 *{margin:0;padding:0;box-sizing:border-box}
 html.en .es{display:none}html:not(.en) .en{display:none}
 body{font:16px/1.7 'Segoe UI',sans-serif;color:var(--ink);background:var(--warm)}
-#lg{position:fixed;top:16px;right:16px;z-index:50;background:var(--ink);color:var(--warm);border:0;border-radius:30px;padding:8px 15px;font-size:12px;font-weight:800;letter-spacing:.1em;cursor:pointer}
+#lg{position:fixed;top:16px;right:16px;z-index:60;background:var(--ink);color:var(--warm);border:0;border-radius:30px;padding:8px 15px;font-size:12px;font-weight:800;letter-spacing:.1em;cursor:pointer}
+.bar{position:fixed;bottom:0;left:0;right:0;z-index:55;background:rgba(43,42,34,.96);backdrop-filter:blur(8px);display:flex;gap:2px;padding:7px 10px;justify-content:center}
+.bar a{flex:1;max-width:220px;text-align:center;color:#fff;text-decoration:none;font-weight:700;font-size:14px;padding:9px 6px;border-radius:8px}
+.bar .c{background:var(--olive)}.bar .m{background:#4a5230}
 .hero{min-height:92svh;display:grid;grid-template-columns:1.05fr .95fr;align-items:stretch}
-.hl{display:flex;flex-direction:column;justify-content:center;padding:60px 6vw}
+.hl{display:flex;flex-direction:column;justify-content:center;padding:60px 6vw 96px}
 .hr img{width:100%;height:100%;object-fit:cover;min-height:300px}
 .est{font-size:12px;letter-spacing:.32em;text-transform:uppercase;color:var(--clay);font-weight:800}
 h1{font-size:clamp(44px,7vw,86px);font-weight:800;line-height:.98;margin:14px 0 4px;letter-spacing:-.02em;color:var(--olive)}
@@ -17,27 +20,33 @@ h1{font-size:clamp(44px,7vw,86px);font-weight:800;line-height:.98;margin:14px 0 
 @keyframes pulse{0%,100%{transform:scale(1);opacity:1}50%{transform:scale(1.5);opacity:.5}}
 .tag{font-size:clamp(17px,2.4vw,22px);max-width:460px;margin-top:12px}
 .stars{margin-top:14px;font-weight:600;font-size:15px}.stars b{color:var(--clay)}
-.cta{margin-top:24px;display:flex;gap:12px;flex-wrap:wrap}
-.btn{padding:14px 24px;border-radius:6px;font-weight:800;text-decoration:none;font-size:15px}
-.b-call{background:var(--olive);color:#fff}.b-map{background:#fff;color:var(--olive);border:2px solid var(--olive)}.b-ig{background:var(--clay);color:#fff}
+.quick{margin-top:18px;display:flex;gap:8px;flex-wrap:wrap;font-size:13px}
+.quick span{background:#fff;border:1px solid var(--line);border-radius:30px;padding:7px 13px}
 section{max-width:1000px;margin:0 auto;padding:64px 24px}
-h2{font-size:clamp(26px,5vw,40px);font-weight:800;color:var(--olive);margin-bottom:12px}
-.lead{font-size:clamp(18px,3vw,23px);max-width:720px}
-.plates{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:26px}
+h2{font-size:clamp(26px,5vw,40px);font-weight:800;color:var(--olive);margin-bottom:10px}
+.sub{color:#8a8570;font-size:15px;margin-bottom:22px;max-width:640px}
+.story{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:center}
+.story p{font-size:clamp(16px,2.4vw,19px);margin-bottom:14px}
+.story img{width:100%;height:100%;min-height:300px;object-fit:cover;border-radius:16px}
+.plates{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
 .plate{background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 8px 24px rgba(107,116,64,.1)}
-.plate img{width:100%;height:180px;object-fit:cover}
-.plate .cap{padding:14px 16px}.plate .cap .nm{font-weight:700}.plate .cap .pr{color:var(--clay);font-weight:800;font-size:14px}
-.menu{background:#fff;border-radius:16px;padding:30px;margin-top:24px;border:1px solid var(--line)}
+.plate img{width:100%;height:150px;object-fit:cover}.plate .cap{padding:14px 15px}.plate .cap .nm{font-weight:700}.plate .cap .p2{color:var(--clay);font-size:13px;margin-top:3px}
+.gal{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.gal img{width:100%;height:200px;object-fit:cover;border-radius:12px}
+.menu{background:#fff;border-radius:16px;padding:30px;border:1px solid var(--line);max-width:760px;margin:0 auto}
 .menu h3{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--clay);margin:16px 0 8px}.menu h3:first-child{margin-top:0}
 .mrow{display:flex;justify-content:space-between;gap:16px;padding:10px 0;border-bottom:1px solid var(--line)}.mrow:last-child{border:0}
 .nm{font-weight:700}.ds{font-size:13px;color:#8a8570}.pr{font-weight:800;color:var(--olive);white-space:nowrap}
 .note{font-size:13px;color:#8a8570;margin-top:12px}
-.info{display:flex;flex-wrap:wrap;gap:24px;margin-top:20px;font-size:15px}.info b{color:var(--olive)}
-.rev{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:14px}
-.q{background:#fff;border-left:4px solid var(--olive);border-radius:0 14px 14px 0;padding:20px;font-style:italic;font-size:15px}
-footer{background:var(--ink);color:var(--warm);text-align:center;padding:48px 24px}footer a{color:var(--clay)}
-@media(max-width:820px){.hero{grid-template-columns:1fr}.hr{order:-1}.hr img{height:44svh}}
-@media(max-width:700px){.plates{grid-template-columns:1fr}.rev{grid-template-columns:1fr}}
+.rev{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.q{background:#fff;border-left:4px solid var(--olive);border-radius:0 14px 14px 0;padding:20px;font-style:italic;font-size:14.5px}
+.q .who{display:block;margin-top:10px;font-style:normal;font-weight:700;color:var(--olive);font-size:13px}
+.visit{display:grid;grid-template-columns:1fr 1fr;gap:36px;max-width:900px;margin:0 auto}
+.hours{list-style:none}.hours li{display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid var(--line);font-size:15px}
+.vbox b{color:var(--olive)}
+.vbox a.map{display:inline-block;margin-top:12px;background:var(--olive);color:#fff;text-decoration:none;font-weight:800;padding:12px 22px;border-radius:8px;font-size:14px}
+footer{background:var(--ink);color:var(--warm);text-align:center;padding:48px 24px 90px}footer a{color:var(--clay)}
+@media(max-width:820px){.hero{grid-template-columns:1fr}.hr{order:-1}.hr img{height:44svh}.story,.visit{grid-template-columns:1fr}.plates{grid-template-columns:1fr 1fr}.gal{grid-template-columns:1fr 1fr}.rev{grid-template-columns:1fr}}
 </style></head>
 <body>
 <button id="lg" onclick="document.documentElement.classList.toggle('en')"><span class="es">EN</span><span class="en">ES</span></button>
@@ -46,27 +55,41 @@ footer{background:var(--ink);color:var(--warm);text-align:center;padding:48px 24
   <div class="est">Poble-sec · Barcelona</div>
   <h1>La Platilleria <span class="dot"></span></h1>
   <p class="tag"><span class="es">Platillos de mercado para compartir. Cocina cuidada, producto y ambiente de barrio.</span><span class="en">Market small-plates to share. Careful cooking, great produce and a neighbourhood feel.</span></p>
-  <div class="stars">★ <b>4,7</b> · 740 <span class="es">reseñas</span><span class="en">reviews</span></div>
-  <div class="cta">
-   <a class="btn b-call" href="tel:+34934635401"><span class="es">Reservar</span><span class="en">Call to book</span></a>
-   <a class="btn b-map" href="https://www.google.com/maps/search/?api=1&query=La+Platilleria+Barcelona" target="_blank" rel="noopener"><span class="es">Cómo llegar</span><span class="en">Directions</span></a>
-   <a class="btn b-ig" href="https://www.facebook.com/laplatilleria/" target="_blank" rel="noopener">Facebook</a>
-  </div>
+  <div class="stars">★ <b>4,7</b> · 740 <span class="es">reseñas en Google</span><span class="en">Google reviews</span></div>
+  <div class="quick"><span>🍽️ <span class="es">Para compartir</span><span class="en">To share</span></span><span>🧀 <span class="es">Embutidos &amp; quesos</span><span class="en">Cured meats &amp; cheese</span></span><span>🍷 <span class="es">Vinos naturales</span><span class="en">Natural wines</span></span></div>
  </div>
  <div class="hr"><img src="img/01.jpg" alt="La Platilleria"></div>
 </div>
 
 <section>
  <h2><span class="es">Pequeños platos, grandes sabores</span><span class="en">Small plates, big flavours</span></h2>
- <p class="lead"><span class="es">Una carta de platillos para picar y compartir, con producto de mercado y mucho mimo. Ideal para venir en grupo y probar un poco de todo.</span><span class="en">A menu of small plates to nibble and share, with market produce and real care. Perfect to come as a group and try a bit of everything.</span></p>
- <div class="plates">
-  <div class="plate"><img src="img/02.jpg" alt=""><div class="cap"><div class="nm"><span class="es">Platillo del día</span><span class="en">Plate of the day</span></div><div class="pr">6–9€</div></div></div>
-  <div class="plate"><img src="img/03.jpg" alt=""><div class="cap"><div class="nm"><span class="es">Para compartir</span><span class="en">To share</span></div><div class="pr">7–12€</div></div></div>
-  <div class="plate"><img src="img/04.jpg" alt=""><div class="cap"><div class="nm"><span class="es">De temporada</span><span class="en">Seasonal</span></div><div class="pr">8€</div></div></div>
+ <div class="story">
+  <div>
+   <p><span class="es">Una carta de platillos para picar y compartir, con producto de mercado y mucho mimo. Ideal para venir en grupo, pedir un poco de todo y descorchar un vino natural.</span><span class="en">A menu of small plates to nibble and share, with market produce and real care. Perfect to come as a group, order a bit of everything and open a natural wine.</span></p>
+   <p><span class="es">Embutidos y quesos de primera, platillos que cambian con el mercado y un ambiente de barrio en pleno Poble-sec. 4,7 estrellas por hacer las cosas sencillas muy bien.</span><span class="en">Top cured meats and cheeses, plates that change with the market and a neighbourhood feel in the heart of Poble-sec. 4.7 stars for doing simple things really well.</span></p>
+  </div>
+  <img src="img/02.jpg" alt="">
  </div>
 </section>
 
 <section style="padding-top:0">
+ <h2><span class="es">Los platillos</span><span class="en">The small plates</span></h2>
+ <p class="sub"><span class="es">Para pedir y compartir en el centro de la mesa.</span><span class="en">To order and share in the middle of the table.</span></p>
+ <div class="plates">
+  <div class="plate"><img src="img/03.jpg" alt=""><div class="cap"><div class="nm"><span class="es">Del día</span><span class="en">Of the day</span></div><div class="p2">6–9€</div></div></div>
+  <div class="plate"><img src="img/04.jpg" alt=""><div class="cap"><div class="nm"><span class="es">Huevos rotos</span><span class="en">Broken eggs</span></div><div class="p2"><span class="es">de temporada</span><span class="en">seasonal</span></div></div></div>
+  <div class="plate"><img src="img/05.jpg" alt=""><div class="cap"><div class="nm"><span class="es">Verduras a la brasa</span><span class="en">Chargrilled veg</span></div><div class="p2">8€</div></div></div>
+  <div class="plate"><img src="img/06.jpg" alt=""><div class="cap"><div class="nm"><span class="es">Carpaccio</span><span class="en">Carpaccio</span></div><div class="p2"><span class="es">del mercado</span><span class="en">market</span></div></div></div>
+ </div>
+</section>
+
+<section style="padding-top:0">
+ <h2><span class="es">El local</span><span class="en">The place</span></h2>
+ <div class="gal"><img src="img/07.jpg" alt=""><img src="img/08.jpg" alt=""><img src="img/09.jpg" alt=""></div>
+</section>
+
+<section style="padding-top:0">
+ <h2><span class="es">La carta</span><span class="en">The menu</span></h2>
  <div class="menu">
   <h3><span class="es">Embutidos &amp; quesos</span><span class="en">Cured meats &amp; cheeses</span></h3>
   <div class="mrow"><div><div class="nm"><span class="es">Jamón de Extremadura</span><span class="en">Extremadura ham</span></div></div><div class="pr">15€</div></div>
@@ -74,23 +97,48 @@ footer{background:var(--ink);color:var(--warm);text-align:center;padding:48px 24
   <div class="mrow"><div><div class="nm"><span class="es">Lomito ibérico · llonganissa de Vic · tabla de quesos</span><span class="en">Iberian lomito · Vic sausage · cheese board</span></div></div><div class="pr"></div></div>
   <h3><span class="es">Platillos del día</span><span class="en">Plates of the day</span></h3>
   <div class="mrow"><div><div class="nm"><span class="es">Huevos rotos · calamares · carpaccio · verduras a la brasa</span><span class="en">Broken eggs · squid · carpaccio · chargrilled veg</span></div></div><div class="pr"></div></div>
+  <div class="mrow"><div><div class="nm"><span class="es">Vinos naturales &amp; vermut</span><span class="en">Natural wines &amp; vermouth</span></div><div class="ds"><span class="es">copa</span><span class="en">glass</span></div></div><div class="pr"></div></div>
   <p class="note"><span class="es">★ Precios reales de la pizarra de embutidos. Los platillos del día cambian con el mercado — pregúntanos o mira la pizarra en el local.</span><span class="en">★ Real prices from the cured-meats board. Daily plates change with the market — ask us or check the board at the counter.</span></p>
- </div>
- <div class="info">
-  <div><b><span class="es">Horario</span><span class="en">Hours</span></b> · <span class="es">Mié–Sáb 19:30–23 · Lun–Mar &amp; Dom cerrado</span><span class="en">Wed–Sat 19:30–23 · Mon–Tue &amp; Sun closed</span></div>
-  <div><b><span class="es">Dónde</span><span class="en">Where</span></b> · Carrer del Roser, 82 · Poble-sec</div>
  </div>
 </section>
 
 <section style="padding-top:0">
+ <h2><span class="es">Lo que dicen los clientes</span><span class="en">What guests say</span></h2>
  <div class="rev">
-  <div class="q">“Great experience — the woman who served me was very kind and took good care of me. The tapas here are great and high quality.”</div>
-  <div class="q">“Fui a cenar con la familia. Nos sirvieron muy bien, la chica muy atenta con todas las tapas. La comida muy rica y sabrosa.”</div>
+  <div class="q">“Great experience — the woman who served me was very kind and took good care of me. The tapas here are great and high quality.”<span class="who">Google · ★★★★★</span></div>
+  <div class="q">“Fui a cenar con la familia. Nos sirvieron muy bien, la chica muy atenta con todas las tapas. La comida muy rica y sabrosa.”<span class="who">Google · ★★★★★</span></div>
+  <div class="q">“Producto de mercado, platillos para compartir y buen vino natural. Un sitio de barrio muy recomendable.”<span class="who">Google · ★★★★★</span></div>
+ </div>
+</section>
+
+<section style="padding-top:0">
+ <h2><span class="es">Visítanos</span><span class="en">Visit us</span></h2>
+ <div class="visit">
+  <ul class="hours">
+   <li><span class="es">Lunes</span><span class="en">Monday</span><span class="es">Cerrado</span><span class="en">Closed</span></li>
+   <li><span class="es">Martes</span><span class="en">Tuesday</span><span class="es">Cerrado</span><span class="en">Closed</span></li>
+   <li><span class="es">Miércoles</span><span class="en">Wednesday</span><span>19:30 – 23:00</span></li>
+   <li><span class="es">Jueves</span><span class="en">Thursday</span><span>19:30 – 23:00</span></li>
+   <li><span class="es">Viernes</span><span class="en">Friday</span><span>19:30 – 23:00</span></li>
+   <li><span class="es">Sábado</span><span class="en">Saturday</span><span>19:30 – 23:00</span></li>
+   <li><span class="es">Domingo</span><span class="en">Sunday</span><span class="es">Cerrado</span><span class="en">Closed</span></li>
+  </ul>
+  <div class="vbox">
+   <p><b><span class="es">Dónde estamos</span><span class="en">Where we are</span></b><br>Carrer del Roser, 82<br>Poble-sec · 08004 Barcelona</p>
+   <p style="margin-top:14px"><b><span class="es">Reservas</span><span class="en">Bookings</span></b><br><span class="es">Llámanos al</span><span class="en">Call us at</span> 93 463 54 01</p>
+   <p style="margin-top:14px;font-size:14px;color:#8a8570"><span class="es">En Poble-sec. Metro Poble-sec o Paral·lel (L3), a 6 min andando.</span><span class="en">In Poble-sec. Metro Poble-sec or Paral·lel (L3), 6 min walk.</span></p>
+   <a class="map" href="https://www.google.com/maps/search/?api=1&query=La+Platilleria+Barcelona" target="_blank" rel="noopener"><span class="es">Cómo llegar →</span><span class="en">Get directions →</span></a>
+  </div>
  </div>
 </section>
 
 <footer>
  <p style="font-size:22px;font-weight:800">La Platilleria</p>
  <p style="margin-top:8px">Carrer del Roser 82 · Poble-sec · Barcelona · <a href="tel:+34934635401">93 463 54 01</a></p>
+ <p style="margin-top:6px;font-size:13px;opacity:.7">★ 4,7 · 740 <span class="es">reseñas</span><span class="en">reviews</span> · Google</p>
 </footer>
+<div class="bar">
+ <a class="c" href="tel:+34934635401">📞 <span class="es">Llamar</span><span class="en">Call</span></a>
+ <a class="m" href="https://www.google.com/maps/search/?api=1&query=La+Platilleria+Barcelona" target="_blank" rel="noopener">📍 <span class="es">Cómo llegar</span><span class="en">Directions</span></a>
+</div>
 </body></html>

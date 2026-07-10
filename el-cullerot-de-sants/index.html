@@ -5,38 +5,49 @@
 <style>
 :root{--ochre:#d9962a;--oxblood:#9a2b1e;--olive:#5e6b2c;--cream:#f7efd9;--ink:#2a1a12}
 *{margin:0;padding:0;box-sizing:border-box}
-html.en .es{display:none}html.en .ca{display:none}
-html:not(.en) .en{display:none}
+html.en .es{display:none}html:not(.en) .en{display:none}
 body{font:16px/1.65 'Segoe UI',sans-serif;color:var(--ink);background:var(--cream)}
-#lg{position:fixed;top:16px;right:16px;z-index:50;background:var(--oxblood);color:var(--cream);border:0;border-radius:30px;padding:8px 15px;font-size:12px;font-weight:800;letter-spacing:.1em;cursor:pointer}
-.hero{min-height:94svh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:60px 24px;position:relative;background:radial-gradient(120% 90% at 50% 15%,#f3e4c2 0%,var(--cream) 60%)}
+#lg{position:fixed;top:16px;right:16px;z-index:60;background:var(--oxblood);color:var(--cream);border:0;border-radius:30px;padding:8px 15px;font-size:12px;font-weight:800;letter-spacing:.1em;cursor:pointer}
+.bar{position:fixed;bottom:0;left:0;right:0;z-index:55;background:rgba(42,26,18,.96);backdrop-filter:blur(8px);display:flex;gap:2px;padding:7px 10px;justify-content:center}
+.bar a{flex:1;max-width:220px;text-align:center;color:#fff;text-decoration:none;font-weight:700;font-size:14px;padding:9px 6px;border-radius:10px}
+.bar .c{background:var(--oxblood)}.bar .m{background:#4a5a24}
+.hero{min-height:92svh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:60px 24px 90px;position:relative;background:radial-gradient(120% 90% at 50% 15%,#f3e4c2 0%,var(--cream) 60%)}
 .ladle{font-size:60px;animation:stir 4s ease-in-out infinite;display:inline-block}
 @keyframes stir{0%,100%{transform:rotate(-10deg)}50%{transform:rotate(10deg)}}
-.hero-in{max-width:840px}
+.hero-in{max-width:860px}
 .est{font-size:12px;letter-spacing:.32em;text-transform:uppercase;color:var(--olive);font-weight:800}
 h1{font-size:clamp(44px,11vw,104px);font-weight:900;line-height:.92;margin:10px 0 6px;color:var(--oxblood);letter-spacing:-.02em}
 .tag{font-size:clamp(17px,3.4vw,23px);max-width:600px;margin:0 auto}
 .stars{margin-top:12px;font-weight:600}.stars b{color:var(--ochre)}
-.cta{margin-top:24px;display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
-.btn{padding:14px 24px;border-radius:30px;font-weight:800;text-decoration:none;font-size:15px}
-.b-call{background:var(--oxblood);color:var(--cream)}.b-map{background:#fff;color:var(--oxblood);border:2px solid var(--oxblood)}
-section{max-width:980px;margin:0 auto;padding:60px 24px}
-h2{font-size:clamp(26px,5vw,40px);font-weight:900;color:var(--oxblood);margin-bottom:12px;text-align:center}
-.lead{font-size:clamp(18px,3vw,23px);max-width:720px;margin:0 auto;text-align:center}
-.gal{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:26px}
-.gal img{width:100%;height:220px;object-fit:cover;border-radius:12px}
-.menu{background:#fff;border:2px solid var(--ochre);border-radius:16px;padding:32px;margin-top:14px}
+.quick{margin-top:20px;display:flex;gap:10px;flex-wrap:wrap;justify-content:center;font-size:13.5px}
+.quick span{background:#fff;border:1px solid #e2d3ac;border-radius:30px;padding:7px 15px}
+section{max-width:1000px;margin:0 auto;padding:64px 24px}
+h2{font-size:clamp(26px,5vw,40px);font-weight:900;color:var(--oxblood);margin-bottom:10px;text-align:center}
+.sub{color:var(--olive);font-size:15px;margin:0 auto 22px;max-width:620px;text-align:center}
+.story{display:grid;grid-template-columns:.85fr 1.15fr;gap:36px;align-items:center}
+.story p{font-size:clamp(16px,2.4vw,19px);margin-bottom:14px}
+.story img{width:100%;height:100%;min-height:300px;object-fit:cover;border-radius:16px}
+.spec{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.sc{background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 8px 22px rgba(154,43,30,.1)}
+.sc img{width:100%;height:150px;object-fit:cover}.sc .cap{padding:14px 15px}.sc .cap h3{font-size:16px;color:var(--oxblood);margin-bottom:4px}.sc .cap p{font-size:13px;color:#8a6b4a}
+.gal{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.gal img{width:100%;height:150px;object-fit:cover;border-radius:12px}.gal img.wide{grid-column:span 2;height:100%}
+.menu{background:#fff;border:2px solid var(--ochre);border-radius:16px;padding:32px;max-width:760px;margin:0 auto}
 .menu .mh{text-align:center;font-family:Georgia,serif;font-size:24px;color:var(--oxblood);font-style:italic;margin-bottom:4px}
 .menu .mp{text-align:center;color:var(--olive);font-weight:800;margin-bottom:18px}
 .menu h3{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--ochre);margin:16px 0 8px}
 .menu ul{list-style:none}.menu li{padding:6px 0;border-bottom:1px dotted #e2d3ac;font-size:15.5px}.menu li:last-child{border:0}
 .note{font-size:13px;color:#8a6b4a;margin-top:14px;text-align:center}
-.flag{height:5px;background:repeating-linear-gradient(90deg,var(--ochre) 0 22px,var(--oxblood) 22px 27px);border-radius:4px;margin:22px auto;max-width:200px}
-.info{display:flex;flex-wrap:wrap;gap:24px;justify-content:center;margin-top:20px;font-size:15px}.info b{color:var(--oxblood)}
-.rev{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:14px}
-.q{background:#fff;border-left:4px solid var(--olive);border-radius:0 14px 14px 0;padding:20px;font-style:italic;font-size:15px}
-footer{background:var(--ink);color:var(--cream);text-align:center;padding:46px 24px}footer a{color:var(--ochre)}
-@media(max-width:700px){.gal{grid-template-columns:1fr 1fr}.rev{grid-template-columns:1fr}}
+.flag{height:5px;background:repeating-linear-gradient(90deg,var(--ochre) 0 22px,var(--oxblood) 22px 27px);border-radius:4px;margin:26px auto;max-width:200px}
+.rev{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.q{background:#fff;border-left:4px solid var(--olive);border-radius:0 14px 14px 0;padding:20px;font-style:italic;font-size:14.5px}
+.q .who{display:block;margin-top:10px;font-style:normal;font-weight:700;color:var(--oxblood);font-size:13px}
+.visit{display:grid;grid-template-columns:1fr 1fr;gap:36px;max-width:900px;margin:0 auto}
+.hours{list-style:none}.hours li{display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid #eaddc4;font-size:15px}
+.vbox b{color:var(--oxblood)}
+.vbox a.map{display:inline-block;margin-top:12px;background:var(--oxblood);color:#fff;text-decoration:none;font-weight:800;padding:12px 22px;border-radius:30px;font-size:14px}
+footer{background:var(--ink);color:var(--cream);text-align:center;padding:46px 24px 90px}footer a{color:var(--ochre)}
+@media(max-width:820px){.story,.visit{grid-template-columns:1fr}.spec{grid-template-columns:1fr 1fr}.gal{grid-template-columns:1fr 1fr}.gal img.wide{grid-column:span 2}.rev{grid-template-columns:1fr}}
 </style></head>
 <body>
 <button id="lg" onclick="document.documentElement.classList.toggle('en')"><span class="es">EN</span><span class="en">CAT/ES</span></button>
@@ -46,18 +57,38 @@ footer{background:var(--ink);color:var(--cream);text-align:center;padding:46px 2
   <div class="est">Sants · Barcelona</div>
   <h1>El Cullerot<br>de Sants</h1>
   <p class="tag"><span class="es">Menú del día casero, honesto y a buen precio. Cocina de cuchara en el corazón de Sants.</span><span class="en">Honest, homemade menú del día at a fair price. Comfort cooking in the heart of Sants.</span></p>
-  <div class="stars">★ <b>4,7</b> · 742 <span class="es">reseñas</span><span class="en">reviews</span></div>
-  <div class="cta">
-   <a class="btn b-call" href="tel:+34934319069"><span class="es">Reservar</span><span class="en">Call to book</span></a>
-   <a class="btn b-map" href="https://www.google.com/maps/search/?api=1&query=El+Cullerot+de+Sants+Barcelona" target="_blank" rel="noopener"><span class="es">Cómo llegar</span><span class="en">Directions</span></a>
-  </div>
+  <div class="stars">★ <b>4,7</b> · 742 <span class="es">reseñas en Google</span><span class="en">Google reviews</span></div>
+  <div class="quick"><span>🍲 <span class="es">Cocina de cuchara</span><span class="en">Comfort cooking</span></span><span>💶 <span class="es">Menú del dia</span><span class="en">Set lunch</span></span><span>🏘️ <span class="es">De barrio</span><span class="en">Neighbourhood</span></span></div>
  </div>
 </div>
 
 <section>
  <h2><span class="es">Menú de barrio, calidad-precio insuperable</span><span class="en">A neighbourhood menu, unbeatable value</span></h2>
- <p class="lead"><span class="es">Un menú a un precio irrisorio con una calidad y cantidad que no tienen nada que envidiar. Comida casera con algún toque original y ambiente de barrio de toda la vida.</span><span class="en">A menu at a tiny price with quality and portions second to none. Home cooking with the odd original touch and a true neighbourhood feel.</span></p>
- <div class="gal"><img src="img/01.jpg" alt=""><img src="img/02.jpg" alt=""><img src="img/03.jpg" alt=""><img src="img/04.jpg" alt=""><img src="img/05.jpg" alt=""><img src="img/06.jpg" alt=""></div>
+ <div class="story">
+  <img src="img/02.jpg" alt="">
+  <div>
+   <p><span class="es">Un menú a un precio irrisorio con una calidad y una cantidad que no tienen nada que envidiar. Comida casera, con algún toque original, y ese ambiente de barrio de toda la vida.</span><span class="en">A menu at a tiny price with quality and portions second to none. Home cooking with the odd original touch, and a true old-school neighbourhood feel.</span></p>
+   <p><span class="es">La carta cambia cada día y muchas veces está solo en catalán — parte de su encanto. Papada con garbanzos, fricandó, canelones, peix del dia… de lo mejor que se come en Sants por lo que cuesta.</span><span class="en">The menu changes daily and is often only in Catalan — part of its charm. Pork jowl with chickpeas, fricandó, cannelloni, fish of the day… some of the best value eating in Sants.</span></p>
+  </div>
+ </div>
+</section>
+
+<section style="padding-top:0">
+ <h2><span class="es">De la cocina</span><span class="en">From the kitchen</span></h2>
+ <p class="sub"><span class="es">Platos caseros que cambian con el mercado.</span><span class="en">Homemade dishes that change with the market.</span></p>
+ <div class="spec">
+  <div class="sc"><img src="img/03.jpg" alt=""><div class="cap"><h3><span class="es">Papada amb cigrons</span><span class="en">Pork jowl &amp; chickpeas</span></h3><p><span class="es">Con allioli — de los mejores bocados.</span><span class="en">With allioli — a highlight.</span></p></div></div>
+  <div class="sc"><img src="img/04.jpg" alt=""><div class="cap"><h3><span class="es">Escalivada</span><span class="en">Escalivada</span></h3><p><span class="es">Con su picada.</span><span class="en">With picada.</span></p></div></div>
+  <div class="sc"><img src="img/05.jpg" alt=""><div class="cap"><h3><span class="es">Canelons rostits</span><span class="en">Roast cannelloni</span></h3><p><span class="es">Con beixamel de la casa.</span><span class="en">House béchamel.</span></p></div></div>
+  <div class="sc"><img src="img/06.jpg" alt=""><div class="cap"><h3><span class="es">Guisos del dia</span><span class="en">Daily stews</span></h3><p><span class="es">Cocina de cuchara.</span><span class="en">Spoon food.</span></p></div></div>
+ </div>
+</section>
+
+<section style="padding-top:0">
+ <h2><span class="es">El local</span><span class="en">The place</span></h2>
+ <div class="gal">
+  <img class="wide" src="img/07.jpg" alt=""><img src="img/08.jpg" alt=""><img src="img/09.jpg" alt=""><img src="img/10.jpg" alt="">
+ </div>
 </section>
 
 <section style="padding-top:0">
@@ -68,24 +99,48 @@ footer{background:var(--ink);color:var(--cream);text-align:center;padding:46px 2
   <ul><li><span class="es">Amanida catalana</span><span class="en">Catalan salad</span></li><li><span class="es">Canelons rostits amb beixamel</span><span class="en">Roast cannelloni with béchamel</span></li><li><span class="es">Escalivada amb la seva picada</span><span class="en">Escalivada with picada</span></li></ul>
   <h3><span class="es">Segons</span><span class="en">Mains</span></h3>
   <ul><li><span class="es">Papada amb cigrons i allioli</span><span class="en">Pork jowl with chickpeas &amp; allioli</span></li><li><span class="es">Cassola de mongetes amb botifarra</span><span class="en">Bean &amp; sausage casserole</span></li><li><span class="es">Peix del dia</span><span class="en">Fish of the day</span></li></ul>
-  <p class="note"><span class="es">★ La carta canvia cada dia i sovint només és en català — part del seu encant. El preu del menú, pregunteu-nos o al local.</span><span class="en">★ The menu changes daily and is often only in Catalan — part of its charm. Ask us or at the counter for today's price.</span></p>
+  <p class="note"><span class="es">★ La carta cambia cada día y a menudo solo está en catalán — parte de su encanto. El precio del menú, pregúntanos o al entrar.</span><span class="en">★ The menu changes daily and is often only in Catalan — part of its charm. Ask us or at the counter for today's price.</span></p>
  </div>
  <div class="flag"></div>
- <div class="info">
-  <div><b><span class="es">Horario</span><span class="en">Hours</span></b> · <span class="es">Mar–Dom 9–17 · Lun cerrado</span><span class="en">Tue–Sun 9–17 · Mon closed</span></div>
-  <div><b><span class="es">Dónde</span><span class="en">Where</span></b> · Carrer d'Olzinelles, 114 · Sants</div>
+</section>
+
+<section style="padding-top:0">
+ <h2><span class="es">Lo que dicen los clientes</span><span class="en">What guests say</span></h2>
+ <div class="rev">
+  <div class="q">“Gran descubrimiento. Un menú a un precio irrisorio con una calidad y cantidad que nada tienen que envidiar a otros restaurantes.”<span class="who">Google · ★★★★★</span></div>
+  <div class="q">“Menú de fin de semana calidad-precio insuperable. La papada con garbanzos y alioli, de los mejores bocados en mucho tiempo.”<span class="who">Google · ★★★★★</span></div>
+  <div class="q">“Comida casera con algún toque original y ambiente de barrio. Muy recomendable si buscas comer bien sin gastarte una fortuna.”<span class="who">Google · ★★★★★</span></div>
  </div>
 </section>
 
 <section style="padding-top:0">
- <div class="rev">
-  <div class="q">“Gran descubrimiento. Un menú a un precio irrisorio con una calidad y cantidad que nada tienen que envidiar a otros restaurantes.”</div>
-  <div class="q">“Menú de fin de semana calidad-precio insuperable. La papada con garbanzos y alioli, de los mejores bocados en mucho tiempo.”</div>
+ <h2><span class="es">Visítanos</span><span class="en">Visit us</span></h2>
+ <div class="visit">
+  <ul class="hours">
+   <li><span class="es">Lunes</span><span class="en">Monday</span><span class="es">Cerrado</span><span class="en">Closed</span></li>
+   <li><span class="es">Martes</span><span class="en">Tuesday</span><span>9:00 – 17:00</span></li>
+   <li><span class="es">Miércoles</span><span class="en">Wednesday</span><span>9:00 – 17:00</span></li>
+   <li><span class="es">Jueves</span><span class="en">Thursday</span><span>9:00 – 17:00</span></li>
+   <li><span class="es">Viernes</span><span class="en">Friday</span><span>9:00 – 17:00</span></li>
+   <li><span class="es">Sábado</span><span class="en">Saturday</span><span>9:00 – 17:00</span></li>
+   <li><span class="es">Domingo</span><span class="en">Sunday</span><span class="es">Cerrado</span><span class="en">Closed</span></li>
+  </ul>
+  <div class="vbox">
+   <p><b><span class="es">Dónde estamos</span><span class="en">Where we are</span></b><br>Carrer d'Olzinelles, 114<br>Sants · 08014 Barcelona</p>
+   <p style="margin-top:14px"><b><span class="es">Reservas</span><span class="en">Bookings</span></b><br><span class="es">Llámanos al</span><span class="en">Call us at</span> 93 431 90 69</p>
+   <p style="margin-top:14px;font-size:14px;color:#8a6b4a"><span class="es">En pleno Sants. Metro Plaça de Sants (L1/L5) o Mercat Nou (L1), a 5 min andando.</span><span class="en">In the heart of Sants. Metro Plaça de Sants (L1/L5) or Mercat Nou (L1), 5 min walk.</span></p>
+   <a class="map" href="https://www.google.com/maps/search/?api=1&query=El+Cullerot+de+Sants+Barcelona" target="_blank" rel="noopener"><span class="es">Cómo llegar →</span><span class="en">Get directions →</span></a>
+  </div>
  </div>
 </section>
 
 <footer>
  <p style="font-size:22px;font-weight:900">El Cullerot de Sants</p>
  <p style="margin-top:8px">Carrer d'Olzinelles 114 · Sants · Barcelona · <a href="tel:+34934319069">93 431 90 69</a></p>
+ <p style="margin-top:6px;font-size:13px;opacity:.7">★ 4,7 · 742 <span class="es">reseñas</span><span class="en">reviews</span> · Google</p>
 </footer>
+<div class="bar">
+ <a class="c" href="tel:+34934319069">📞 <span class="es">Llamar</span><span class="en">Call</span></a>
+ <a class="m" href="https://www.google.com/maps/search/?api=1&query=El+Cullerot+de+Sants+Barcelona" target="_blank" rel="noopener">📍 <span class="es">Cómo llegar</span><span class="en">Directions</span></a>
+</div>
 </body></html>

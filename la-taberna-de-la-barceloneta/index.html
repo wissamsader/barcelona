@@ -7,8 +7,11 @@
 *{margin:0;padding:0;box-sizing:border-box}
 html.en .es{display:none}html:not(.en) .en{display:none}
 body{font:16px/1.65 'Segoe UI',sans-serif;color:var(--ink);background:var(--sand)}
-#lg{position:fixed;top:16px;right:16px;z-index:50;background:var(--navy);color:var(--sand);border:0;border-radius:30px;padding:8px 15px;font-size:12px;font-weight:800;letter-spacing:.1em;cursor:pointer}
-.hero{min-height:96svh;display:flex;flex-direction:column;justify-content:flex-end;padding:0 24px 56px;position:relative;background:linear-gradient(180deg,rgba(12,34,51,.1),rgba(12,34,51,.78)),url('img/01.jpg') center/cover;color:var(--sand)}
+#lg{position:fixed;top:16px;right:16px;z-index:60;background:var(--navy);color:var(--sand);border:0;border-radius:30px;padding:8px 15px;font-size:12px;font-weight:800;letter-spacing:.1em;cursor:pointer}
+.bar{position:fixed;bottom:0;left:0;right:0;z-index:55;background:rgba(12,34,51,.96);backdrop-filter:blur(8px);display:flex;gap:2px;padding:7px 10px;justify-content:center}
+.bar a{flex:1;max-width:200px;text-align:center;color:#fff;text-decoration:none;font-weight:700;font-size:14px;padding:9px 6px;border-radius:10px}
+.bar .w{background:#25d366;color:#053}.bar .m{background:#164a72}.bar .i{background:var(--red)}
+.hero{min-height:92svh;display:flex;flex-direction:column;justify-content:flex-end;padding:0 24px 96px;position:relative;background:linear-gradient(180deg,rgba(12,34,51,.1),rgba(12,34,51,.78)),url('img/01.jpg') center/cover;color:var(--sand)}
 .rope{position:absolute;top:0;left:0;right:0;height:14px;background:repeating-linear-gradient(45deg,#d9b98a 0 8px,#b8925f 8px 16px)}
 .stripe{position:absolute;bottom:0;left:0;right:0;height:64px;background:repeating-linear-gradient(90deg,var(--sea) 0 28px,var(--sand) 28px 56px);opacity:.85;mask:linear-gradient(180deg,transparent,#000)}
 .hero-in{position:relative;z-index:2;max-width:1000px;margin:0 auto;width:100%}
@@ -16,27 +19,34 @@ body{font:16px/1.65 'Segoe UI',sans-serif;color:var(--ink);background:var(--sand
 h1{font-size:clamp(40px,9.5vw,92px);font-weight:900;line-height:.92;margin:12px 0 6px;letter-spacing:-.02em;text-shadow:0 4px 26px rgba(0,0,0,.4)}
 .tag{font-size:clamp(17px,3.4vw,23px);max-width:620px}
 .stars{margin-top:12px;font-weight:600}.stars b{color:#ffd66b}
-.cta{margin-top:22px;display:flex;gap:12px;flex-wrap:wrap}
-.btn{padding:14px 24px;border-radius:40px;font-weight:800;text-decoration:none;font-size:15px}
-.b-wa{background:#25d366;color:#053}.b-map{background:var(--sand);color:var(--sea)}.b-ig{background:var(--red);color:#fff}
-section{max-width:1000px;margin:0 auto;padding:62px 24px}
-h2{font-size:clamp(26px,5vw,42px);font-weight:900;color:var(--sea);margin-bottom:12px}
-.lead{font-size:clamp(18px,3vw,24px);max-width:760px}
-.gal{display:grid;grid-template-columns:2fr 1fr 1fr;gap:12px;margin-top:24px}
-.gal img{width:100%;height:100%;object-fit:cover;border-radius:14px;min-height:150px}
-.gal img:first-child{grid-row:span 2;min-height:320px}
-.menu{background:#fff;border-radius:18px;padding:30px;margin-top:14px;border-top:8px solid var(--sea)}
+.quick{margin-top:18px;display:flex;gap:10px;flex-wrap:wrap;font-size:13.5px}
+.quick span{background:rgba(0,0,0,.32);border:1px solid rgba(255,255,255,.4);border-radius:30px;padding:7px 15px}
+section{max-width:1000px;margin:0 auto;padding:66px 24px}
+h2{font-size:clamp(26px,5vw,42px);font-weight:900;color:var(--sea);margin-bottom:10px}
+.sub{color:#5a6a76;font-size:15px;margin-bottom:22px;max-width:640px}
+.story{display:grid;grid-template-columns:1.1fr .9fr;gap:36px;align-items:center}
+.story p{font-size:clamp(16px,2.4vw,19px);margin-bottom:14px}
+.story img{width:100%;height:100%;min-height:300px;object-fit:cover;border-radius:16px}
+.spec{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.sc{background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 8px 22px rgba(18,99,158,.12)}
+.sc img{width:100%;height:150px;object-fit:cover}.sc .cap{padding:14px 15px}.sc .cap h3{font-size:16px;color:var(--sea);margin-bottom:3px}.sc .cap p{font-size:13px;color:#6a7a86}
+.gal{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.gal img{width:100%;height:200px;object-fit:cover;border-radius:12px}
+.crew{background:var(--navy);color:var(--sand);border-radius:16px;padding:22px;text-align:center;font-size:15px;margin-top:20px}.crew b{color:#8fd0ff}
+.menu{background:#fff;border-radius:18px;padding:30px;border-top:8px solid var(--sea);max-width:800px;margin:0 auto}
 .menu h3{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--red);margin:16px 0 8px}.menu h3:first-child{margin-top:0}
 .mrow{display:flex;justify-content:space-between;gap:16px;padding:10px 0;border-bottom:1px dashed #cfe0ec}.mrow:last-child{border:0}
 .nm{font-weight:700}.ds{font-size:13px;color:#6a7a86}.pr{font-weight:900;color:var(--sea);white-space:nowrap}
 .note{font-size:13px;color:#6a7a86;margin-top:12px}
-.crew{background:var(--navy);color:var(--sand);border-radius:16px;padding:22px;margin-top:20px;text-align:center;font-size:15px}
-.crew b{color:#8fd0ff}
-.info{display:flex;flex-wrap:wrap;gap:24px;margin-top:20px;font-size:15px}.info b{color:var(--sea)}
-.rev{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:14px}
-.q{background:#fff;border-radius:16px;padding:20px;font-style:italic;font-size:15px;box-shadow:0 6px 18px rgba(18,99,158,.1)}
-footer{background:var(--ink);color:var(--sand);text-align:center;padding:48px 24px}footer a{color:#8fd0ff}
-@media(max-width:700px){.gal{grid-template-columns:1fr 1fr}.gal img:first-child{grid-column:span 2;grid-row:auto}.rev{grid-template-columns:1fr}}
+.rev{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.q{background:#fff;border-radius:16px;padding:20px;font-style:italic;font-size:14.5px;box-shadow:0 6px 18px rgba(18,99,158,.1)}
+.q .who{display:block;margin-top:10px;font-style:normal;font-weight:700;color:var(--sea);font-size:13px}
+.visit{display:grid;grid-template-columns:1fr 1fr;gap:36px;max-width:900px;margin:0 auto}
+.hours{list-style:none}.hours li{display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid #dfe7ec;font-size:15px}
+.vbox b{color:var(--sea)}
+.vbox a.map{display:inline-block;margin-top:12px;background:var(--sea);color:#fff;text-decoration:none;font-weight:800;padding:12px 22px;border-radius:30px;font-size:14px}
+footer{background:var(--ink);color:var(--sand);text-align:center;padding:48px 24px 90px}footer a{color:#8fd0ff}
+@media(max-width:820px){.story,.visit{grid-template-columns:1fr}.spec{grid-template-columns:1fr 1fr}.gal{grid-template-columns:1fr 1fr}.rev{grid-template-columns:1fr}}
 </style></head>
 <body>
 <button id="lg" onclick="document.documentElement.classList.toggle('en')"><span class="es">EN</span><span class="en">ES</span></button>
@@ -46,19 +56,36 @@ footer{background:var(--ink);color:var(--sand);text-align:center;padding:48px 24
   <div class="est">La Barceloneta · Barcelona</div>
   <h1>La Taberna de<br>La Barceloneta</h1>
   <p class="tag"><span class="es">Arroces, fideuà y tapas de mar a dos pasos de la playa. Comida gourmet con el mejor trato.</span><span class="en">Rice dishes, fideuà and seafood tapas two steps from the beach. Gourmet food with the warmest service.</span></p>
-  <div class="stars">★ <b>4,8</b> · 504 <span class="es">reseñas</span><span class="en">reviews</span></div>
-  <div class="cta">
-   <a class="btn b-wa" href="https://wa.me/34653486735" target="_blank" rel="noopener"><span class="es">Reservar</span><span class="en">Book</span></a>
-   <a class="btn b-map" href="https://www.google.com/maps/search/?api=1&query=La+Taberna+de+la+Barceloneta+Barcelona" target="_blank" rel="noopener"><span class="es">Cómo llegar</span><span class="en">Directions</span></a>
-   <a class="btn b-ig" href="https://www.instagram.com/latabernadelabarceloneta/" target="_blank" rel="noopener">Instagram</a>
-  </div>
+  <div class="stars">★ <b>4,8</b> · 504 <span class="es">reseñas en Google</span><span class="en">Google reviews</span></div>
+  <div class="quick"><span>🥘 <span class="es">Arroces &amp; fideuà</span><span class="en">Rice &amp; fideuà</span></span><span>🐙 <span class="es">Bomba de pulpo</span><span class="en">Octopus bomba</span></span><span>🏖️ <span class="es">Junto a la playa</span><span class="en">By the beach</span></span></div>
  </div>
 </div>
 
 <section>
  <h2><span class="es">Sabor de mar en la Barceloneta</span><span class="en">The taste of the sea in Barceloneta</span></h2>
- <p class="lead"><span class="es">Paellas con su punto de socarrat, fideuà, la famosa bomba de pulpo y una gran variedad de tapas. Producto fresco, cocina cuidada y un equipo que te trata de 11 sobre 10.</span><span class="en">Paellas with the perfect socarrat, fideuà, the famous octopus "bomba" and a wide range of tapas. Fresh produce, careful cooking and a team that treats you 11 out of 10.</span></p>
- <div class="gal"><img src="img/02.jpg" alt=""><img src="img/03.jpg" alt=""><img src="img/04.jpg" alt=""><img src="img/05.jpg" alt=""><img src="img/06.jpg" alt=""></div>
+ <div class="story">
+  <div>
+   <p><span class="es">Paellas con su punto de socarrat, fideuà, la famosa bomba de pulpo y una gran variedad de tapas. Producto fresco, cocina cuidada y un equipo que te trata de 11 sobre 10.</span><span class="en">Paellas with the perfect socarrat, fideuà, the famous octopus "bomba" and a wide range of tapas. Fresh produce, careful cooking and a team that treats you 11 out of 10.</span></p>
+   <p><span class="es">A dos pasos de la playa de la Barceloneta, es el sitio para sentarse, pedir arroz para compartir y dejar que la tarde se alargue. 4,8 estrellas dicen que no somos los únicos que lo pensamos.</span><span class="en">Two steps from Barceloneta beach, it's the place to sit down, order rice to share and let the afternoon stretch out. 4.8 stars say we're not the only ones who think so.</span></p>
+  </div>
+  <img src="img/02.jpg" alt="">
+ </div>
+</section>
+
+<section style="padding-top:0">
+ <h2><span class="es">Lo que hay que pedir</span><span class="en">What to order</span></h2>
+ <p class="sub"><span class="es">De la brasa y del mar, para compartir.</span><span class="en">From the grill and the sea, to share.</span></p>
+ <div class="spec">
+  <div class="sc"><img src="img/03.jpg" alt=""><div class="cap"><h3><span class="es">Paella de marisco</span><span class="en">Seafood paella</span></h3><p><span class="es">Con socarrat de manual.</span><span class="en">Textbook socarrat.</span></p></div></div>
+  <div class="sc"><img src="img/04.jpg" alt=""><div class="cap"><h3><span class="es">Bomba de pulpo</span><span class="en">Octopus bomba</span></h3><p><span class="es">Imprescindible.</span><span class="en">A must.</span></p></div></div>
+  <div class="sc"><img src="img/05.jpg" alt=""><div class="cap"><h3><span class="es">Bravas de la casa</span><span class="en">House bravas</span></h3><p><span class="es">Con su salsa picante.</span><span class="en">With spicy sauce.</span></p></div></div>
+  <div class="sc"><img src="img/06.jpg" alt=""><div class="cap"><h3><span class="es">Bocadillos</span><span class="en">Sandwiches</span></h3><p><span class="es">El Galeón, el Rockero…</span><span class="en">El Galeón, el Rockero…</span></p></div></div>
+ </div>
+</section>
+
+<section style="padding-top:0">
+ <h2><span class="es">El local</span><span class="en">The place</span></h2>
+ <div class="gal"><img src="img/07.jpg" alt=""><img src="img/08.jpg" alt=""><img src="img/01.jpg" alt=""></div>
 </section>
 
 <section style="padding-top:0">
@@ -75,21 +102,45 @@ footer{background:var(--ink);color:var(--sand);text-align:center;padding:48px 24
   <p class="note"><span class="es">★ Precios reales de la carta de bocadillos. Arroces y tapas — precio en carta; los arroces, mejor reservarlos.</span><span class="en">★ Real prices from the sandwich menu. Rice &amp; tapas priced on the card; rice dishes best reserved.</span></p>
  </div>
  <div class="crew"><span class="es">Pregunta por <b>Lyam, Jerry y Wildo</b> — el equipo que hace de cada comida una fiesta.</span><span class="en">Ask for <b>Lyam, Jerry &amp; Wildo</b> — the crew who turn every meal into a party.</span></div>
- <div class="info">
-  <div><b><span class="es">Horario</span><span class="en">Hours</span></b> · <span class="es">Mar–Dom 13–16 / 19–23:30 · Lun cerrado</span><span class="en">Tue–Sun 13–16 / 19–23:30 · Mon closed</span></div>
-  <div><b><span class="es">Dónde</span><span class="en">Where</span></b> · Carrer d'Andrea Dòria, 27 · La Barceloneta</div>
+</section>
+
+<section style="padding-top:0">
+ <h2><span class="es">Lo que dicen los clientes</span><span class="en">What guests say</span></h2>
+ <div class="rev">
+  <div class="q">“¡Todo muy bueno! Gran variedad de tapas y platos. Recomiendo la bomba de pulpo. La atención es de 10, el personal super amable. ☺️”<span class="who">Google · ★★★★★</span></div>
+  <div class="q">“The paella was truly authentic, with a perfect layer of socarrat at the bottom. Absolutely delicious — one of those dishes you can't stop eating.”<span class="who">Google · ★★★★★</span></div>
+  <div class="q">“Cenamos fideuá y fue genial, comida gourmet y la atención 11/10, Lyam, Jerry y Wildo the best.”<span class="who">Google · ★★★★★</span></div>
  </div>
 </section>
 
 <section style="padding-top:0">
- <div class="rev">
-  <div class="q">“¡Todo muy bueno! Gran variedad de tapas y platos. Recomiendo la bomba de pulpo. La atención es de 10, el personal super amable. ☺️”</div>
-  <div class="q">“The paella was truly authentic, with a perfect layer of socarrat at the bottom. Absolutely delicious — one of those dishes you can't stop eating.”</div>
+ <h2><span class="es">Visítanos</span><span class="en">Visit us</span></h2>
+ <div class="visit">
+  <ul class="hours">
+   <li><span class="es">Lunes</span><span class="en">Monday</span><span class="es">Cerrado</span><span class="en">Closed</span></li>
+   <li><span class="es">Martes</span><span class="en">Tuesday</span><span>19:00 – 23:30</span></li>
+   <li><span class="es">Miércoles</span><span class="en">Wednesday</span><span>19:00 – 23:30</span></li>
+   <li><span class="es">Jueves</span><span class="en">Thursday</span><span>19:00 – 23:30</span></li>
+   <li><span class="es">Viernes</span><span class="en">Friday</span><span>13:00 – 16:00 · 19:00 – 23:30</span></li>
+   <li><span class="es">Sábado</span><span class="en">Saturday</span><span>13:00 – 16:00 · 19:00 – 23:30</span></li>
+   <li><span class="es">Domingo</span><span class="en">Sunday</span><span>13:00 – 16:00</span></li>
+  </ul>
+  <div class="vbox">
+   <p><b><span class="es">Dónde estamos</span><span class="en">Where we are</span></b><br>Carrer d'Andrea Dòria, 27<br>La Barceloneta · 08003 Barcelona</p>
+   <p style="margin-top:14px"><b><span class="es">Reservas</span><span class="en">Bookings</span></b><br>WhatsApp · 653 486 735</p>
+   <p style="margin-top:14px;font-size:14px;color:#5a6a76"><span class="es">En plena Barceloneta, a un paso de la playa. Metro Barceloneta (L4), 6 min andando.</span><span class="en">In the heart of Barceloneta, a step from the beach. Metro Barceloneta (L4), 6 min walk.</span></p>
+   <a class="map" href="https://www.google.com/maps/search/?api=1&query=La+Taberna+de+la+Barceloneta+Barcelona" target="_blank" rel="noopener"><span class="es">Cómo llegar →</span><span class="en">Get directions →</span></a>
+  </div>
  </div>
 </section>
 
 <footer>
  <p style="font-size:22px;font-weight:900">La Taberna de La Barceloneta</p>
  <p style="margin-top:8px">Carrer d'Andrea Dòria 27 · La Barceloneta · Barcelona · <a href="https://wa.me/34653486735">653 486 735</a></p>
+ <p style="margin-top:6px;font-size:13px;opacity:.7">★ 4,8 · 504 <span class="es">reseñas</span><span class="en">reviews</span> · Google</p>
 </footer>
+<div class="bar">
+ <a class="w" href="https://wa.me/34653486735" target="_blank" rel="noopener">💬 WhatsApp</a>
+ <a class="m" href="https://www.google.com/maps/search/?api=1&query=La+Taberna+de+la+Barceloneta+Barcelona" target="_blank" rel="noopener">📍 <span class="es">Cómo llegar</span><span class="en">Directions</span></a>
+</div>
 </body></html>

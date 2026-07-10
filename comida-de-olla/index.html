@@ -7,33 +7,47 @@
 *{margin:0;padding:0;box-sizing:border-box}
 html.en .es{display:none}html:not(.en) .en{display:none}
 body{font:16px/1.65 'Segoe UI',sans-serif;color:var(--ink);background:var(--cream)}
-#lg{position:fixed;top:16px;right:16px;z-index:50;background:var(--green);color:var(--cream);border:0;border-radius:30px;padding:8px 15px;font-size:12px;font-weight:800;letter-spacing:.1em;cursor:pointer}
-.hero{min-height:94svh;display:flex;flex-direction:column;justify-content:center;padding:60px 24px;position:relative;background:linear-gradient(180deg,rgba(44,28,16,.2),rgba(44,28,16,.72)),url('img/01.jpg') center/cover;color:var(--cream)}
+#lg{position:fixed;top:16px;right:16px;z-index:60;background:var(--green);color:var(--cream);border:0;border-radius:30px;padding:8px 15px;font-size:12px;font-weight:800;letter-spacing:.1em;cursor:pointer}
+.bar{position:fixed;bottom:0;left:0;right:0;z-index:55;background:rgba(44,28,16,.96);backdrop-filter:blur(8px);display:flex;gap:2px;padding:7px 10px;justify-content:center}
+.bar a{flex:1;max-width:220px;text-align:center;color:#fff;text-decoration:none;font-weight:700;font-size:14px;padding:9px 6px;border-radius:10px}
+.bar .c{background:var(--mustard);color:#3a2405}.bar .m{background:#3a5a36}.bar .w{background:#25d366;color:#053}
+.hero{min-height:92svh;display:flex;flex-direction:column;justify-content:center;padding:60px 24px 90px;position:relative;background:linear-gradient(180deg,rgba(44,28,16,.2),rgba(44,28,16,.72)),url('img/01.jpg') center/cover;color:var(--cream)}
 .hero-in{max-width:1000px;margin:0 auto;width:100%}
 .est{font-size:12px;letter-spacing:.32em;text-transform:uppercase;color:var(--mustard);font-weight:800}
 h1{font-size:clamp(46px,11vw,104px);font-weight:900;line-height:.92;margin:14px 0 6px;letter-spacing:-.02em}
 .tag{font-size:clamp(17px,3.4vw,24px);max-width:640px}
 .stars{margin-top:12px;font-weight:600}.stars b{color:var(--mustard)}
-.cta{margin-top:24px;display:flex;gap:12px;flex-wrap:wrap}
-.btn{padding:14px 24px;border-radius:40px;font-weight:800;text-decoration:none;font-size:15px}
-.b-call{background:var(--mustard);color:#3a2405}.b-map{background:var(--cream);color:var(--terra)}.b-ig{background:transparent;color:var(--cream);border:2px solid var(--cream)}
-section{max-width:1000px;margin:0 auto;padding:62px 24px}
-h2{font-size:clamp(26px,5vw,42px);font-weight:900;color:var(--terra);margin-bottom:12px}
-.lead{font-size:clamp(18px,3vw,24px);max-width:760px}
-.board{background:#26331f;color:#f3ecd6;border-radius:18px;padding:34px;margin-top:14px;border:8px solid #17200f;box-shadow:inset 0 0 60px rgba(0,0,0,.4)}
+.hero .quick{margin-top:22px;display:flex;gap:10px;flex-wrap:wrap;font-size:13.5px}
+.hero .quick span{background:rgba(0,0,0,.3);border:1px solid rgba(255,255,255,.35);border-radius:30px;padding:7px 15px;backdrop-filter:blur(4px)}
+section{max-width:1000px;margin:0 auto;padding:66px 24px}
+h2{font-size:clamp(26px,5vw,42px);font-weight:900;color:var(--terra);margin-bottom:10px}
+.sub{color:#7a5b46;font-size:15px;margin-bottom:22px;max-width:620px}
+.story{display:grid;grid-template-columns:1.15fr .85fr;gap:36px;align-items:center}
+.story p{font-size:clamp(16px,2.4vw,19px);margin-bottom:14px}
+.story img{width:100%;height:100%;min-height:300px;object-fit:cover;border-radius:16px}
+.spec{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.sc{background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 8px 24px rgba(192,90,43,.1)}
+.sc img{width:100%;height:150px;object-fit:cover}
+.sc .cap{padding:14px 15px}.sc .cap h3{font-size:16px;color:var(--terra);margin-bottom:4px}.sc .cap p{font-size:13px;color:#7a5b46}
+.gal{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.gal img{width:100%;height:150px;object-fit:cover;border-radius:12px}
+.gal img.wide{grid-column:span 2;height:100%}
+.board{background:#26331f;color:#f3ecd6;border-radius:18px;padding:34px;border:8px solid #17200f;box-shadow:inset 0 0 60px rgba(0,0,0,.4)}
 .board .bh{text-align:center;font-family:Georgia,serif;font-style:italic;font-size:26px;color:var(--mustard);margin-bottom:6px}
 .board .price{text-align:center;font-size:15px;color:#bcd0a8;margin-bottom:18px}
 .board h3{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--mustard);margin:16px 0 8px;border-bottom:1px dashed #4a5a38;padding-bottom:6px}
-.board ul{list-style:none}.board li{padding:5px 0;font-size:15.5px;font-family:Georgia,serif}
-.board li span{color:#9db88a;font-size:13px}
+.board ul{list-style:none}.board li{padding:5px 0;font-size:15.5px;font-family:Georgia,serif}.board li span{color:#9db88a;font-size:13px}
 .note{font-size:13px;color:#8a6b4a;margin-top:14px}
-.gal{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:24px}
-.gal img{width:100%;height:150px;object-fit:cover;border-radius:12px}
-.info{display:flex;flex-wrap:wrap;gap:26px;margin-top:22px;font-size:15px}.info b{color:var(--terra)}
-.rev{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:14px}
-.q{background:#fff;border-left:4px solid var(--green);border-radius:0 14px 14px 0;padding:20px;font-style:italic;font-size:15px}
-footer{background:var(--ink);color:var(--cream);text-align:center;padding:48px 24px}footer a{color:var(--mustard)}
-@media(max-width:700px){.gal{grid-template-columns:1fr 1fr}.rev{grid-template-columns:1fr}}
+.rev{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.q{background:#fff;border-left:4px solid var(--green);border-radius:0 14px 14px 0;padding:20px;font-style:italic;font-size:14.5px}
+.q .who{display:block;margin-top:10px;font-style:normal;font-weight:700;color:var(--terra);font-size:13px}
+.visit{display:grid;grid-template-columns:1fr 1fr;gap:36px}
+.hours{list-style:none}.hours li{display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid #eaddc4;font-size:15px}
+.hours li.today{color:var(--terra);font-weight:800}
+.vbox b{color:var(--terra)}
+.vbox a.map{display:inline-block;margin-top:12px;background:var(--terra);color:#fff;text-decoration:none;font-weight:800;padding:12px 22px;border-radius:30px;font-size:14px}
+footer{background:var(--ink);color:var(--cream);text-align:center;padding:48px 24px 90px}footer a{color:var(--mustard)}
+@media(max-width:820px){.story,.visit{grid-template-columns:1fr}.spec{grid-template-columns:1fr 1fr}.gal{grid-template-columns:1fr 1fr}.gal img.wide{grid-column:span 2}.rev{grid-template-columns:1fr}}
 </style></head>
 <body>
 <button id="lg" onclick="document.documentElement.classList.toggle('en')"><span class="es">EN</span><span class="en">ES</span></button>
@@ -42,22 +56,42 @@ footer{background:var(--ink);color:var(--cream);text-align:center;padding:48px 2
   <div class="est">Horta-Guinardó · Barcelona</div>
   <h1>Comida de Olla</h1>
   <p class="tag"><span class="es">Menú del día, arroces y cocina casera de siempre. La cantina de barrio donde comen los de siempre.</span><span class="en">Menú del día, rice dishes and honest home cooking. The neighbourhood canteen the regulars swear by.</span></p>
-  <div class="stars">★ <b>4,7</b> · 1.884 <span class="es">reseñas</span><span class="en">reviews</span></div>
-  <div class="cta">
-   <a class="btn b-call" href="tel:+34932528465"><span class="es">Reservar</span><span class="en">Call to book</span></a>
-   <a class="btn b-map" href="https://www.google.com/maps/search/?api=1&query=Comida+de+Olla+Barcelona" target="_blank" rel="noopener"><span class="es">Cómo llegar</span><span class="en">Directions</span></a>
-   <a class="btn b-ig" href="https://www.facebook.com/comidadeollamenjars/" target="_blank" rel="noopener">Facebook</a>
-  </div>
+  <div class="stars">★ <b>4,7</b> · 1.884 <span class="es">reseñas en Google</span><span class="en">Google reviews</span></div>
+  <div class="quick"><span>🍚 <span class="es">Arroces &amp; paellas</span><span class="en">Rice &amp; paellas</span></span><span>🍽️ <span class="es">Menú del día 17,50€</span><span class="en">Set lunch €17.50</span></span><span>🏡 <span class="es">Cocina casera</span><span class="en">Home cooking</span></span></div>
  </div>
 </div>
 
 <section>
  <h2><span class="es">Cocina de casa, hecha al momento</span><span class="en">Home cooking, made fresh</span></h2>
- <p class="lead"><span class="es">Platos sanos y caseros, trato cercano y ese ambiente de cantina de habitués. Ven a probar nuestros arroces — pero reserva, que los findes se llena.</span><span class="en">Healthy homemade dishes, a warm welcome and that "regulars' canteen" feel. Come for our rice dishes — but book ahead, weekends fill up.</span></p>
- <div class="gal"><img src="img/02.jpg" alt=""><img src="img/03.jpg" alt=""><img src="img/04.jpg" alt=""><img src="img/05.jpg" alt=""></div>
+ <div class="story">
+  <div>
+   <p><span class="es">Comida de Olla es de esos sitios a los que vuelven los del barrio: platos sanos y caseros, trato cercano y ese ambiente de cantina de habitués que ya casi no queda en Barcelona.</span><span class="en">Comida de Olla is one of those places the neighbourhood keeps coming back to: healthy homemade dishes, a warm welcome, and that regulars' canteen feeling that's almost gone from Barcelona.</span></p>
+   <p><span class="es">Nuestra especialidad son los arroces y las paellas — de marisco, negro, con su punto de socarrat — pero cada día hay guisos, pescado fresco y un menú del día que cambia con el mercado. Vienen desde Madrid a comer aquí; reservad, que los fines de semana se llena.</span><span class="en">Our specialty is rice and paella — seafood, black rice, with the perfect socarrat — but every day there are stews, fresh fish and a set menu that changes with the market. People come from Madrid to eat here; book ahead, weekends fill up.</span></p>
+  </div>
+  <img src="img/02.jpg" alt="">
+ </div>
 </section>
 
 <section style="padding-top:0">
+ <h2><span class="es">Lo que no te puedes perder</span><span class="en">What you can't miss</span></h2>
+ <p class="sub"><span class="es">Los platos por los que la gente cruza la ciudad.</span><span class="en">The dishes people cross the city for.</span></p>
+ <div class="spec">
+  <div class="sc"><img src="img/03.jpg" alt=""><div class="cap"><h3><span class="es">Arroz negro</span><span class="en">Black rice</span></h3><p><span class="es">Con sepia y su alioli.</span><span class="en">With cuttlefish &amp; allioli.</span></p></div></div>
+  <div class="sc"><img src="img/04.jpg" alt=""><div class="cap"><h3><span class="es">Paella de marisco</span><span class="en">Seafood paella</span></h3><p><span class="es">Gambas, mejillones, socarrat.</span><span class="en">Prawns, mussels, socarrat.</span></p></div></div>
+  <div class="sc"><img src="img/05.jpg" alt=""><div class="cap"><h3><span class="es">Menú del día</span><span class="en">Menu of the day</span></h3><p><span class="es">Casero, cambia a diario.</span><span class="en">Homemade, changes daily.</span></p></div></div>
+  <div class="sc"><img src="img/06.jpg" alt=""><div class="cap"><h3><span class="es">Postres caseros</span><span class="en">Homemade desserts</span></h3><p><span class="es">Para acabar como toca.</span><span class="en">The proper finish.</span></p></div></div>
+ </div>
+</section>
+
+<section style="padding-top:0">
+ <h2><span class="es">La casa por dentro</span><span class="en">Inside the house</span></h2>
+ <div class="gal">
+  <img class="wide" src="img/07.jpg" alt=""><img src="img/08.jpg" alt=""><img src="img/09.jpg" alt=""><img src="img/10.jpg" alt="">
+ </div>
+</section>
+
+<section style="padding-top:0">
+ <h2><span class="es">La carta</span><span class="en">The menu</span></h2>
  <div class="board">
   <div class="bh"><span class="es">Menú del día</span><span class="en">Menu of the day</span></div>
   <div class="price"><span class="es">Menú completo</span><span class="en">Full menu</span> · 17,50€ &nbsp;|&nbsp; ½ <span class="es">menú</span><span class="en">menu</span> · 13,50€ &nbsp;|&nbsp; +1€ <span class="es">terraza</span><span class="en">terrace</span></div>
@@ -67,23 +101,47 @@ footer{background:var(--ink);color:var(--cream);text-align:center;padding:48px 2
   <ul><li><span class="es">Garbanzos guisados con carne "ropavieja"</span><span class="en">Chickpea stew with "ropavieja"</span></li><li><span class="es">Brocheta de pollo con hummus y salsa de cacahuete</span><span class="en">Chicken skewer, hummus &amp; peanut sauce</span></li><li><span class="es">Huevos a la plancha con patatas y jamón</span><span class="en">Grilled eggs with potatoes &amp; ham</span></li></ul>
   <h3><span class="es">Postre o café</span><span class="en">Dessert or coffee</span></h3>
   <ul><li><span class="es">Pastel · macedonia · yogur con miel · helado</span><span class="en">Cake · fruit salad · yogurt with honey · ice cream</span></li></ul>
-  <p class="note" style="color:#bcd0a8"><span class="es">★ Menú real del local (incluye entrantes + principal + bebida + postre/café). Además, arroces y paellas — mejor encargarlos.</span><span class="en">★ Real menu from the restaurant (starter + main + drink + dessert/coffee). Plus rice dishes &amp; paellas — best pre-ordered.</span></p>
- </div>
- <div class="info">
-  <div><b><span class="es">Horario</span><span class="en">Hours</span></b> · <span class="es">Mié–Vie 11–16:30 · Sáb–Dom 10–16:30 · Lun–Mar cerrado</span><span class="en">Wed–Fri 11–16:30 · Sat–Sun 10–16:30 · Mon–Tue closed</span></div>
-  <div><b><span class="es">Dónde</span><span class="en">Where</span></b> · Carrer de Praga, 1 · Horta-Guinardó</div>
+  <p class="note" style="color:#bcd0a8"><span class="es">★ Menú real del local (entrantes + principal + bebida + postre/café). Además, arroces y paellas a la carta — mejor encargarlos.</span><span class="en">★ Real menu from the restaurant (starter + main + drink + dessert/coffee). Plus rice dishes &amp; paellas à la carte — best pre-ordered.</span></p>
  </div>
 </section>
 
 <section style="padding-top:0">
+ <h2><span class="es">Lo que dicen los clientes</span><span class="en">What guests say</span></h2>
  <div class="rev">
-  <div class="q">“¡Imprescindible parada en Barcelona! Un trato excepcional, camareros agradables y cercanos. Sin duda volveremos.”</div>
-  <div class="q">“Five stars, food and service through and through ❤️ The seafood paella and black paella were amazing. Highly recommended — but book, it gets busy at weekend lunch.”</div>
+  <div class="q">“¡Imprescindible parada en Barcelona! Un trato excepcional, camareros agradables y cercanos. Sin duda volveremos.”<span class="who">Laura I.</span></div>
+  <div class="q">“Five stars, food and service through and through ❤️ The seafood paella and black paella were amazing. Highly recommended — but book, it gets busy at weekend lunch.”<span class="who">Ethan L.</span></div>
+  <div class="q">“Très bon restaurant ! Des plats sains et fait maison, on sent que c'est vraiment une cantine d'habitués, on adore !”<span class="who">Camille C.</span></div>
+ </div>
+</section>
+
+<section style="padding-top:0">
+ <h2><span class="es">Visítanos</span><span class="en">Visit us</span></h2>
+ <div class="visit">
+  <ul class="hours">
+   <li><span class="es">Lunes</span><span class="en">Monday</span><span class="es">Cerrado</span><span class="en">Closed</span></li>
+   <li><span class="es">Martes</span><span class="en">Tuesday</span><span class="es">Cerrado</span><span class="en">Closed</span></li>
+   <li><span class="es">Miércoles</span><span class="en">Wednesday</span><span>11:00 – 16:30</span></li>
+   <li><span class="es">Jueves</span><span class="en">Thursday</span><span>11:00 – 16:30</span></li>
+   <li><span class="es">Viernes</span><span class="en">Friday</span><span>11:00 – 16:30</span></li>
+   <li><span class="es">Sábado</span><span class="en">Saturday</span><span>10:00 – 16:30</span></li>
+   <li><span class="es">Domingo</span><span class="en">Sunday</span><span>10:00 – 16:30</span></li>
+  </ul>
+  <div class="vbox">
+   <p><b><span class="es">Dónde estamos</span><span class="en">Where we are</span></b><br>Carrer de Praga, 1<br>Horta-Guinardó · 08024 Barcelona</p>
+   <p style="margin-top:14px"><b><span class="es">Reservas</span><span class="en">Bookings</span></b><br><span class="es">Llámanos al</span><span class="en">Call us at</span> 93 252 84 65</p>
+   <p style="margin-top:14px;font-size:14px;color:#7a5b46"><span class="es">A un paso del Park Güell. Metro Alfons X (L4) o autobús — 10 min andando.</span><span class="en">A step from Park Güell. Metro Alfons X (L4) or bus — 10 min walk.</span></p>
+   <a class="map" href="https://www.google.com/maps/search/?api=1&query=Comida+de+Olla+Barcelona" target="_blank" rel="noopener"><span class="es">Cómo llegar →</span><span class="en">Get directions →</span></a>
+  </div>
  </div>
 </section>
 
 <footer>
  <p style="font-size:22px;font-weight:900">Comida de Olla</p>
  <p style="margin-top:8px">Carrer de Praga 1 · Horta-Guinardó · Barcelona · <a href="tel:+34932528465">93 252 84 65</a></p>
+ <p style="margin-top:6px;font-size:13px;opacity:.7">★ 4,7 · 1.884 <span class="es">reseñas</span><span class="en">reviews</span> · Google</p>
 </footer>
+<div class="bar">
+ <a class="c" href="tel:+34932528465">📞 <span class="es">Llamar</span><span class="en">Call</span></a>
+ <a class="m" href="https://www.google.com/maps/search/?api=1&query=Comida+de+Olla+Barcelona" target="_blank" rel="noopener">📍 <span class="es">Cómo llegar</span><span class="en">Directions</span></a>
+</div>
 </body></html>
