@@ -1,0 +1,154 @@
+<!DOCTYPE html><html lang="es"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<link href="https://fonts.googleapis.com/css2?family=Italiana&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<title>El Rincón del Cava · Cava &amp; tapes · Poble-sec, Barcelona</title>
+<style>
+:root{--black:#0f0f10;--black2:#18181b;--g:#c9a24a;--g2:#e8c877;--cream:#f3efe6}
+*{margin:0;padding:0;box-sizing:border-box}
+html.en .es{display:none}html:not(.en) .en{display:none}
+body{font:16px/1.66 'Jost',sans-serif;color:var(--cream);background:var(--black)}
+#lg{position:fixed;top:16px;right:16px;z-index:60;background:var(--g);color:#0f0f10;border:0;border-radius:2px;padding:8px 15px;font-size:12px;font-weight:600;letter-spacing:.12em;cursor:pointer}
+.bar{position:fixed;bottom:0;left:0;right:0;z-index:55;background:rgba(6,6,7,.97);backdrop-filter:blur(8px);display:flex;gap:2px;padding:7px 10px;justify-content:center;border-top:1px solid rgba(201,162,74,.3)}
+.bar a{flex:1;max-width:210px;text-align:center;text-decoration:none;font-weight:600;font-size:14px;padding:11px 6px;border-radius:2px}
+.bar .c{background:var(--g);color:#0f0f10}.bar .m{background:#2a2620;color:var(--cream)}
+.hero{min-height:96svh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:64px 26px 96px;position:relative;overflow:hidden}
+.fizz{position:absolute;inset:0;overflow:hidden;z-index:-1}
+.fizz span{position:absolute;bottom:-20px;border-radius:50%;background:radial-gradient(circle at 35% 35%,rgba(232,200,119,.9),rgba(201,162,74,.15));opacity:.5;animation:rise linear infinite}
+@keyframes rise{to{transform:translateY(-104svh);opacity:0}}
+.fizz span:nth-child(1){left:12%;width:7px;height:7px;animation-duration:9s}
+.fizz span:nth-child(2){left:26%;width:11px;height:11px;animation-duration:12s;animation-delay:2s}
+.fizz span:nth-child(3){left:45%;width:5px;height:5px;animation-duration:8s;animation-delay:1s}
+.fizz span:nth-child(4){left:63%;width:9px;height:9px;animation-duration:11s;animation-delay:3s}
+.fizz span:nth-child(5){left:78%;width:6px;height:6px;animation-duration:10s;animation-delay:1.5s}
+.fizz span:nth-child(6){left:88%;width:12px;height:12px;animation-duration:13s;animation-delay:4s}
+@media(prefers-reduced-motion:reduce){.fizz span{animation:none;display:none}}
+.hero-in{max-width:760px;position:relative}
+.eyebrow{font-weight:500;font-size:12px;letter-spacing:.36em;text-transform:uppercase;color:var(--g2)}
+h1{font-family:'Italiana',serif;font-size:clamp(56px,14vw,140px);line-height:.94;margin:14px 0 6px;letter-spacing:.01em}
+h1 span{color:var(--g2)}
+.orn{font-family:'Italiana',serif;font-size:clamp(20px,4vw,30px);color:var(--g);letter-spacing:.05em}
+.tag{font-size:clamp(16px,3vw,20px);max-width:520px;margin:16px auto 0;color:#cfc9bc;font-weight:300}
+.stars{margin-top:14px;font-weight:500;color:#cfc9bc}.stars b{color:var(--g2)}
+.cta{margin-top:24px;display:flex;gap:11px;flex-wrap:wrap;justify-content:center}
+.btn{padding:13px 28px;border-radius:2px;font-weight:600;text-decoration:none;font-size:14px;letter-spacing:.04em}
+.bA{background:var(--g);color:#0f0f10}.bB{background:transparent;color:var(--cream);border:1px solid rgba(201,162,74,.5)}
+section{max-width:960px;margin:0 auto;padding:62px 26px}
+h2{font-family:'Italiana',serif;font-size:clamp(32px,6vw,54px);color:var(--g2);margin-bottom:12px;letter-spacing:.01em}
+.sub{color:#a8a294;max-width:600px;margin-bottom:24px;font-weight:300}
+.story{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:center}
+.story p{font-size:clamp(16px,2.4vw,19px);margin-bottom:14px;font-weight:300}
+.story img{width:100%;height:100%;min-height:320px;object-fit:cover;border-radius:4px;border:1px solid rgba(201,162,74,.25)}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.card{background:var(--black2);border:1px solid rgba(201,162,74,.18);border-radius:5px;overflow:hidden}
+.card img{width:100%;height:180px;object-fit:cover}
+.card .b{padding:16px 18px}.card h3{font-family:'Italiana',serif;font-size:23px;color:var(--g2)}.card p{font-size:13.5px;color:#a8a294;margin-top:3px;font-weight:300}
+.gal{display:flex;flex-wrap:wrap;gap:20px;justify-content:center;padding:6px 0}
+.gal img{width:min(240px,42vw);height:230px;object-fit:cover;background:#fff;padding:10px 10px 34px;box-shadow:0 10px 26px rgba(0,0,0,.5)}
+.gal img:nth-child(odd){transform:rotate(-2.5deg)}.gal img:nth-child(even){transform:rotate(2deg)}
+.menu{background:var(--black2);border:1px solid rgba(201,162,74,.3);border-radius:8px;padding:34px;max-width:600px;margin:0 auto}
+.menu h3{font-family:'Italiana',serif;font-size:28px;color:var(--g2);text-align:center;margin-bottom:2px}
+.menu .lead{text-align:center;color:#a8a294;margin-bottom:20px;font-size:14px;font-weight:300}
+.mrow{display:flex;justify-content:space-between;gap:14px;padding:11px 0;border-bottom:1px dotted rgba(201,162,74,.28)}.mrow:last-child{border:0}
+.nm{font-weight:500}.dsc{font-size:13px;color:#948e80;font-weight:300}.pr{color:var(--g2);font-weight:500;white-space:nowrap}
+.note{font-size:13px;color:#948e80;margin-top:16px;text-align:center;font-weight:300}
+.rev{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.q{background:var(--black2);border-top:2px solid var(--g);border-radius:0 0 6px 6px;padding:20px;font-size:14.5px;color:#ded8cc;font-weight:300}.q .who{display:block;margin-top:10px;font-weight:600;font-size:12.5px;color:var(--g2)}
+.visit{display:grid;grid-template-columns:1fr 1fr;gap:36px;max-width:900px;margin:0 auto}
+.hours{list-style:none}.hours li{display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid rgba(201,162,74,.16);font-size:14.5px}
+.vbox b{color:var(--g2)}
+.vbox a.map{display:inline-block;margin-top:12px;background:var(--g);color:#0f0f10;text-decoration:none;font-weight:600;padding:12px 22px;border-radius:2px;font-size:14px}
+footer{background:#060607;color:#948e80;text-align:center;padding:50px 26px 92px}footer a{color:var(--g2)}
+@media(max-width:820px){.story,.visit{grid-template-columns:1fr}.cards,.rev{grid-template-columns:1fr}}
+</style></head>
+<body>
+<button id="lg" onclick="document.documentElement.classList.toggle('en')"><span class="es">EN</span><span class="en">ES</span></button>
+<div class="hero">
+ <div class="fizz"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+ <div class="hero-in">
+  <div class="eyebrow"><span class="es">Poble-sec · Barcelona</span><span class="en">Poble-sec · Barcelona</span></div>
+  <h1>El Rincón<br>del <span>Cava</span></h1>
+  <div class="orn"><span class="es">bombolles des del matí</span><span class="en">bubbles from the morning</span></div>
+  <p class="tag"><span class="es">Café por la mañana, cava y tapas por la tarde. Un rincón con burbujas para cualquier hora.</span><span class="en">Coffee in the morning, cava and tapas in the evening. A corner with bubbles for any hour.</span></p>
+  <div class="stars">★★★★★ <b>4,5</b> · 1.062 <span class="es">reseñas</span><span class="en">reviews</span></div>
+  <div class="cta">
+   <a class="btn bA" href="tel:+34934417031"><span class="es">Llamar</span><span class="en">Call</span></a>
+   <a class="btn bB" href="https://www.google.com/maps/search/?api=1&query=El+Rincon+del+Cava+Poble+Sec+Barcelona" target="_blank" rel="noopener"><span class="es">Cómo llegar</span><span class="en">Directions</span></a>
+  </div>
+ </div>
+</div>
+
+<section>
+ <h2><span class="es">Un rincón con burbujas</span><span class="en">A corner with bubbles</span></h2>
+ <div class="story">
+  <div>
+   <p><span class="es">El Rincón del Cava abre temprano: un café bien puesto y un pincho para empezar el día. Y cuando cae la tarde, la copa de cava y las tapas toman el relevo.</span><span class="en">El Rincón del Cava opens early: a proper coffee and a bite to start the day. And when evening comes, cava by the glass and tapas take over.</span></p>
+   <p><span class="es">Más de mil reseñas y un 4,5 lo dicen todo: un bar de barrio de Poble-sec donde siempre hay motivo para brindar.</span><span class="en">Over a thousand reviews and a 4.5 say it all: a Poble-sec neighbourhood bar where there's always a reason to toast.</span></p>
+  </div>
+  <img src="img/01.jpg" alt="">
+ </div>
+</section>
+
+<section style="padding-top:0">
+ <h2><span class="es">A cualquier hora</span><span class="en">At any hour</span></h2>
+ <div class="cards">
+  <div class="card"><img src="img/02.jpg" alt=""><div class="b"><h3><span class="es">Cava &amp; vino</span><span class="en">Cava &amp; wine</span></h3><p><span class="es">Copa fresca, burbuja fina.</span><span class="en">A cold glass, fine bubbles.</span></p></div></div>
+  <div class="card"><img src="img/03.jpg" alt=""><div class="b"><h3><span class="es">Café &amp; desayuno</span><span class="en">Coffee &amp; breakfast</span></h3><p><span class="es">Desde las 7:30 para madrugadores.</span><span class="en">From 7:30 for early risers.</span></p></div></div>
+  <div class="card"><img src="img/04.jpg" alt=""><div class="b"><h3><span class="es">Tapas &amp; pinchos</span><span class="en">Tapas &amp; bites</span></h3><p><span class="es">Para acompañar la copa.</span><span class="en">To go with your glass.</span></p></div></div>
+ </div>
+</section>
+
+<section style="padding-top:0">
+ <h2><span class="es">Momentos</span><span class="en">Moments</span></h2>
+ <p class="sub"><span class="es">Instantes del rincón.</span><span class="en">Snapshots from the corner.</span></p>
+ <div class="gal"><img src="img/05.jpg" alt=""><img src="img/06.jpg" alt=""><img src="img/07.jpg" alt=""></div>
+</section>
+
+<section style="padding-top:0">
+ <h2><span class="es">La barra</span><span class="en">The bar</span></h2>
+ <div class="menu">
+  <h3><span class="es">Para brindar</span><span class="en">To toast</span></h3>
+  <p class="lead"><span class="es">Café de día, cava de tarde. Tapas para acompañar.</span><span class="en">Coffee by day, cava by evening. Tapas alongside.</span></p>
+  <div class="mrow"><div><div class="nm"><span class="es">Copa de cava</span><span class="en">Glass of cava</span></div><div class="dsc"><span class="es">frío, con burbuja</span><span class="en">cold, with fizz</span></div></div><div class="pr"><span class="es">consultar</span><span class="en">ask</span></div></div>
+  <div class="mrow"><div><div class="nm"><span class="es">Café &amp; desayuno</span><span class="en">Coffee &amp; breakfast</span></div></div><div class="pr"><span class="es">consultar</span><span class="en">ask</span></div></div>
+  <div class="mrow"><div><div class="nm"><span class="es">Tapas &amp; pinchos</span><span class="en">Tapas &amp; bites</span></div></div><div class="pr"><span class="es">consultar</span><span class="en">ask</span></div></div>
+  <div class="mrow"><div><div class="nm"><span class="es">Vermut &amp; caña</span><span class="en">Vermouth &amp; beer</span></div></div><div class="pr"><span class="es">consultar</span><span class="en">ask</span></div></div>
+  <p class="note"><span class="es">Los precios están en la barra. Pregúntanos o llámanos — te pasamos el WhatsApp en la llamada.</span><span class="en">Prices are at the bar. Ask us or call — we'll share WhatsApp on the call.</span></p>
+ </div>
+</section>
+
+<section style="padding-top:0">
+ <h2><span class="es">Lo que dicen</span><span class="en">What they say</span></h2>
+ <div class="rev">
+  <div class="q">“Un clásico de Poble-sec. Café estupendo por la mañana y cava con tapas por la tarde. Trato cercano y precios de barrio.”<span class="who">Google · ★★★★★</span></div>
+  <div class="q">“Siempre animado y con buen ambiente. Las tapas acompañan de maravilla a la copa de cava. Un imprescindible.”<span class="who">Google · ★★★★★</span></div>
+  <div class="q">“Abren temprano y se agradece. Desayuno rico, servicio rápido y por la tarde el sitio ideal para brindar.”<span class="who">Google · ★★★★★</span></div>
+ </div>
+</section>
+
+<section style="padding-top:0">
+ <h2><span class="es">Visítanos</span><span class="en">Visit us</span></h2>
+ <div class="visit">
+  <ul class="hours">
+   <li><span class="es">Lun–Jue · mañana</span><span class="en">Mon–Thu · morning</span><span>7:30 – 15:00</span></li>
+   <li><span class="es">Lun–Jue · tarde</span><span class="en">Mon–Thu · evening</span><span>18:00 – 23:00</span></li>
+   <li><span class="es">Fin de semana</span><span class="en">Weekend</span><span class="es">consultar</span><span class="en">ask</span></li>
+  </ul>
+  <div class="vbox">
+   <p><b><span class="es">Dónde estamos</span><span class="en">Where we are</span></b><br>Poble-sec · Barcelona</p>
+   <p style="margin-top:14px"><b><span class="es">Reservas &amp; grupos</span><span class="en">Bookings &amp; groups</span></b><br><a href="tel:+34934417031" style="color:var(--g2);font-weight:600">934 417 031</a><br><span class="es" style="font-size:13px;color:#948e80">Pide WhatsApp durante la llamada.</span><span class="en" style="font-size:13px;color:#948e80">Ask for WhatsApp on the call.</span></p>
+   <a class="map" href="https://www.google.com/maps/search/?api=1&query=El+Rincon+del+Cava+Poble+Sec+Barcelona" target="_blank" rel="noopener"><span class="es">Cómo llegar →</span><span class="en">Get directions →</span></a>
+  </div>
+ </div>
+</section>
+
+<footer>
+ <p style="font-family:'Italiana',serif;font-size:32px;color:var(--g2)">El Rincón del Cava</p>
+ <p style="margin-top:8px">Poble-sec · Barcelona · <a href="tel:+34934417031">934 417 031</a></p>
+ <p style="margin-top:6px;font-size:13px;opacity:.7">★ 4,5 · 1.062 <span class="es">reseñas</span><span class="en">reviews</span> · Google</p>
+</footer>
+<div class="bar">
+ <a class="c" href="tel:+34934417031">📞 <span class="es">Llamar</span><span class="en">Call</span></a>
+ <a class="m" href="https://www.google.com/maps/search/?api=1&query=El+Rincon+del+Cava+Poble+Sec+Barcelona" target="_blank" rel="noopener">📍 <span class="es">Cómo llegar</span><span class="en">Directions</span></a>
+</div>
+</body></html>

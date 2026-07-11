@@ -1,0 +1,147 @@
+<!DOCTYPE html><html lang="es"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<title>Restaurant l'Andreuenc · Cuina catalana · Sant Andreu, Barcelona</title>
+<style>
+:root{--red:#b31424;--redd:#6d0d18;--cream:#f6efe0;--ink:#1c120f;--gold:#c99a3a}
+*{margin:0;padding:0;box-sizing:border-box}
+html.en .es{display:none}html:not(.en) .en{display:none}
+body{font:16px/1.6 'Oswald',sans-serif;color:var(--ink);background:var(--cream)}
+#lg{position:fixed;top:16px;right:16px;z-index:60;background:var(--ink);color:var(--cream);border:0;border-radius:30px;padding:8px 15px;font-size:12px;font-weight:700;letter-spacing:.1em;cursor:pointer}
+.bar{position:fixed;bottom:0;left:0;right:0;z-index:55;background:rgba(28,18,15,.96);backdrop-filter:blur(8px);display:flex;gap:2px;padding:7px 10px;justify-content:center}
+.bar a{flex:1;max-width:210px;text-align:center;color:#fff;text-decoration:none;font-weight:700;font-size:14px;padding:10px 6px;border-radius:8px;letter-spacing:.04em}
+.bar .c{background:var(--red)}.bar .m{background:#3a2a1a}
+.hero{min-height:94svh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:60px 24px 96px;background:var(--red);color:var(--cream);position:relative;overflow:hidden}
+.suit{position:absolute;font-size:180px;opacity:.07;font-family:serif}
+.suit.a{top:6%;left:6%}.suit.b{bottom:8%;right:7%}.suit.c{top:40%;right:14%;font-size:90px}
+.card{position:relative;z-index:2;background:var(--cream);color:var(--ink);border-radius:16px;padding:44px 40px;max-width:640px;box-shadow:0 24px 60px rgba(0,0,0,.3);border:2px solid var(--gold)}
+.badge{display:inline-block;background:var(--ink);color:var(--gold);font-size:11px;letter-spacing:.18em;text-transform:uppercase;padding:6px 14px;border-radius:30px;font-weight:700}
+h1{font-family:'DM Serif Display',serif;font-size:clamp(44px,9vw,88px);line-height:.95;margin:16px 0 6px;color:var(--redd)}
+.tag{font-size:clamp(16px,3vw,20px);color:#5a4a42}
+.stars{margin-top:12px;font-size:15px;font-weight:500}.stars b{color:var(--red)}
+.cta{margin-top:22px;display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
+.btn{padding:13px 24px;border-radius:8px;font-weight:700;text-decoration:none;font-size:14px;letter-spacing:.03em}
+.b1{background:var(--red);color:#fff}.b2{background:transparent;color:var(--ink);border:2px solid var(--ink)}.b3{background:var(--gold);color:var(--ink)}
+section{max-width:1000px;margin:0 auto;padding:64px 24px}
+h2{font-family:'DM Serif Display',serif;font-size:clamp(28px,5vw,44px);color:var(--red);margin-bottom:10px}
+.sub{color:#7a5b46;font-size:15px;margin-bottom:22px;max-width:620px;font-weight:400}
+.story{display:grid;grid-template-columns:1.1fr .9fr;gap:36px;align-items:center}
+.story p{font-family:sans-serif;font-size:clamp(16px,2.4vw,19px);margin-bottom:14px;color:#3a2a24}
+.story img{width:100%;height:100%;min-height:300px;object-fit:cover;border-radius:14px;border:3px solid var(--gold)}
+.spec{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.sc{background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 8px 22px rgba(179,20,36,.12);border-top:4px solid var(--red)}
+.sc img{width:100%;height:180px;object-fit:cover}.sc .cap{padding:15px 16px}.sc .cap h3{font-size:19px;color:var(--redd)}.sc .cap p{font:400 13.5px/1.4 sans-serif;color:#7a5b46;margin-top:3px}
+.gal{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.gal img{width:100%;height:210px;object-fit:cover;border-radius:12px}
+.menu{background:#fff;border:2px solid var(--red);border-radius:16px;padding:32px;max-width:640px;margin:0 auto}
+.menu .mh{text-align:center;font-family:'DM Serif Display',serif;font-size:26px;color:var(--redd)}
+.menu .mp{text-align:center;color:var(--gold);font-weight:700;margin:4px 0 16px}
+.mrow{display:flex;justify-content:space-between;gap:16px;padding:10px 0;border-bottom:1px dashed #e0cfa8;font-family:sans-serif}.mrow:last-child{border:0}
+.nm{font-weight:700}.pr{font-weight:700;color:var(--red);white-space:nowrap;font-family:'Oswald'}
+.note{font:400 13px/1.5 sans-serif;color:#7a5b46;margin-top:12px;text-align:center}
+.rev{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.q{background:#fff;border-left:4px solid var(--gold);border-radius:0 14px 14px 0;padding:20px;font:italic 400 14.5px/1.5 sans-serif}.q .who{display:block;margin-top:10px;font-style:normal;font-weight:700;color:var(--red);font-size:13px;font-family:'Oswald'}
+.visit{display:grid;grid-template-columns:1fr 1fr;gap:36px;max-width:900px;margin:0 auto;font-family:sans-serif}
+.hours{list-style:none}.hours li{display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid #e5d6b4;font-size:14.5px}
+.vbox b{color:var(--red)}
+.vbox a.map{display:inline-block;margin-top:12px;background:var(--red);color:#fff;text-decoration:none;font-weight:700;padding:12px 22px;border-radius:8px;font-size:14px}
+footer{background:var(--ink);color:var(--cream);text-align:center;padding:48px 24px 90px}footer a{color:var(--gold)}
+@media(max-width:820px){.story,.visit{grid-template-columns:1fr}.spec,.gal{grid-template-columns:1fr 1fr}.rev{grid-template-columns:1fr}}
+</style></head>
+<body>
+<button id="lg" onclick="document.documentElement.classList.toggle('en')"><span class="es">EN</span><span class="en">ES</span></button>
+<div class="hero">
+ <div class="suit a">♠</div><div class="suit b">♦</div><div class="suit c">♣</div>
+ <div class="card">
+  <span class="badge"><span class="es">Vist a Joc de Cartes · TV3</span><span class="en">As seen on Joc de Cartes · TV3</span></span>
+  <h1>Restaurant<br>l'Andreuenc</h1>
+  <p class="tag"><span class="es">Cuina catalana de sempre, portada per dos germans, al cor de Sant Andreu.</span><span class="en">Timeless Catalan cooking, run by two brothers, in the heart of Sant Andreu.</span></p>
+  <div class="stars">★★★★★ <b>4,8</b> · 651 <span class="es">reseñas</span><span class="en">reviews</span></div>
+  <div class="cta">
+   <a class="btn b1" href="tel:+34933453405"><span class="es">Reservar</span><span class="en">Book</span></a>
+   <a class="btn b2" href="https://www.google.com/maps/search/?api=1&query=Restaurant+l+Andreuenc+Barcelona" target="_blank" rel="noopener"><span class="es">Cómo llegar</span><span class="en">Directions</span></a>
+   <a class="btn b3" href="https://www.instagram.com/restaurantlandreuenc" target="_blank" rel="noopener">Instagram</a>
+  </div>
+ </div>
+</div>
+
+<section>
+ <h2><span class="es">La casa de dos germans</span><span class="en">The house of two brothers</span></h2>
+ <div class="story">
+  <div>
+   <p><span class="es">Un local bien llevado por dos hermanos, atentos y cercanos: cocina tradicional catalana con un toque especial. Salió en el programa Joc de Cartes de TV3 y no defraudó — mejor reservar.</span><span class="en">A place run by two brothers, warm and attentive: traditional Catalan cooking with a special touch. Featured on TV3's Joc de Cartes — and it lived up to it. Best to book.</span></p>
+   <p><span class="es">Menú del día por 18€, arroces, fideuà, y platos ejecutados de principio a fin con mimo. Un bar de barrio como los de antes, pero con estilo.</span><span class="en">Set lunch at €18, rice dishes, fideuà, and plates cooked with care from start to finish. A neighbourhood spot like the old days, but with style.</span></p>
+  </div>
+  <img src="img/02.jpg" alt="">
+ </div>
+</section>
+
+<section style="padding-top:0">
+ <h2><span class="es">Lo que hay que pedir</span><span class="en">What to order</span></h2>
+ <p class="sub"><span class="es">Cocina catalana con carácter.</span><span class="en">Catalan cooking with character.</span></p>
+ <div class="spec">
+  <div class="sc"><img src="img/04.jpg" alt=""><div class="cap"><h3><span class="es">Fideuà &amp; arroces</span><span class="en">Fideuà &amp; rice</span></h3><p><span class="es">De Palamós, con su alioli.</span><span class="en">Palamós prawns, with allioli.</span></p></div></div>
+  <div class="sc"><img src="img/05.jpg" alt=""><div class="cap"><h3><span class="es">Coulant de xocolata</span><span class="en">Chocolate coulant</span></h3><p><span class="es">Para acabar en alto.</span><span class="en">A high note to finish.</span></p></div></div>
+  <div class="sc"><img src="img/06.jpg" alt=""><div class="cap"><h3><span class="es">Menú del dia · 18€</span><span class="en">Set lunch · €18</span></h3><p><span class="es">Bebida incluida.</span><span class="en">Drink included.</span></p></div></div>
+ </div>
+</section>
+
+<section style="padding-top:0">
+ <h2><span class="es">El local</span><span class="en">The place</span></h2>
+ <div class="gal"><img src="img/03.jpg" alt=""><img src="img/07.jpg" alt=""><img src="img/08.jpg" alt=""></div>
+</section>
+
+<section style="padding-top:0">
+ <h2><span class="es">La carta</span><span class="en">The menu</span></h2>
+ <div class="menu">
+  <div class="mh"><span class="es">Menú del dia</span><span class="en">Set lunch</span></div>
+  <div class="mp">18€ · <span class="es">primer + segon + postre + beguda</span><span class="en">starter + main + dessert + drink</span></div>
+  <div class="mrow"><div class="nm"><span class="es">Arròs amb gambes de Palamós</span><span class="en">Rice with Palamós prawns</span></div><div class="pr">18€</div></div>
+  <div class="mrow"><div class="nm"><span class="es">Arròs negre / fideuà</span><span class="en">Black rice / fideuà</span></div><div class="pr">18–25€</div></div>
+  <div class="mrow"><div class="nm"><span class="es">Fondue de formatges</span><span class="en">Cheese fondue</span></div><div class="pr">18€</div></div>
+  <div class="mrow"><div class="nm"><span class="es">Botifarra esparracada amb sanfaina</span><span class="en">Catalan sausage with sanfaina</span></div><div class="pr">10€</div></div>
+  <div class="mrow"><div class="nm"><span class="es">Coulant de xocolata</span><span class="en">Chocolate coulant</span></div><div class="pr">postre</div></div>
+  <p class="note"><span class="es">★ Precios de la carta del local. Menú del día entre semana, carta de arroces fin de semana.</span><span class="en">★ Real prices from the menu. Set lunch on weekdays, rice à la carte at weekends.</span></p>
+ </div>
+</section>
+
+<section style="padding-top:0">
+ <h2><span class="es">Lo que dicen los clientes</span><span class="en">What guests say</span></h2>
+ <div class="rev">
+  <div class="q">“Salió en el famoso programa Joc de Cartes y no nos defraudó. Menú del día, 18 euros, todo bien ejecutado de principio a fin. Servicio excelente. Totalmente recomendable.”<span class="who">Google · ★★★★★</span></div>
+  <div class="q">“Local bien llevado por 2 hermanos, atentos y muy amables. Cocina tradicional con toque especial. Hay que reservar. Para volver todas las veces que se pueda.”<span class="who">Google · ★★★★★</span></div>
+  <div class="q">“Mi bar de barrio, como los de antes pero con mobiliario más moderno. Bien atendidos. Sin reserva casi no comemos, siempre está lleno.”<span class="who">Google · ★★★★★</span></div>
+ </div>
+</section>
+
+<section style="padding-top:0">
+ <h2><span class="es">Visítanos</span><span class="en">Visit us</span></h2>
+ <div class="visit">
+  <ul class="hours">
+   <li><span class="es">Lunes</span><span class="en">Monday</span><span class="es">Cerrado</span><span class="en">Closed</span></li>
+   <li><span class="es">Mar–Mié</span><span class="en">Tue–Wed</span><span>9–16</span></li>
+   <li><span class="es">Jueves</span><span class="en">Thursday</span><span>9–16 · 20:15–23:30</span></li>
+   <li><span class="es">Viernes</span><span class="en">Friday</span><span>9–16 · 20:15–23:30</span></li>
+   <li><span class="es">Sábado</span><span class="en">Saturday</span><span>9:30–16:00</span></li>
+   <li><span class="es">Domingo</span><span class="en">Sunday</span><span class="es">Cerrado</span><span class="en">Closed</span></li>
+  </ul>
+  <div class="vbox">
+   <p><b><span class="es">Dónde estamos</span><span class="en">Where we are</span></b><br>Carrer de Neopàtria, 87<br>Sant Andreu · 08030 Barcelona</p>
+   <p style="margin-top:14px"><b><span class="es">Reservas</span><span class="en">Bookings</span></b><br>93 345 34 05</p>
+   <p style="margin-top:14px;font-size:14px;color:#7a5b46"><span class="es">En Sant Andreu. Metro Sant Andreu (L1) o Fabra i Puig (L1), a 8 min andando.</span><span class="en">In Sant Andreu. Metro Sant Andreu (L1) or Fabra i Puig (L1), 8 min walk.</span></p>
+   <a class="map" href="https://www.google.com/maps/search/?api=1&query=Restaurant+l+Andreuenc+Barcelona" target="_blank" rel="noopener"><span class="es">Cómo llegar →</span><span class="en">Get directions →</span></a>
+  </div>
+ </div>
+</section>
+
+<footer>
+ <p style="font-family:'DM Serif Display',serif;font-size:24px">Restaurant l'Andreuenc</p>
+ <p style="margin-top:8px">Carrer de Neopàtria 87 · Sant Andreu · Barcelona · <a href="tel:+34933453405">93 345 34 05</a></p>
+ <p style="margin-top:6px;font-size:13px;opacity:.7">★ 4,8 · 651 <span class="es">reseñas</span><span class="en">reviews</span> · Google</p>
+</footer>
+<div class="bar">
+ <a class="c" href="tel:+34933453405">📞 <span class="es">Reservar</span><span class="en">Book</span></a>
+ <a class="m" href="https://www.google.com/maps/search/?api=1&query=Restaurant+l+Andreuenc+Barcelona" target="_blank" rel="noopener">📍 <span class="es">Cómo llegar</span><span class="en">Directions</span></a>
+</div>
+</body></html>

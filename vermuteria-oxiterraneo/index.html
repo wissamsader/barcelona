@@ -1,0 +1,147 @@
+<!DOCTYPE html><html lang="es"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+<title>Vermuteria Oxiterráneo · Vermut &amp; tapas de fusión · Sant Andreu, Barcelona</title>
+<style>
+:root{--teal:#0aa7a0;--deep:#064e52;--coral:#ff6b5a;--paper:#f3fbfa;--ink:#0c2a2b}
+*{margin:0;padding:0;box-sizing:border-box}
+html.en .es{display:none}html:not(.en) .en{display:none}
+body{font:16px/1.6 'Inter',sans-serif;color:var(--ink);background:var(--paper)}
+#lg{position:fixed;top:16px;right:16px;z-index:60;background:var(--ink);color:#fff;border:0;border-radius:30px;padding:8px 15px;font-size:12px;font-weight:700;letter-spacing:.08em;cursor:pointer}
+.bar{position:fixed;bottom:0;left:0;right:0;z-index:55;background:rgba(12,42,43,.96);backdrop-filter:blur(8px);display:flex;gap:2px;padding:7px 10px;justify-content:center}
+.bar a{flex:1;max-width:210px;text-align:center;color:#fff;text-decoration:none;font-weight:700;font-size:14px;padding:10px 6px;border-radius:12px;font-family:'Space Grotesk'}
+.bar .w{background:#25d366;color:#053}.bar .m{background:#0a6b6e}
+.hero{min-height:94svh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:60px 24px 96px;position:relative;overflow:hidden;background:linear-gradient(150deg,var(--teal),var(--deep))}
+.b1,.b2,.b3{position:absolute;border-radius:50%;background:rgba(255,255,255,.14);animation:rise 9s ease-in infinite}
+.b1{width:60px;height:60px;left:14%;bottom:-60px}.b2{width:34px;height:34px;left:60%;bottom:-40px;animation-delay:2s}.b3{width:80px;height:80px;left:82%;bottom:-80px;animation-delay:4s}
+@keyframes rise{to{transform:translateY(-115vh)}}
+.hero-in{position:relative;z-index:2;max-width:840px;color:#eafffb}
+.eyebrow{font:700 12px/1 'Space Grotesk';letter-spacing:.3em;text-transform:uppercase;color:#bff3ee}
+h1{font-family:'Space Grotesk',sans-serif;font-size:clamp(44px,11vw,104px);line-height:.92;margin:14px 0 8px;letter-spacing:-.02em}
+h1 span{color:var(--coral)}
+.tag{font-size:clamp(17px,3.4vw,23px);max-width:560px;margin:0 auto;color:#d3f4f0}
+.stars{margin-top:12px;font-weight:600}.stars b{color:#ffe08a}
+.quick{margin-top:18px;display:flex;gap:9px;flex-wrap:wrap;justify-content:center;font-size:13.5px}
+.quick span{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.4);border-radius:30px;padding:7px 14px;font-weight:600}
+.cta{margin-top:24px;display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
+.btn{padding:13px 24px;border-radius:30px;font-weight:700;text-decoration:none;font-size:15px;font-family:'Space Grotesk'}
+.wA{background:#25d366;color:#053}.wB{background:#fff;color:var(--deep)}.wC{background:var(--coral);color:#fff}
+section{max-width:1000px;margin:0 auto;padding:64px 24px}
+h2{font-family:'Space Grotesk',sans-serif;font-size:clamp(28px,5vw,44px);color:var(--deep);margin-bottom:10px}
+.sub{color:#4a7a7a;font-size:15px;margin-bottom:22px;max-width:620px}
+.story{display:grid;grid-template-columns:1.1fr .9fr;gap:36px;align-items:center}
+.story p{font-size:clamp(16px,2.4vw,19px);margin-bottom:14px}
+.story img{width:100%;height:100%;min-height:300px;object-fit:cover;border-radius:20px}
+.spec{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.sc{background:#fff;border-radius:18px;overflow:hidden;box-shadow:0 10px 26px rgba(10,167,160,.16)}
+.sc img{width:100%;height:180px;object-fit:cover}.sc .cap{padding:15px 16px}.sc .cap h3{font-family:'Space Grotesk';font-size:18px;color:var(--teal)}.sc .cap p{font-size:13.5px;color:#4a7a7a;margin-top:3px}
+.gal{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.gal img{width:100%;height:260px;object-fit:cover;border-radius:16px}
+.menu{background:#fff;border-radius:18px;padding:32px;max-width:640px;margin:0 auto;border-top:8px solid var(--coral)}
+.mrow{display:flex;justify-content:space-between;gap:16px;padding:11px 0;border-bottom:1px dashed #cdeeeb}.mrow:last-child{border:0}
+.nm{font-weight:600}.pr{font-weight:700;color:var(--teal);white-space:nowrap;font-family:'Space Grotesk'}
+.note{font-size:13px;color:#4a7a7a;margin-top:12px;text-align:center}
+.rev{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.q{background:#fff;border-radius:18px;padding:20px;font-style:italic;font-size:14.5px;box-shadow:0 8px 20px rgba(10,167,160,.12)}.q .who{display:block;margin-top:10px;font-style:normal;font-weight:700;color:var(--coral);font-size:13px}
+.visit{display:grid;grid-template-columns:1fr 1fr;gap:36px;max-width:900px;margin:0 auto}
+.hours{list-style:none}.hours li{display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid #d5eeeb;font-size:14.5px}
+.vbox b{color:var(--deep)}
+.vbox a.map{display:inline-block;margin-top:12px;background:var(--deep);color:#fff;text-decoration:none;font-weight:700;padding:12px 22px;border-radius:30px;font-size:14px}
+footer{background:var(--ink);color:#d3f4f0;text-align:center;padding:48px 24px 90px}footer a{color:#ffe08a}
+@media(max-width:820px){.story,.visit,.gal{grid-template-columns:1fr}.spec{grid-template-columns:1fr}.rev{grid-template-columns:1fr}}
+</style></head>
+<body>
+<button id="lg" onclick="document.documentElement.classList.toggle('en')"><span class="es">EN</span><span class="en">ES</span></button>
+<div class="hero">
+ <div class="b1"></div><div class="b2"></div><div class="b3"></div>
+ <div class="hero-in">
+  <div class="eyebrow">Sant Andreu · Barcelona</div>
+  <h1>Oxi<span>terráneo</span></h1>
+  <p class="tag"><span class="es">Vermut de la casa y tapas de fusión con alma mediterránea. La joya de Sant Andreu — 4,9★.</span><span class="en">House vermouth and fusion tapas with a Mediterranean soul. Sant Andreu's gem — 4.9★.</span></p>
+  <div class="stars">★★★★★ <b>4,9</b> · 243 <span class="es">reseñas</span><span class="en">reviews</span></div>
+  <div class="quick"><span>🍹 <span class="es">Vermut de la casa</span><span class="en">House vermouth</span></span><span>🐟 Ceviche · <span class="es">gambas borrachas</span><span class="en">drunken prawns</span></span><span>🇵🇪 Pisco</span></div>
+  <div class="cta">
+   <a class="btn wA" href="https://wa.me/34930645590" target="_blank" rel="noopener">WhatsApp</a>
+   <a class="btn wB" href="https://www.google.com/maps/search/?api=1&query=Vermuteria+Oxiterraneo+Sant+Andreu" target="_blank" rel="noopener"><span class="es">Cómo llegar</span><span class="en">Directions</span></a>
+   <a class="btn wC" href="http://oxiterraneo.eatbu.com/" target="_blank" rel="noopener"><span class="es">Carta</span><span class="en">Menu</span></a>
+  </div>
+ </div>
+</div>
+
+<section>
+ <h2><span class="es">Un soplo de aire fresco</span><span class="en">A breath of fresh air</span></h2>
+ <div class="story">
+  <div>
+   <p><span class="es">Un lugar con encanto desde que entras. Tapas de fusión donde cada plato es mejor que el anterior: ceviche, gambas borrachas, y un vermut de la casa que se lleva un 10.</span><span class="en">A place with charm from the moment you walk in. Fusion tapas where every plate outdoes the last: ceviche, drunken prawns, and a house vermouth that scores a perfect 10.</span></p>
+   <p><span class="es">Camareros amables, relación calidad-precio inmejorable y ese 4,9★ que no se consigue por casualidad. En Sant Andreu, lejos del turismo, pero que merece el viaje.</span><span class="en">Warm staff, unbeatable value and a 4.9★ that isn't luck. In Sant Andreu, off the tourist trail, but worth the trip.</span></p>
+  </div>
+  <img src="img/02.jpg" alt="">
+ </div>
+</section>
+
+<section style="padding-top:0">
+ <h2><span class="es">Para no perderse</span><span class="en">Don't miss</span></h2>
+ <p class="sub"><span class="es">Fusión mediterránea con guiño latino.</span><span class="en">Mediterranean fusion with a Latin wink.</span></p>
+ <div class="spec">
+  <div class="sc"><img src="img/03.jpg" alt=""><div class="cap"><h3>Ceviche</h3><p><span class="es">Fresco y cítrico.</span><span class="en">Fresh &amp; citrusy.</span></p></div></div>
+  <div class="sc"><img src="img/04.jpg" alt=""><div class="cap"><h3><span class="es">Gambas borrachas</span><span class="en">Drunken prawns</span></h3><p><span class="es">La estrella de la casa.</span><span class="en">The house star.</span></p></div></div>
+  <div class="sc"><img src="img/05.jpg" alt=""><div class="cap"><h3><span class="es">Vermut &amp; pisco</span><span class="en">Vermouth &amp; pisco</span></h3><p>10/10</p></div></div>
+ </div>
+</section>
+
+<section style="padding-top:0">
+ <h2><span class="es">El local</span><span class="en">The place</span></h2>
+ <div class="gal"><img src="img/06.jpg" alt=""><img src="img/07.jpg" alt=""></div>
+</section>
+
+<section style="padding-top:0">
+ <h2><span class="es">La carta</span><span class="en">The menu</span></h2>
+ <div class="menu">
+  <div class="mrow"><div class="nm"><span class="es">Vermut de la casa</span><span class="en">House vermouth</span></div><div class="pr">★</div></div>
+  <div class="mrow"><div class="nm">Ceviche</div></div>
+  <div class="mrow"><div class="nm"><span class="es">Gambas borrachas</span><span class="en">Drunken prawns</span></div></div>
+  <div class="mrow"><div class="nm"><span class="es">Tapas de fusión</span><span class="en">Fusion tapas</span></div></div>
+  <div class="mrow"><div class="nm">Pisco &amp; <span class="es">cócteles</span><span class="en">cocktails</span></div></div>
+  <p class="note"><span class="es">★ Carta completa en la web del local. Precios muy buenos — pregúntanos.</span><span class="en">★ Full menu on the venue's page. Great value — just ask us.</span></p>
+ </div>
+</section>
+
+<section style="padding-top:0">
+ <h2><span class="es">Lo que dicen los clientes</span><span class="en">What guests say</span></h2>
+ <div class="rev">
+  <div class="q">“Tuvimos el placer de conocer este lugar tan especial, que tiene encanto desde que entras. Una noche muy agradable de tapas, cada una mejor que la anterior.”<span class="who">Google · ★★★★★</span></div>
+  <div class="q">“¡Muy buena experiencia! Camareros muy amables, la comida muy buena — a destacar el ceviche y las gambas borrachas. Relación calidad-precio muy buena. ¡Repetimos!”<span class="who">Google · ★★★★★</span></div>
+  <div class="q">“Vermut de la casa 10/10, pisco 10/10. Un descubrimiento en Sant Andreu, volveremos seguro.”<span class="who">Google · ★★★★★</span></div>
+ </div>
+</section>
+
+<section style="padding-top:0">
+ <h2><span class="es">Visítanos</span><span class="en">Visit us</span></h2>
+ <div class="visit">
+  <ul class="hours">
+   <li><span class="es">Lunes</span><span class="en">Monday</span><span class="es">Cerrado</span><span class="en">Closed</span></li>
+   <li><span class="es">Mar–Jue</span><span class="en">Tue–Thu</span><span>17:00 – 24:00</span></li>
+   <li><span class="es">Viernes</span><span class="en">Friday</span><span>17:00 – 1:00</span></li>
+   <li><span class="es">Sábado</span><span class="en">Saturday</span><span>12:00 – 1:00</span></li>
+   <li><span class="es">Domingo</span><span class="en">Sunday</span><span>11:00 – 16:00</span></li>
+  </ul>
+  <div class="vbox">
+   <p><b><span class="es">Dónde estamos</span><span class="en">Where we are</span></b><br>Carrer de Malats, 24<br>Sant Andreu · 08030 Barcelona</p>
+   <p style="margin-top:14px"><b><span class="es">Reservas</span><span class="en">Bookings</span></b><br>WhatsApp · 930 645 590</p>
+   <p style="margin-top:14px;font-size:14px;color:#4a7a7a"><span class="es">En Sant Andreu. Metro Sant Andreu (L1), a 5 min andando.</span><span class="en">In Sant Andreu. Metro Sant Andreu (L1), 5 min walk.</span></p>
+   <a class="map" href="https://www.google.com/maps/search/?api=1&query=Vermuteria+Oxiterraneo+Sant+Andreu" target="_blank" rel="noopener"><span class="es">Cómo llegar →</span><span class="en">Get directions →</span></a>
+  </div>
+ </div>
+</section>
+
+<footer>
+ <p style="font-family:'Space Grotesk',sans-serif;font-size:24px;font-weight:700">Oxiterráneo</p>
+ <p style="margin-top:8px">Carrer de Malats 24 · Sant Andreu · Barcelona · <a href="https://wa.me/34930645590">930 645 590</a></p>
+ <p style="margin-top:6px;font-size:13px;opacity:.7">★ 4,9 · 243 <span class="es">reseñas</span><span class="en">reviews</span> · Google</p>
+</footer>
+<div class="bar">
+ <a class="w" href="https://wa.me/34930645590" target="_blank" rel="noopener">💬 WhatsApp</a>
+ <a class="m" href="https://www.google.com/maps/search/?api=1&query=Vermuteria+Oxiterraneo+Sant+Andreu" target="_blank" rel="noopener">📍 <span class="es">Cómo llegar</span><span class="en">Directions</span></a>
+</div>
+</body></html>

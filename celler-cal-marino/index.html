@@ -1,0 +1,144 @@
+<!DOCTYPE html><html lang="es"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<link href="https://fonts.googleapis.com/css2?family=Prata&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<title>Celler Cal Marino · Celler i botiga de vins · Poble-sec, Barcelona</title>
+<style>
+:root{--green:#1f3a2c;--green2:#2b4d3a;--kraft:#c6a06a;--kraft2:#d9bd8f;--paper:#f2ecdd;--ink:#22201a}
+*{margin:0;padding:0;box-sizing:border-box}
+html.en .es{display:none}html:not(.en) .en{display:none}
+body{font:16px/1.68 'Outfit',sans-serif;color:var(--ink);background:var(--paper);font-weight:300}
+#lg{position:fixed;top:16px;right:16px;z-index:60;background:var(--green);color:var(--paper);border:0;border-radius:2px;padding:8px 16px;font-size:12px;font-weight:500;letter-spacing:.1em;cursor:pointer}
+.bar{position:fixed;bottom:0;left:0;right:0;z-index:55;background:rgba(18,28,22,.97);backdrop-filter:blur(8px);display:flex;gap:2px;padding:7px 10px;justify-content:center}
+.bar a{flex:1;max-width:220px;text-align:center;text-decoration:none;font-weight:500;font-size:14px;padding:11px 6px;border-radius:2px}
+.bar .i{background:linear-gradient(45deg,#f09433,#dc2743,#bc1888);color:#fff}.bar .m{background:#33463b;color:var(--paper)}
+.hero{min-height:94svh;display:flex;flex-direction:column;justify-content:center;padding:70px 30px 96px;position:relative;overflow:hidden;background:var(--green);color:var(--paper)}
+.hero:before{content:"";position:absolute;right:-6%;top:-10%;width:50vw;height:50vw;max-width:460px;max-height:460px;border-radius:50%;background:radial-gradient(circle,rgba(198,160,106,.16),transparent 66%)}
+.hero-in{max-width:960px;margin:0 auto;width:100%;position:relative}
+.eyebrow{font-weight:500;font-size:12px;letter-spacing:.32em;text-transform:uppercase;color:var(--kraft2)}
+h1{font-family:'Prata',serif;font-weight:400;font-size:clamp(50px,11vw,112px);line-height:1;letter-spacing:.005em;margin:14px 0 8px}
+h1 span{color:var(--kraft2)}
+.orn{font-family:'Prata',serif;font-size:clamp(18px,3.4vw,26px);color:var(--kraft)}
+.tag{font-size:clamp(16px,3vw,20px);max-width:560px;margin-top:14px;color:#d7ddca}
+.meta{margin-top:16px;font-size:14px;color:#bcc6b0;display:flex;gap:16px;flex-wrap:wrap;align-items:center}.meta b{color:var(--kraft2)}
+.cta{margin-top:26px;display:flex;gap:12px;flex-wrap:wrap}
+.btn{padding:14px 26px;border-radius:2px;font-weight:500;text-decoration:none;font-size:14px}
+.bA{background:var(--kraft);color:#22201a}.bB{background:transparent;color:var(--paper);border:1px solid rgba(242,236,221,.4)}
+section{max-width:960px;margin:0 auto;padding:60px 30px}
+h2{font-family:'Prata',serif;font-weight:400;font-size:clamp(28px,5vw,46px);color:var(--green);margin-bottom:14px}
+.sub{color:#5f5a4c;max-width:600px;margin-bottom:24px}
+.story{display:grid;grid-template-columns:1.05fr .95fr;gap:38px;align-items:center}
+.story p{font-size:clamp(16px,2.3vw,18.5px);margin-bottom:14px}
+.story img{width:100%;height:100%;min-height:320px;object-fit:cover;border-radius:4px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{background:#fbf7ec;border:1px solid #e2d8c2;border-radius:6px;overflow:hidden}
+.card img{width:100%;height:175px;object-fit:cover}
+.card .b{padding:16px 18px}.card h3{font-family:'Prata',serif;font-size:20px;color:var(--green);margin-bottom:4px}.card p{font-size:13.5px;color:#5f5a4c}
+.gal{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.gal img{width:100%;height:200px;object-fit:cover;border-radius:4px}
+.gal img:first-child{grid-column:span 2;grid-row:span 2;height:auto}
+.menu{background:var(--green);color:var(--paper);border-radius:8px;padding:36px;max-width:620px;margin:0 auto}
+.menu h3{font-family:'Prata',serif;font-size:24px;color:var(--kraft2);text-align:center;margin-bottom:2px}
+.menu .lead{text-align:center;color:#bcc6b0;margin-bottom:20px;font-size:14px}
+.mrow{display:flex;justify-content:space-between;gap:14px;padding:11px 0;border-bottom:1px dashed rgba(242,236,221,.2)}.mrow:last-child{border:0}
+.nm{font-weight:400}.dsc{font-size:13px;color:#9fac93}.pr{color:var(--kraft2);font-weight:500;white-space:nowrap}
+.note{font-size:13px;color:#9fac93;margin-top:16px;text-align:center}
+.rev{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.q{background:#fbf7ec;border-left:4px solid var(--kraft);border-radius:0 6px 6px 0;padding:20px;font-family:'Prata',serif;font-size:15px;color:#3a382c;line-height:1.55}.q .who{display:block;margin-top:10px;font-family:'Outfit';font-weight:500;font-size:12.5px;color:var(--green)}
+.visit{display:grid;grid-template-columns:1fr 1fr;gap:36px;max-width:900px;margin:0 auto}
+.hours{list-style:none}.hours li{display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid #ded3bc;font-size:14.5px}
+.hours li.off{color:#a89e8a}
+.vbox b{color:var(--green)}
+.vbox a.map{display:inline-block;margin-top:12px;background:var(--green);color:var(--paper);text-decoration:none;font-weight:500;padding:12px 22px;border-radius:2px;font-size:14px}
+footer{background:var(--ink);color:#bcae94;text-align:center;padding:50px 30px 92px}footer a{color:var(--kraft2)}
+@media(max-width:820px){.story,.visit{grid-template-columns:1fr}.cards,.rev{grid-template-columns:1fr}.gal{grid-template-columns:1fr 1fr}.gal img:first-child{grid-column:span 2}}
+</style></head>
+<body>
+<button id="lg" onclick="document.documentElement.classList.toggle('en')"><span class="es">EN</span><span class="en">ES</span></button>
+<div class="hero">
+ <div class="hero-in">
+  <div class="eyebrow"><span class="es">Poble-sec · Barcelona</span><span class="en">Poble-sec · Barcelona</span></div>
+  <h1>Celler<br>Cal <span>Marino</span></h1>
+  <div class="orn"><span class="es">celler &amp; botiga de vins</span><span class="en">wine cellar &amp; shop</span></div>
+  <p class="tag"><span class="es">Vinos para beber aquí o llevar a casa. Una tienda-bodega de barrio con selección honesta y buen consejo.</span><span class="en">Wines to drink in or take home. A neighbourhood cellar-shop with an honest selection and good advice.</span></p>
+  <div class="meta"><span>★★★★★ <b>4,6</b> · 383 <span class="es">reseñas</span><span class="en">reviews</span></span><span>·</span><span class="es">Celler &amp; botiga</span><span class="en">Cellar &amp; shop</span></div>
+  <div class="cta">
+   <a class="btn bA" href="https://www.instagram.com/cellercalmarino/" target="_blank" rel="noopener">Instagram</a>
+   <a class="btn bB" href="https://www.google.com/maps/search/?api=1&query=Celler+Cal+Marino+Poble+Sec+Barcelona" target="_blank" rel="noopener"><span class="es">Cómo llegar</span><span class="en">Directions</span></a>
+  </div>
+ </div>
+</div>
+
+<section>
+ <h2><span class="es">Beber aquí, o llevártelo</span><span class="en">Drink in, or take it home</span></h2>
+ <div class="story">
+  <div>
+   <p><span class="es">Cal Marino es celler y botiga a la vez: te sientas a probar una copa, charlas de vino con quien te atiende y sales con una botella (o tres) bajo el brazo.</span><span class="en">Cal Marino is cellar and shop at once: you sit for a glass, talk wine with whoever's serving, and leave with a bottle (or three) under your arm.</span></p>
+   <p><span class="es">Selección de pequeños productores, vinos con historia y algo para picar. Poble-sec en estado puro.</span><span class="en">A selection of small growers, wines with a story and something to nibble. Poble-sec at its purest.</span></p>
+  </div>
+  <img src="img/01.jpg" alt="">
+ </div>
+</section>
+
+<section style="padding-top:0">
+ <h2><span class="es">La casa</span><span class="en">The house</span></h2>
+ <div class="cards">
+  <div class="card"><img src="img/02.jpg" alt=""><div class="b"><h3><span class="es">Vinos a copa</span><span class="en">Wine by the glass</span></h3><p><span class="es">Pequeños productores, para probar aquí.</span><span class="en">Small growers, to taste in.</span></p></div></div>
+  <div class="card"><img src="img/03.jpg" alt=""><div class="b"><h3><span class="es">Botiga · para llevar</span><span class="en">Shop · to take home</span></h3><p><span class="es">Elige botella con buen consejo.</span><span class="en">Pick a bottle with good advice.</span></p></div></div>
+  <div class="card"><img src="img/04.jpg" alt=""><div class="b"><h3><span class="es">Para picar</span><span class="en">To nibble</span></h3><p><span class="es">Conservas, quesos y embutidos.</span><span class="en">Tins, cheese and charcuterie.</span></p></div></div>
+ </div>
+</section>
+
+<section style="padding-top:0">
+ <h2><span class="es">El celler</span><span class="en">The cellar</span></h2>
+ <div class="gal"><img src="img/05.jpg" alt=""><img src="img/06.jpg" alt=""><img src="img/07.jpg" alt=""></div>
+</section>
+
+<section style="padding-top:0">
+ <h2><span class="es">La selección</span><span class="en">The selection</span></h2>
+ <div class="menu">
+  <h3><span class="es">Vino &amp; picoteo</span><span class="en">Wine &amp; bites</span></h3>
+  <p class="lead"><span class="es">Rota constantemente. Pregunta por lo que hay abierto.</span><span class="en">Constantly rotating. Ask what's open.</span></p>
+  <div class="mrow"><div><div class="nm"><span class="es">Vino a copa</span><span class="en">Wine by the glass</span></div><div class="dsc"><span class="es">pequeños productores</span><span class="en">small growers</span></div></div><div class="pr"><span class="es">consultar</span><span class="en">ask</span></div></div>
+  <div class="mrow"><div><div class="nm"><span class="es">Botella para llevar</span><span class="en">Bottle to take home</span></div><div class="dsc"><span class="es">precio botiga</span><span class="en">shop price</span></div></div><div class="pr"><span class="es">consultar</span><span class="en">ask</span></div></div>
+  <div class="mrow"><div><div class="nm"><span class="es">Conservas &amp; quesos</span><span class="en">Tins &amp; cheese</span></div></div><div class="pr"><span class="es">consultar</span><span class="en">ask</span></div></div>
+  <div class="mrow"><div><div class="nm"><span class="es">Tabla de embutidos</span><span class="en">Charcuterie board</span></div></div><div class="pr"><span class="es">consultar</span><span class="en">ask</span></div></div>
+  <p class="note"><span class="es">La carta de vinos cambia siempre. Precios en el local — escríbenos por Instagram para reservar mesa.</span><span class="en">The wine list always changes. Prices in the shop — message us on Instagram to book a table.</span></p>
+ </div>
+</section>
+
+<section style="padding-top:0">
+ <h2><span class="es">Lo que dicen</span><span class="en">What they say</span></h2>
+ <div class="rev">
+  <div class="q">“Selección de vinos increíble y un trato de diez. Te aconsejan con pasión y aciertan siempre. Para beber allí o llevarte botellas.”<span class="who">Google · ★★★★★</span></div>
+  <div class="q">“Un celler con encanto en Poble-sec. Vinos naturales, buen picoteo y precios honestos. Nuestro sitio de confianza.”<span class="who">Google · ★★★★★</span></div>
+  <div class="q">“Ambiente cercano y sin pretensiones. Descubres vinos que no encuentras en otro sitio. Muy recomendable.”<span class="who">Google · ★★★★★</span></div>
+ </div>
+</section>
+
+<section style="padding-top:0">
+ <h2><span class="es">Visítanos</span><span class="en">Visit us</span></h2>
+ <div class="visit">
+  <ul class="hours">
+   <li><span class="es">Mar–Vie · mediodía</span><span class="en">Tue–Fri · midday</span><span>12:30 – 15:00</span></li>
+   <li><span class="es">Mar–Vie · noche</span><span class="en">Tue–Fri · evening</span><span>19:30 – 23:00</span></li>
+   <li class="off"><span class="es">Dom–Lun</span><span class="en">Sun–Mon</span><span class="es">consultar</span><span class="en">ask</span></li>
+  </ul>
+  <div class="vbox">
+   <p><b><span class="es">Dónde estamos</span><span class="en">Where we are</span></b><br>Poble-sec · Barcelona</p>
+   <p style="margin-top:14px"><b><span class="es">Reservas</span><span class="en">Bookings</span></b><br><a href="https://www.instagram.com/cellercalmarino/" target="_blank" rel="noopener" style="color:var(--green);font-weight:500">@cellercalmarino</a><br><span class="es" style="font-size:13px;color:#8a8271">Escríbenos por Instagram.</span><span class="en" style="font-size:13px;color:#8a8271">Message us on Instagram.</span></p>
+   <a class="map" href="https://www.google.com/maps/search/?api=1&query=Celler+Cal+Marino+Poble+Sec+Barcelona" target="_blank" rel="noopener"><span class="es">Cómo llegar →</span><span class="en">Get directions →</span></a>
+  </div>
+ </div>
+</section>
+
+<footer>
+ <p style="font-family:'Prata',serif;font-size:30px;color:var(--paper)">Celler Cal Marino</p>
+ <p style="margin-top:8px">Poble-sec · Barcelona · <a href="https://www.instagram.com/cellercalmarino/" target="_blank" rel="noopener">@cellercalmarino</a></p>
+ <p style="margin-top:6px;font-size:13px;opacity:.7">★ 4,6 · 383 <span class="es">reseñas</span><span class="en">reviews</span> · Google</p>
+</footer>
+<div class="bar">
+ <a class="i" href="https://www.instagram.com/cellercalmarino/" target="_blank" rel="noopener">📷 Instagram</a>
+ <a class="m" href="https://www.google.com/maps/search/?api=1&query=Celler+Cal+Marino+Poble+Sec+Barcelona" target="_blank" rel="noopener">📍 <span class="es">Cómo llegar</span><span class="en">Directions</span></a>
+</div>
+</body></html>
