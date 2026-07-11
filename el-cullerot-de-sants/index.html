@@ -1,28 +1,35 @@
 <!DOCTYPE html><html lang="es"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow">
+<link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,500;0,600;0,800;1,400&family=Mulish:wght@400;500;700;800&display=swap" rel="stylesheet">
 <title>El Cullerot de Sants · Menú del dia · Sants, Barcelona</title>
 <style>
 :root{--ochre:#d9962a;--oxblood:#9a2b1e;--olive:#5e6b2c;--cream:#f7efd9;--ink:#2a1a12}
 *{margin:0;padding:0;box-sizing:border-box}
 html.en .es{display:none}html:not(.en) .en{display:none}
-body{font:16px/1.65 'Segoe UI',sans-serif;color:var(--ink);background:var(--cream)}
+body{font:16px/1.65 'Mulish',sans-serif;color:var(--ink);background:var(--cream)}
 #lg{position:fixed;top:16px;right:16px;z-index:60;background:var(--oxblood);color:var(--cream);border:0;border-radius:30px;padding:8px 15px;font-size:12px;font-weight:800;letter-spacing:.1em;cursor:pointer}
 .bar{position:fixed;bottom:0;left:0;right:0;z-index:55;background:rgba(42,26,18,.96);backdrop-filter:blur(8px);display:flex;gap:2px;padding:7px 10px;justify-content:center}
 .bar a{flex:1;max-width:220px;text-align:center;color:#fff;text-decoration:none;font-weight:700;font-size:14px;padding:9px 6px;border-radius:10px}
 .bar .c{background:var(--oxblood)}.bar .m{background:#4a5a24}
-.hero{min-height:92svh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:60px 24px 90px;position:relative;background:radial-gradient(120% 90% at 50% 15%,#f3e4c2 0%,var(--cream) 60%)}
-.ladle{font-size:60px;animation:stir 4s ease-in-out infinite;display:inline-block}
-@keyframes stir{0%,100%{transform:rotate(-10deg)}50%{transform:rotate(10deg)}}
-.hero-in{max-width:860px}
-.est{font-size:12px;letter-spacing:.32em;text-transform:uppercase;color:var(--olive);font-weight:800}
-h1{font-size:clamp(44px,11vw,104px);font-weight:900;line-height:.92;margin:10px 0 6px;color:var(--oxblood);letter-spacing:-.02em}
-.tag{font-size:clamp(17px,3.4vw,23px);max-width:600px;margin:0 auto}
-.stars{margin-top:12px;font-weight:600}.stars b{color:var(--ochre)}
-.quick{margin-top:20px;display:flex;gap:10px;flex-wrap:wrap;justify-content:center;font-size:13.5px}
-.quick span{background:#fff;border:1px solid #e2d3ac;border-radius:30px;padding:7px 15px}
+.hero{min-height:94svh;display:grid;grid-template-columns:1.02fr .98fr;position:relative}
+.hero-txt{background:var(--ink);color:var(--cream);display:flex;flex-direction:column;justify-content:center;padding:64px clamp(28px,5vw,68px) 96px;position:relative;overflow:hidden}
+.hero-txt:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 18% 16%,rgba(217,150,42,.26),transparent 55%);pointer-events:none}
+.hero-txt>*{position:relative}
+.hero-img{position:relative;min-height:52svh;background:#1c110b}
+.hero-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero-img:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(42,26,18,.5),transparent 32%)}
+.est{font-size:12px;letter-spacing:.32em;text-transform:uppercase;color:var(--ochre);font-weight:800}
+h1{font-family:'Bitter',serif;font-size:clamp(46px,6.8vw,92px);font-weight:800;line-height:.98;margin:12px 0 12px;color:var(--cream);letter-spacing:-.01em}
+.tag{font-size:clamp(17px,2.5vw,22px);max-width:32ch;color:#efe4cd}
+.stars{margin-top:14px;font-weight:600;color:#e7d9bd}.stars b{color:var(--ochre)}
+.quick{margin-top:20px;display:flex;gap:10px;flex-wrap:wrap;font-size:13.5px}
+.quick span{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.22);border-radius:30px;padding:8px 15px}
+.hbtns{margin-top:26px;display:flex;gap:11px;flex-wrap:wrap}
+.hbtns a{padding:13px 24px;border-radius:30px;font-weight:800;text-decoration:none;font-size:14px}
+.hbtns .p{background:var(--ochre);color:#241606}.hbtns .s{background:transparent;color:var(--cream);border:1px solid rgba(255,255,255,.4)}
 section{max-width:1000px;margin:0 auto;padding:64px 24px}
-h2{font-size:clamp(26px,5vw,40px);font-weight:900;color:var(--oxblood);margin-bottom:10px;text-align:center}
+h2{font-family:'Bitter',serif;font-size:clamp(28px,5vw,42px);font-weight:800;color:var(--oxblood);margin-bottom:10px;text-align:center}
 .sub{color:var(--olive);font-size:15px;margin:0 auto 22px;max-width:620px;text-align:center}
 .story{display:grid;grid-template-columns:.85fr 1.15fr;gap:36px;align-items:center}
 .story p{font-size:clamp(16px,2.4vw,19px);margin-bottom:14px}
@@ -47,19 +54,23 @@ h2{font-size:clamp(26px,5vw,40px);font-weight:900;color:var(--oxblood);margin-bo
 .vbox b{color:var(--oxblood)}
 .vbox a.map{display:inline-block;margin-top:12px;background:var(--oxblood);color:#fff;text-decoration:none;font-weight:800;padding:12px 22px;border-radius:30px;font-size:14px}
 footer{background:var(--ink);color:var(--cream);text-align:center;padding:46px 24px 90px}footer a{color:var(--ochre)}
-@media(max-width:820px){.story,.visit{grid-template-columns:1fr}.spec{grid-template-columns:1fr 1fr}.gal{grid-template-columns:1fr 1fr}.gal img.wide{grid-column:span 2}.rev{grid-template-columns:1fr}}
+@media(max-width:820px){.hero{grid-template-columns:1fr}.hero-img{min-height:44svh}.story,.visit{grid-template-columns:1fr}.spec{grid-template-columns:1fr 1fr}.gal{grid-template-columns:1fr 1fr}.gal img.wide{grid-column:span 2}.rev{grid-template-columns:1fr}}
 </style></head>
 <body>
 <button id="lg" onclick="document.documentElement.classList.toggle('en')"><span class="es">EN</span><span class="en">CAT/ES</span></button>
 <div class="hero">
- <div class="hero-in">
-  <div class="ladle">🥄</div>
+ <div class="hero-txt">
   <div class="est">Sants · Barcelona</div>
   <h1>El Cullerot<br>de Sants</h1>
   <p class="tag"><span class="es">Menú del día casero, honesto y a buen precio. Cocina de cuchara en el corazón de Sants.</span><span class="en">Honest, homemade menú del día at a fair price. Comfort cooking in the heart of Sants.</span></p>
   <div class="stars">★ <b>4,7</b> · 742 <span class="es">reseñas en Google</span><span class="en">Google reviews</span></div>
   <div class="quick"><span>🍲 <span class="es">Cocina de cuchara</span><span class="en">Comfort cooking</span></span><span>💶 <span class="es">Menú del dia</span><span class="en">Set lunch</span></span><span>🏘️ <span class="es">De barrio</span><span class="en">Neighbourhood</span></span></div>
+  <div class="hbtns">
+   <a class="p" href="tel:+34934319069">📞 <span class="es">Llamar</span><span class="en">Call</span></a>
+   <a class="s" href="https://www.google.com/maps/search/?api=1&query=El+Cullerot+de+Sants+Barcelona" target="_blank" rel="noopener"><span class="es">Cómo llegar</span><span class="en">Directions</span></a>
+  </div>
  </div>
+ <div class="hero-img"><img src="img/01.jpg" alt="El Cullerot de Sants"></div>
 </div>
 
 <section>
