@@ -8,7 +8,7 @@
 html.en .es{display:none}html:not(.en) .en{display:none}
 body{font:16px/1.6 'Segoe UI',sans-serif;color:#fff;background:var(--ink)}
 #lg{position:fixed;top:16px;right:16px;z-index:60;background:rgba(0,0,0,.4);color:var(--cyan);border:1px solid var(--cyan);border-radius:30px;padding:7px 15px;font-size:12px;font-weight:700;letter-spacing:.1em;cursor:pointer}
-.bar{position:fixed;bottom:0;left:0;right:0;z-index:55;background:rgba(5,2,12,.96);backdrop-filter:blur(8px);display:flex;gap:2px;padding:7px 10px;justify-content:center}
+.bar{position:fixed;bottom:calc(10px + env(safe-area-inset-bottom));left:14px;right:14px;z-index:55;background:rgba(5,2,12,.96);backdrop-filter:blur(8px);display:flex;gap:6px;padding:7px;border-radius:999px;box-shadow:0 14px 34px -12px rgba(0,0,0,.5)}
 .bar a{flex:1;max-width:200px;text-align:center;text-decoration:none;font-weight:900;font-size:14px;padding:11px 6px;border-radius:30px}
 .bar .t{background:var(--pink);color:#fff}.bar .i{background:transparent;color:var(--cyan);border:2px solid var(--cyan)}.bar .m{background:#fff;color:#7b2ff7}
 .scan{position:fixed;inset:0;pointer-events:none;z-index:40;background:repeating-linear-gradient(0deg,rgba(255,255,255,.035) 0 1px,transparent 1px 3px)}
@@ -34,6 +34,10 @@ h2{font-size:clamp(26px,5vw,40px);font-weight:900;margin-bottom:10px;color:var(-
 .q{background:#180a2b;border-radius:16px;padding:20px;font-size:15px;font-style:italic;border-left:3px solid var(--pink)}
 footer{text-align:center;padding:56px 20px 90px;background:#05020c;color:#c9a8ff;font-size:14px}footer a{color:var(--cyan)}
 @media(max-width:700px){.info,.cards{grid-template-columns:1fr}}
+.bar::before{content:'';position:absolute;top:-6px;left:0;right:0;height:6px;background:repeating-linear-gradient(90deg,#febc2e 0 8px,transparent 8px 16px)}.bar a.c{background:#febc2e;color:#0d0b08;border-radius:999px;animation:bcnp 2.4s ease-in-out infinite}@keyframes bcnp{0%,100%{transform:scale(1)}50%{transform:scale(1.05)}}
+*{-webkit-tap-highlight-color:transparent}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+@media(max-width:480px){h1{font-size:clamp(40px,13.5vw,64px)}}
 </style></head>
 <body>
 <div class="scan"></div>

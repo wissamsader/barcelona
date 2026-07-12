@@ -8,7 +8,7 @@
 html.en .es{display:none}html:not(.en) .en{display:none}
 body{font:15px/1.7 'Helvetica Neue',Arial,sans-serif;color:var(--ice);background:var(--void)}
 #lg{position:fixed;top:16px;right:16px;z-index:60;background:transparent;color:var(--blue);border:1px solid #26324a;padding:7px 14px;font-size:12px;font-weight:700;letter-spacing:.14em;cursor:pointer}
-.bar{position:fixed;bottom:0;left:0;right:0;z-index:55;background:rgba(3,4,10,.96);backdrop-filter:blur(8px);display:flex;gap:2px;padding:7px 10px;justify-content:center}
+.bar{position:fixed;bottom:calc(10px + env(safe-area-inset-bottom));left:50%;transform:translateX(-50%);z-index:55;background:rgba(3,4,10,.96);backdrop-filter:blur(8px);display:flex;gap:8px;padding:8px;border-radius:16px;box-shadow:0 16px 40px -14px rgba(0,0,0,.55)}
 .bar a{flex:1;max-width:200px;text-align:center;text-decoration:none;font-weight:700;font-size:13px;letter-spacing:.08em;text-transform:uppercase;padding:12px 6px}
 .bar .t{background:var(--blue);color:#000}.bar .i{border:1px solid #26324a;color:var(--ice)}.bar .m{background:var(--ice);color:#000}
 .hero{min-height:100svh;display:flex;flex-direction:column;justify-content:center;padding:60px 26px 100px;position:relative;overflow:hidden}
@@ -38,6 +38,9 @@ h2{font-size:clamp(24px,5vw,38px);font-weight:200;color:#fff;margin-bottom:14px}
 .q{border-left:2px solid var(--blue);padding:14px 18px;margin-top:14px;color:var(--dim);font-weight:300;font-style:italic}
 footer{padding:56px 26px 90px;background:#03040a;color:var(--dim);text-align:center;font-size:13px}footer a{color:var(--blue)}
 @media(max-width:640px){.hmeta{grid-template-columns:1fr 1fr;gap:20px}.two,.cards{grid-template-columns:1fr}}
+.bar{border-top:2px solid #9b6bff;box-shadow:0 -4px 18px -6px #9b6bff}.bar a.c{background:transparent;color:#9b6bff;border:2px solid #9b6bff;border-radius:999px}
+*{-webkit-tap-highlight-color:transparent}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
 </style></head>
 <body>
 <button id="lg" onclick="document.documentElement.classList.toggle('en')"><span class="es">EN</span><span class="en">ES</span></button>

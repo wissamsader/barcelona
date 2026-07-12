@@ -8,7 +8,7 @@
 html.en .es{display:none}html:not(.en) .en{display:none}
 body{font:16px/1.65 'Georgia',serif;color:var(--paper);background:var(--pine);overflow-x:hidden}
 #lg{position:fixed;top:16px;right:16px;z-index:60;background:rgba(0,0,0,.4);color:var(--sage);border:1px solid var(--moss);border-radius:30px;padding:7px 15px;font:700 12px/1 sans-serif;letter-spacing:.1em;cursor:pointer}
-.bar{position:fixed;bottom:0;left:0;right:0;z-index:55;background:rgba(5,10,7,.96);backdrop-filter:blur(8px);display:flex;gap:2px;padding:7px 10px;justify-content:center}
+.bar{position:fixed;bottom:calc(10px + env(safe-area-inset-bottom));left:50%;transform:translateX(-50%);z-index:55;background:rgba(5,10,7,.96);backdrop-filter:blur(8px);display:flex;gap:8px;padding:8px;border-radius:16px;box-shadow:0 16px 40px -14px rgba(0,0,0,.55)}
 .bar a{flex:1;max-width:210px;text-align:center;text-decoration:none;font:800 13px/1 sans-serif;letter-spacing:.06em;text-transform:uppercase;padding:12px 6px;border-radius:4px}
 .bar .t{background:var(--gold);color:#1a1a10}.bar .i{background:transparent;color:var(--paper);border:1px solid var(--moss)}
 .hero{min-height:100svh;display:flex;flex-direction:column;justify-content:center;padding:60px 24px 100px;position:relative;background:radial-gradient(120% 90% at 50% 0%,#16281c 0%,#0a1410 60%)}
@@ -37,6 +37,9 @@ h2{font-size:clamp(26px,5vw,40px);font-weight:400;font-style:italic;color:var(--
 .q{background:#0f1c14;border-left:3px solid var(--gold);border-radius:0 12px 12px 0;padding:20px;font-style:italic;font-size:15px;margin-top:14px}
 footer{text-align:center;padding:56px 24px 90px;background:#050a07;color:var(--sage);font-family:sans-serif;font-size:14px}footer a{color:var(--gold)}
 @media(max-width:700px){.cards,.info{grid-template-columns:1fr}}
+.bar::before{content:'∿∿∿∿∿∿∿∿';position:absolute;top:-14px;left:0;right:0;text-align:center;color:#8fa895;font-size:12px;letter-spacing:2px;line-height:1}.bar a.c{background:transparent;color:#8fa895;border:2px solid #8fa895;border-radius:999px}
+*{-webkit-tap-highlight-color:transparent}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
 </style></head>
 <body>
 <button id="lg" onclick="document.documentElement.classList.toggle('en')"><span class="es">EN</span><span class="en">ES</span></button>

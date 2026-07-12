@@ -9,7 +9,7 @@
 html.en .es{display:none}html:not(.en) .en{display:none}
 body{font:16px/1.6 'Oswald',sans-serif;color:var(--ink);background:var(--cream)}
 #lg{position:fixed;top:16px;right:16px;z-index:60;background:var(--ink);color:var(--cream);border:0;border-radius:30px;padding:8px 15px;font-size:12px;font-weight:700;letter-spacing:.1em;cursor:pointer}
-.bar{position:fixed;bottom:0;left:0;right:0;z-index:55;background:rgba(28,18,15,.96);backdrop-filter:blur(8px);display:flex;gap:2px;padding:7px 10px;justify-content:center}
+.bar{position:fixed;bottom:0;left:0;right:0;z-index:55;background:rgba(28,18,15,.96);display:flex;gap:10px;padding:10px 14px calc(10px + env(safe-area-inset-bottom));justify-content:center;border-radius:22px 22px 0 0}
 .bar a{flex:1;max-width:210px;text-align:center;color:#fff;text-decoration:none;font-weight:700;font-size:14px;padding:10px 6px;border-radius:8px;letter-spacing:.04em}
 .bar .c{background:var(--red)}.bar .m{background:#3a2a1a}
 .hero{min-height:94svh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:60px 24px 96px;background:var(--red);color:var(--cream);position:relative;overflow:hidden}
@@ -48,6 +48,9 @@ h2{font-family:'DM Serif Display',serif;font-size:clamp(28px,5vw,44px);color:var
 .vbox a.map{display:inline-block;margin-top:12px;background:var(--red);color:#fff;text-decoration:none;font-weight:700;padding:12px 22px;border-radius:8px;font-size:14px}
 footer{background:var(--ink);color:var(--cream);text-align:center;padding:48px 24px 90px}footer a{color:var(--gold)}
 @media(max-width:820px){.story,.visit{grid-template-columns:1fr}.spec,.gal{grid-template-columns:1fr 1fr}.rev{grid-template-columns:1fr}}
+.bar::before{content:'';position:absolute;top:-4px;left:0;right:0;height:2px;background:#c08a2d}.bar::after{content:'';position:absolute;top:-9px;left:12%;right:12%;height:1px;background:#c08a2d;opacity:.6}.bar a.c{background:#c08a2d;color:#0d0b08;border-radius:10px;font-weight:800}
+*{-webkit-tap-highlight-color:transparent}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
 </style></head>
 <body>
 <button id="lg" onclick="document.documentElement.classList.toggle('en')"><span class="es">EN</span><span class="en">ES</span></button>

@@ -9,7 +9,7 @@
 html.en .es{display:none}html:not(.en) .en{display:none}
 body{font:16px/1.66 'Mulish',sans-serif;color:var(--ink);background:var(--cream)}
 #lg{position:fixed;top:16px;right:16px;z-index:60;background:var(--cream);color:var(--olive);border:0;border-radius:3px;padding:8px 15px;font-size:12px;font-weight:700;letter-spacing:.08em;cursor:pointer}
-.bar{position:fixed;bottom:0;left:0;right:0;z-index:55;background:rgba(44,42,32,.97);backdrop-filter:blur(8px);display:flex;gap:2px;padding:7px 10px;justify-content:center}
+.bar{position:fixed;bottom:0;left:0;right:0;z-index:55;background:rgba(44,42,32,.97);display:flex;gap:10px;padding:12px 12px calc(10px + env(safe-area-inset-bottom));justify-content:center;clip-path:polygon(0 10px,100% 0,100% 100%,0 100%)}
 .bar a{flex:1;max-width:220px;text-align:center;color:#fff;text-decoration:none;font-weight:700;font-size:14px;padding:11px 6px;border-radius:3px}
 .bar .m{background:var(--terra)}.bar .g{background:var(--olive2)}
 .hero{min-height:96svh;display:flex;flex-direction:column;justify-content:flex-end;padding:60px 30px 110px;position:relative;color:var(--cream);overflow:hidden}
@@ -50,6 +50,9 @@ h2{font-family:'Rozha One',serif;font-weight:400;font-size:clamp(30px,5.5vw,50px
 .vbox a.map{display:inline-block;margin-top:12px;background:var(--terra);color:#fff;text-decoration:none;font-weight:700;padding:12px 22px;border-radius:3px;font-size:14px}
 footer{background:var(--ink);color:#b7ab8c;text-align:center;padding:50px 30px 92px}footer a{color:var(--terra2)}
 @media(max-width:820px){.story,.visit,.gal{grid-template-columns:1fr}.cards,.rev{grid-template-columns:1fr}}
+.bar a.c{background:transparent;color:#c9a227;border:2px solid #c9a227;border-radius:999px}
+*{-webkit-tap-highlight-color:transparent}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
 </style></head>
 <body>
 <button id="lg" onclick="document.documentElement.classList.toggle('en')"><span class="es">EN</span><span class="en">ES</span></button>

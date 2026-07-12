@@ -8,7 +8,7 @@
 html.en .es{display:none}html:not(.en) .en{display:none}
 body{font:16px/1.7 Georgia,serif;color:var(--cream);background:var(--redd)}
 #lg{position:fixed;top:16px;right:16px;z-index:60;background:var(--yel);color:var(--redd);border:0;border-radius:30px;padding:8px 15px;font:800 12px/1 sans-serif;letter-spacing:.1em;cursor:pointer}
-.bar{position:fixed;bottom:0;left:0;right:0;z-index:55;background:rgba(26,13,12,.96);backdrop-filter:blur(8px);display:flex;gap:2px;padding:7px 10px;justify-content:center}
+.bar{position:fixed;bottom:calc(10px + env(safe-area-inset-bottom));left:50%;transform:translateX(-50%);z-index:55;background:rgba(26,13,12,.96);backdrop-filter:blur(8px);display:flex;gap:8px;padding:8px;border-radius:16px;box-shadow:0 16px 40px -14px rgba(0,0,0,.55)}
 .bar a{flex:1;max-width:200px;text-align:center;color:#fff;text-decoration:none;font:800 14px/1 sans-serif;padding:11px 6px;border-radius:8px}
 .bar .w{background:#25d366;color:#053}.bar .m{background:#701820}.bar .i{background:var(--yel);color:var(--redd)}
 .hero{min-height:90svh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:70px 26px;position:relative;background:radial-gradient(circle at 50% 30%,#a8262e 0%,var(--redd) 70%)}
@@ -48,6 +48,9 @@ h2{font-size:clamp(28px,5.5vw,44px);font-style:italic;color:var(--yel);text-alig
 .vbox a.map{display:inline-block;margin-top:12px;background:var(--yel);color:var(--redd);text-decoration:none;font-weight:800;padding:12px 22px;border-radius:30px;font-size:14px}
 footer{background:var(--ink);color:var(--cream);text-align:center;padding:50px 26px 90px}footer a{color:var(--yel)}
 @media(max-width:820px){.story,.visit{grid-template-columns:1fr}.nights{grid-template-columns:1fr}.gal{grid-template-columns:1fr 1fr}.rev{grid-template-columns:1fr}}
+.bar::before{content:'∿∿∿∿∿∿∿∿';position:absolute;top:-14px;left:0;right:0;text-align:center;color:#e0a4b8;font-size:12px;letter-spacing:2px;line-height:1}.bar a.c{background:transparent;color:#e0a4b8;border-bottom:3px solid #e0a4b8;border-radius:0;font-weight:800}
+*{-webkit-tap-highlight-color:transparent}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
 </style></head>
 <body>
 <button id="lg" onclick="document.documentElement.classList.toggle('en')"><span class="es">EN</span><span class="en">ES</span></button>
