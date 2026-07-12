@@ -20,7 +20,7 @@ body{font:15px/1.6 ui-monospace,'SF Mono',Menlo,monospace;color:#e9dfe0;backgrou
 .est{font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--red)}
 h1{font-family:'Arial Black','Segoe UI',sans-serif;font-size:clamp(40px,10vw,104px);font-weight:900;line-height:.9;letter-spacing:-.02em;text-transform:uppercase;margin:14px 0 8px;color:#fff}
 .tag{font-size:14px;color:var(--ash);max-width:560px;letter-spacing:.02em}
-.meta{margin-top:22px;display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:1px;background:#2a1518;border:1px solid #2a1518}
+.meta{margin-top:22px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:#2a1518;border:1px solid #2a1518}
 .meta div{background:var(--ink);padding:15px}.meta h3{font-size:10px;letter-spacing:.18em;color:var(--red);text-transform:uppercase;margin-bottom:6px}.meta p{color:#fff;font-weight:600;font-size:14px}
 section{max-width:1000px;margin:0 auto;padding:64px 24px}
 h2{font-family:'Arial Black',sans-serif;font-size:clamp(24px,5vw,40px);text-transform:uppercase;color:#fff;margin-bottom:10px}
@@ -45,6 +45,7 @@ footer{padding:46px 24px 90px;background:#040203;text-align:center;color:var(--a
 .bar{border-top:2px solid #ffd76a;box-shadow:0 -4px 18px -6px #ffd76a}.bar a.c{background:#ffd76a;color:#0d0b08;transform:skewX(-8deg);border-radius:4px}.bar a.c>*{display:inline-block;transform:skewX(8deg)}
 *{-webkit-tap-highlight-color:transparent}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+@media(max-width:560px){.meta{grid-template-columns:repeat(2,minmax(0,1fr))}}
 </style></head>
 <body>
 <button id="lg" onclick="document.documentElement.classList.toggle('en')"><span class="es">EN</span><span class="en">ES</span></button>
