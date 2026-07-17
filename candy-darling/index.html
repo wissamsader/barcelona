@@ -49,7 +49,9 @@ footer{background:#0a0010;text-align:center;padding:48px 24px 90px;color:#c79ad6
 .bar::before{content:'· · · · · · · · · ·';position:absolute;top:-13px;left:0;right:0;text-align:center;color:#ff7ab8;letter-spacing:12px;font-size:11px;line-height:1}.bar a.c{background:#ff7ab8;color:#0d0b08;border-radius:999px;animation:bcnp 2.4s ease-in-out infinite}@keyframes bcnp{0%,100%{transform:scale(1)}50%{transform:scale(1.05)}}
 *{-webkit-tap-highlight-color:transparent}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
-</style></head>
+</style><style data-fx-orn>.ball{animation:fxcandyspin 70s linear infinite}
+@keyframes fxcandyspin{to{transform:translateX(-50%) rotate(360deg)}}
+@media (prefers-reduced-motion: reduce){.ball{animation:none}}</style></head>
 <body>
 <button id="lg" onclick="document.documentElement.classList.toggle('en')"><span class="es" data-edit="t1" data-edit-label="Text — EN">EN</span><span class="en" data-edit="t2" data-edit-label="Text — ES">ES</span></button>
 <div class="hero">
